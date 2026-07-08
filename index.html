@@ -1,0 +1,226 @@
+<!-- index.html — Vlad Grigorov · AI Filmmaker -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vlad Grigorov — AI Filmmaker & Director</title>
+<meta name="description" content="Vlad Grigorov — AI filmmaker and director. Cinematic stories generated, directed and finished with artificial intelligence." />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Vlad Grigorov — AI Filmmaker & Director" />
+<meta property="og:description" content="Cinematic stories generated, directed and finished with artificial intelligence." />
+<meta property="og:image" content="assets/vlad-portrait.jpg" />
+<meta name="theme-color" content="#050705" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050705'/%3E%3Ctext x='16' y='23' font-size='20' font-family='Arial' font-weight='bold' fill='%2339ff6a' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E" />
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader">
+  <div class="preloader__inner">
+    <span class="preloader__name">VLAD GRIGOROV</span>
+    <span class="preloader__count" id="preloaderCount">00</span>
+  </div>
+</div>
+
+<!-- ============ GRAIN + SCANLINE OVERLAY ============ -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav__brand">VG<span class="nav__dot">.</span></a>
+  <nav class="nav__links">
+    <a href="#work">Work</a>
+    <a href="#craft">Craft</a>
+    <a href="#about">About</a>
+    <a href="#contact" class="nav__cta">Contact</a>
+  </nav>
+  <button class="nav__menu" id="navMenu" aria-label="Menu"><span></span><span></span></button>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO (scroll-scrubbed video / portrait) ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__media" id="heroMedia">
+      <video class="hero__video" id="heroVideo" playsinline muted preload="auto"
+             poster="assets/vlad-portrait.jpg">
+        <source src="assets/vlad-hero.mp4" type="video/mp4" />
+      </video>
+      <img class="hero__fallback" id="heroFallback" src="assets/vlad-portrait.jpg" alt="Vlad Grigorov" />
+      <div class="hero__wash"></div>
+    </div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow" data-reveal>AI Filmmaker &middot; Director</p>
+      <h1 class="hero__title">
+        <span class="hero__line" data-reveal>VLAD</span>
+        <span class="hero__line hero__line--outline" data-reveal>GRIGOROV</span>
+      </h1>
+      <p class="hero__tagline" data-reveal>
+        I direct films that never touched a camera — stories generated, shaped and finished with artificial intelligence.
+      </p>
+    </div>
+
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <span class="hero__scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>AI CINEMA</span><span class="marquee__star">✦</span>
+      <span>GENERATIVE DIRECTION</span><span class="marquee__star">✦</span>
+      <span>VISUAL STORYTELLING</span><span class="marquee__star">✦</span>
+      <span>AI CINEMA</span><span class="marquee__star">✦</span>
+      <span>GENERATIVE DIRECTION</span><span class="marquee__star">✦</span>
+      <span>VISUAL STORYTELLING</span><span class="marquee__star">✦</span>
+    </div>
+  </div>
+
+  <!-- ============ MANIFESTO ============ -->
+  <section class="manifesto" id="intro">
+    <p class="manifesto__text">
+      <span data-word>The</span> <span data-word>camera</span> <span data-word>is</span>
+      <span data-word>optional</span> <span data-word>now.</span>
+      <span data-word>What</span> <span data-word>stays</span>
+      <span data-word>is</span> <span data-word>the</span>
+      <span data-word class="accent">eye</span> <span data-word>—</span>
+      <span data-word>the</span> <span data-word>instinct</span>
+      <span data-word>for</span> <span data-word>a</span> <span data-word>frame,</span>
+      <span data-word>a</span> <span data-word>mood,</span>
+      <span data-word>a</span> <span data-word class="accent">story</span>
+      <span data-word>worth</span> <span data-word>sitting</span>
+      <span data-word>through.</span>
+    </p>
+  </section>
+
+  <!-- ============ SELECTED WORK ============ -->
+  <section class="work" id="work">
+    <div class="section-head">
+      <span class="section-head__index">01</span>
+      <h2 class="section-head__title" data-reveal>Selected Work</h2>
+      <p class="section-head__sub" data-reveal>Short films, spots and experiments — all made with generative pipelines.</p>
+    </div>
+
+    <div class="work__grid">
+      <article class="project" data-project>
+        <div class="project__media"><div class="project__ph project__ph--1"></div></div>
+        <div class="project__meta">
+          <span class="project__num">01</span>
+          <h3 class="project__title">Neon Requiem</h3>
+          <span class="project__type">Short Film · 2025</span>
+        </div>
+      </article>
+
+      <article class="project" data-project>
+        <div class="project__media"><div class="project__ph project__ph--2"></div></div>
+        <div class="project__meta">
+          <span class="project__num">02</span>
+          <h3 class="project__title">Ghost Signal</h3>
+          <span class="project__type">Music Video · 2025</span>
+        </div>
+      </article>
+
+      <article class="project" data-project>
+        <div class="project__media"><div class="project__ph project__ph--3"></div></div>
+        <div class="project__meta">
+          <span class="project__num">03</span>
+          <h3 class="project__title">Concrete Dreams</h3>
+          <span class="project__type">Brand Film · 2024</span>
+        </div>
+      </article>
+
+      <article class="project" data-project>
+        <div class="project__media"><div class="project__ph project__ph--4"></div></div>
+        <div class="project__meta">
+          <span class="project__num">04</span>
+          <h3 class="project__title">After the Fall</h3>
+          <span class="project__type">Experimental · 2024</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ CRAFT / CAPABILITIES ============ -->
+  <section class="craft" id="craft">
+    <div class="section-head">
+      <span class="section-head__index">02</span>
+      <h2 class="section-head__title" data-reveal>The Craft</h2>
+      <p class="section-head__sub" data-reveal>End-to-end, from prompt to final grade.</p>
+    </div>
+
+    <ul class="craft__list">
+      <li class="craft__row" data-craft>
+        <span class="craft__no">01</span>
+        <h3 class="craft__name">Concept &amp; Direction</h3>
+        <p class="craft__desc">Story, look, and shot design before a single frame is generated.</p>
+      </li>
+      <li class="craft__row" data-craft>
+        <span class="craft__no">02</span>
+        <h3 class="craft__name">Generative Cinematography</h3>
+        <p class="craft__desc">Image and video models directed like a camera — light, lens, motion.</p>
+      </li>
+      <li class="craft__row" data-craft>
+        <span class="craft__no">03</span>
+        <h3 class="craft__name">Editing &amp; Sound</h3>
+        <p class="craft__desc">Rhythm, cut and score that turn frames into a film.</p>
+      </li>
+      <li class="craft__row" data-craft>
+        <span class="craft__no">04</span>
+        <h3 class="craft__name">Color &amp; Finish</h3>
+        <p class="craft__desc">A consistent, cinematic grade across every shot.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="about__portrait">
+      <img src="assets/vlad-portrait.jpg" alt="Vlad Grigorov" id="aboutPortrait" />
+      <div class="about__portrait-wash"></div>
+    </div>
+    <div class="about__body">
+      <span class="section-head__index">03</span>
+      <h2 class="about__title" data-reveal>About</h2>
+      <p data-reveal>I'm Vlad Grigorov, a filmmaker working entirely inside generative tools. I treat AI models the way a director treats a crew — casting light, framing, and motion until the frame feels alive.</p>
+      <p data-reveal>My work sits between cinema and code: the discipline of storytelling, the speed of a new medium. No sets, no rentals — just a vision pushed through the machine until it holds.</p>
+      <dl class="about__stats">
+        <div data-reveal><dt>50+</dt><dd>Films &amp; spots</dd></div>
+        <div data-reveal><dt>4</dt><dd>Years directing</dd></div>
+        <div data-reveal><dt>∞</dt><dd>Frames rendered</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <span class="section-head__index">04</span>
+    <h2 class="contact__title">
+      <span data-reveal>LET'S MAKE</span>
+      <span data-reveal class="accent">SOMETHING</span>
+    </h2>
+    <a class="contact__email" href="mailto:vladgrigorov1@gmail.com">vladgrigorov1@gmail.com</a>
+    <ul class="contact__socials">
+      <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="#" target="_blank" rel="noopener">YouTube</a></li>
+      <li><a href="#" target="_blank" rel="noopener">Vimeo</a></li>
+      <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Vlad Grigorov</span>
+    <span>AI Filmmaker · Bucharest</span>
+    <a href="#top" class="footer__top">Back to top ↑</a>
+  </footer>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
