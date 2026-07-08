@@ -1,184 +1,145 @@
 /* ============================================================
    Vlad Grigorov — AI Filmmaker
-   Smooth scroll + scroll-scrubbed hero + reveals (GSAP)
+   Lenis smooth scroll bridged to GSAP ScrollTrigger.
+   Graceful if the CDN libs fail: the site stays readable.
    ============================================================ */
 (function () {
   "use strict";
 
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var hasGSAP = typeof window.gsap !== "undefined";
+  var hasLenis = typeof window.Lenis !== "undefined";
 
-  /* ---------- Preloader ---------- */
-  const preloader = document.getElementById("preloader");
-  const countEl = document.getElementById("preloaderCount");
-  document.body.classList.add("is-loading");
+  document.documentElement.style.scrollBehavior = "auto";
 
+  /* ---------- Preloader (counts up, then reveals) ---------- */
   function runPreloader(done) {
-    if (reduceMotion) { finish(); return; }
-    let n = 0;
-    const tick = setInterval(() => {
-      n += Math.floor(Math.random() * 8) + 3;
-      if (n >= 100) { n = 100; clearInterval(tick); setTimeout(finish, 250); }
-      if (countEl) countEl.textContent = String(n).padStart(2, "0");
+    var el = document.getElementById("preloader");
+    var count = document.getElementById("preloaderCount");
+    document.body.classList.add("is-loading");
+    if (!el || !count) { document.body.classList.remove("is-loading"); done(); return; }
+
+    var n = 0;
+    var tick = setInterval(function () {
+      n += Math.floor(Math.random() * 11) + 4;
+      if (n >= 100) { n = 100; clearInterval(tick); }
+      count.textContent = n < 10 ? "0" + n : String(n);
+      if (n === 100) {
+        setTimeout(function () {
+          el.style.transition = "opacity .6s ease, transform .8s cubic-bezier(.22,1,.36,1)";
+          el.style.opacity = "0";
+          el.style.transform = "translateY(-2%)";
+          setTimeout(function () {
+            el.style.display = "none";
+            document.body.classList.remove("is-loading");
+            done();
+          }, 650);
+        }, 250);
+      }
     }, 90);
-    function finish() {
-      preloader.style.transition = "opacity .7s ease, transform .9s cubic-bezier(.22,1,.36,1)";
-      preloader.style.opacity = "0";
-      preloader.style.transform = "translateY(-20px)";
-      setTimeout(() => { preloader.style.display = "none"; document.body.classList.remove("is-loading"); done(); }, 700);
-    }
   }
 
-  /* ---------- Lenis smooth scroll ---------- */
-  let lenis = null;
-  function initLenis() {
-    if (reduceMotion || typeof Lenis === "undefined") return;
-    lenis = new Lenis({ duration: 1.1, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
-    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-    requestAnimationFrame(raf);
-    if (window.ScrollTrigger) {
-      lenis.on("scroll", ScrollTrigger.update);
-      gsap.ticker.add((t) => lenis.raf(t * 1000));
-      gsap.ticker.lagSmoothing(0);
+  /* ---------- Lenis smooth scroll bridged to GSAP ---------- */
+  function initSmoothScroll() {
+    if (reduce || !hasLenis) return null;
+    var lenis = new window.Lenis({ duration: 1.1, smoothWheel: true });
+    if (hasGSAP && window.ScrollTrigger) {
+      lenis.on("scroll", window.ScrollTrigger.update);
+      window.gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
+      window.gsap.ticker.lagSmoothing(0);
+    } else {
+      function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+      requestAnimationFrame(raf);
     }
+    return lenis;
   }
 
-  /* ---------- Anchor links via Lenis ---------- */
-  function initAnchors() {
-    document.querySelectorAll('a[href^="#"]').forEach((a) => {
-      a.addEventListener("click", (e) => {
-        const id = a.getAttribute("href");
+  /* ---------- Anchor links through Lenis ---------- */
+  function wireAnchors(lenis) {
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        var id = a.getAttribute("href");
         if (id.length < 2) return;
-        const target = document.querySelector(id);
+        var target = document.querySelector(id);
         if (!target) return;
         e.preventDefault();
-        if (lenis) lenis.scrollTo(target, { offset: 0, duration: 1.3 });
+        if (lenis) lenis.scrollTo(target, { offset: 0, duration: 1.2 });
         else target.scrollIntoView({ behavior: "smooth" });
       });
     });
   }
 
-  /* ---------- Hero: real video vs. portrait fallback ---------- */
-  function initHero() {
-    const media = document.getElementById("heroMedia");
-    const video = document.getElementById("heroVideo");
-    if (!video) return;
+  /* ---------- Animations ---------- */
+  function initAnimations() {
+    if (reduce || !hasGSAP || !window.ScrollTrigger) return;
+    var gsap = window.gsap;
+    gsap.registerPlugin(window.ScrollTrigger);
 
-    // Detect whether the mp4 actually loads; otherwise keep the portrait.
-    let hasVideo = false;
-    video.addEventListener("loadeddata", () => {
-      if (video.readyState >= 2 && video.videoWidth > 0) {
-        hasVideo = true;
-        media.classList.add("has-video");
-        setupScrub();
-      }
-    });
-    video.addEventListener("error", () => { /* stay on portrait */ });
-
-    // Ken Burns on the portrait fallback (only if no video)
-    if (!reduceMotion && window.gsap) {
-      gsap.to("#heroFallback", {
-        scale: 1.18, ease: "none",
-        scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true }
-      });
-    }
-
-    // Scroll-scrub the video's currentTime across the hero height
-    function setupScrub() {
-      if (reduceMotion || !window.ScrollTrigger) { video.play().catch(() => {}); return; }
-      video.pause();
-      const st = ScrollTrigger.create({
-        trigger: ".hero",
-        start: "top top",
-        end: "bottom top",
-        scrub: 0.5,
-        onUpdate: (self) => {
-          if (video.duration) video.currentTime = video.duration * self.progress;
-        }
-      });
-      void st;
-    }
-  }
-
-  /* ---------- Generic reveals ---------- */
-  function initReveals() {
-    if (!window.gsap || !window.ScrollTrigger) return;
-    gsap.registerPlugin(ScrollTrigger);
-
-    if (reduceMotion) {
-      gsap.set("[data-reveal]", { autoAlpha: 1, y: 0 });
-      return;
-    }
-
-    // Hero lines
+    /* Hero title lines build ON MOUNT (screenshot-safe) */
     gsap.from(".hero [data-reveal]", {
-      y: 60, autoAlpha: 0, duration: 1, ease: "power3.out", stagger: 0.12, delay: 0.1
+      yPercent: 115, opacity: 0, duration: 1.1, ease: "power4.out",
+      stagger: 0.09, delay: 0.15
     });
 
-    // Section reveals
-    gsap.utils.toArray("[data-reveal]").forEach((el) => {
+    /* Hero image parallax + scale as you scroll past it */
+    gsap.to("#heroImg", {
+      yPercent: 16, scale: 1.16, ease: "none",
+      scrollTrigger: { trigger: "#hero", start: "top top", end: "bottom top", scrub: true }
+    });
+
+    /* Interlude still: slow parallax drift (transform only) */
+    gsap.to(".interlude__img", {
+      yPercent: -12, ease: "none",
+      scrollTrigger: { trigger: ".interlude", start: "top bottom", end: "bottom top", scrub: true }
+    });
+
+    /* Manifesto: words light up across the scroll */
+    var words = gsap.utils.toArray(".manifesto__text [data-word]");
+    if (words.length) {
+      gsap.to(words, {
+        opacity: 1, ease: "none", stagger: 0.5,
+        scrollTrigger: { trigger: ".manifesto", start: "top 75%", end: "bottom 60%", scrub: true }
+      });
+    }
+
+    /* Generic reveals (transform only — never opacity-to-zero gated) */
+    gsap.utils.toArray("[data-reveal]").forEach(function (el) {
       if (el.closest(".hero")) return;
       gsap.from(el, {
-        y: 40, autoAlpha: 0, duration: 0.9, ease: "power3.out",
-        scrollTrigger: { trigger: el, start: "top 85%" }
-      });
-    });
-
-    // Projects
-    gsap.utils.toArray("[data-project]").forEach((el) => {
-      gsap.from(el, {
-        y: 70, autoAlpha: 0, duration: 1, ease: "power3.out",
+        y: 40, opacity: 0, duration: 0.9, ease: "power3.out",
         scrollTrigger: { trigger: el, start: "top 88%" }
       });
     });
 
-    // Craft rows
-    gsap.utils.toArray("[data-craft]").forEach((el) => {
-      gsap.from(el, {
-        xPercent: -3, autoAlpha: 0, duration: 0.8, ease: "power2.out",
-        scrollTrigger: { trigger: el, start: "top 90%" }
+    /* Project cards rise in, staggered per grid */
+    gsap.utils.toArray(".work__grid").forEach(function (grid) {
+      gsap.from(grid.querySelectorAll("[data-project]"), {
+        y: 60, opacity: 0, duration: 0.9, ease: "power3.out", stagger: 0.12,
+        scrollTrigger: { trigger: grid, start: "top 82%" }
       });
     });
 
-    // Manifesto word-by-word
-    const words = gsap.utils.toArray(".manifesto__text [data-word]");
-    if (words.length) {
-      gsap.to(words, {
-        opacity: 1, ease: "none", stagger: 0.4,
-        scrollTrigger: { trigger: ".manifesto", start: "top 70%", end: "bottom 65%", scrub: true }
-      });
-    }
-  }
-
-  /* ---------- Nav: hide-on-scroll ---------- */
-  function initNav() {
-    const nav = document.getElementById("nav");
-    if (!nav || !window.ScrollTrigger) return;
-    ScrollTrigger.create({
-      start: "top -80", end: 99999,
-      onUpdate: (self) => {
-        if (self.direction === 1 && self.scroll() > 200) nav.style.transform = "translateY(-120%)";
-        else nav.style.transform = "translateY(0)";
-      }
+    /* Craft rows slide in */
+    gsap.from("[data-craft]", {
+      x: -30, opacity: 0, duration: 0.7, ease: "power3.out", stagger: 0.08,
+      scrollTrigger: { trigger: ".craft__list", start: "top 80%" }
     });
-    nav.style.transition = "transform .5s cubic-bezier(.22,1,.36,1)";
-  }
 
-  /* ---------- Misc ---------- */
-  function initMisc() {
-    const y = document.getElementById("year");
-    if (y) y.textContent = new Date().getFullYear();
+    /* Nav appears after hero */
+    gsap.from("#nav", { y: -30, opacity: 0, duration: 0.8, ease: "power3.out", delay: 0.4 });
   }
 
   /* ---------- Boot ---------- */
-  window.addEventListener("load", () => {
-    runPreloader(() => {
-      initLenis();
-      initAnchors();
-      initHero();
-      initReveals();
-      initNav();
-      initMisc();
-      if (window.ScrollTrigger) ScrollTrigger.refresh();
-    });
-  });
+  if (document.getElementById("year")) {
+    document.getElementById("year").textContent = new Date().getFullYear();
+  }
+
+  function boot() {
+    var lenis = initSmoothScroll();
+    wireAnchors(lenis);
+    initAnimations();
+    if (hasGSAP && window.ScrollTrigger) window.ScrollTrigger.refresh();
+  }
+
+  window.addEventListener("load", function () { runPreloader(boot); });
 })();

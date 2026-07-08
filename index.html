@@ -1,20 +1,20 @@
-<!-- index.html — Vlad Grigorov · AI Filmmaker -->
+<!-- Vlad Grigorov — AI Filmmaker & Director -->
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Vlad Grigorov — AI Filmmaker & Director</title>
-<meta name="description" content="Vlad Grigorov — AI filmmaker and director. Cinematic stories generated, directed and finished with artificial intelligence." />
+<meta name="description" content="Vlad Grigorov — AI filmmaker and director. Cinema directed inside generative tools: story, light, motion, and grade." />
 
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Vlad Grigorov — AI Filmmaker & Director" />
-<meta property="og:description" content="Cinematic stories generated, directed and finished with artificial intelligence." />
-<meta property="og:image" content="assets/vlad-portrait.jpg" />
-<meta name="theme-color" content="#050705" />
+<meta property="og:description" content="Cinema directed inside generative tools." />
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_33Ej8t2gAxUeQ3elHCepqWYPaUg/hf_20260708_132505_33f287b7-6707-4261-a0ca-565a1d7b3abd.png" />
+<meta name="theme-color" content="#0B0B0D" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050705'/%3E%3Ctext x='16' y='23' font-size='20' font-family='Arial' font-weight='bold' fill='%2339ff6a' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B0B0D'/%3E%3Ctext x='16' y='23' font-size='19' font-family='Arial' font-weight='bold' fill='%23E8A24C' text-anchor='middle'%3EVG%3C/text%3E%3C/svg%3E" />
 
 <!-- ============ PRELOADER ============ -->
 <div class="preloader" id="preloader">
@@ -24,8 +24,8 @@
   </div>
 </div>
 
-<!-- ============ GRAIN + SCANLINE OVERLAY ============ -->
 <div class="grain" aria-hidden="true"></div>
+<div class="beam" aria-hidden="true"></div>
 
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
@@ -36,19 +36,16 @@
     <a href="#about">About</a>
     <a href="#contact" class="nav__cta">Contact</a>
   </nav>
-  <button class="nav__menu" id="navMenu" aria-label="Menu"><span></span><span></span></button>
 </header>
 
 <main id="top">
 
-  <!-- ============ HERO (scroll-scrubbed video / portrait) ============ -->
+  <!-- ============ HERO ============ -->
   <section class="hero" id="hero">
     <div class="hero__media" id="heroMedia">
-      <video class="hero__video" id="heroVideo" playsinline muted preload="auto"
-             poster="assets/vlad-portrait.jpg">
-        <source src="assets/vlad-hero.mp4" type="video/mp4" />
-      </video>
-      <img class="hero__fallback" id="heroFallback" src="assets/vlad-portrait.jpg" alt="Vlad Grigorov" />
+      <img class="hero__img" id="heroImg"
+           src="https://d8j0ntlcm91z4.cloudfront.net/user_33Ej8t2gAxUeQ3elHCepqWYPaUg/hf_20260708_132505_33f287b7-6707-4261-a0ca-565a1d7b3abd.png"
+           alt="Vlad Grigorov on set beside a cinema camera" />
       <div class="hero__wash"></div>
     </div>
 
@@ -59,7 +56,7 @@
         <span class="hero__line hero__line--outline" data-reveal>GRIGOROV</span>
       </h1>
       <p class="hero__tagline" data-reveal>
-        I direct films that never touched a camera — stories generated, shaped and finished with artificial intelligence.
+        I direct cinema from inside the machine — story, light and motion shaped with generative tools until the frame feels alive.
       </p>
     </div>
 
@@ -88,7 +85,7 @@
       <span data-word>optional</span> <span data-word>now.</span>
       <span data-word>What</span> <span data-word>stays</span>
       <span data-word>is</span> <span data-word>the</span>
-      <span data-word class="accent">eye</span> <span data-word>—</span>
+      <span data-word class="accent">eye</span> <span data-word>:</span>
       <span data-word>the</span> <span data-word>instinct</span>
       <span data-word>for</span> <span data-word>a</span> <span data-word>frame,</span>
       <span data-word>a</span> <span data-word>mood,</span>
@@ -98,12 +95,20 @@
     </p>
   </section>
 
+  <!-- ============ INTERLUDE (full-bleed still) ============ -->
+  <section class="interlude" aria-hidden="true">
+    <img class="interlude__img"
+         src="https://d8j0ntlcm91z4.cloudfront.net/user_33Ej8t2gAxUeQ3elHCepqWYPaUg/hf_20260708_132505_f223ff62-ef9e-4867-92f2-25abadcfea42.png"
+         alt="" />
+    <div class="interlude__bars"></div>
+  </section>
+
   <!-- ============ SELECTED WORK ============ -->
   <section class="work" id="work">
     <div class="section-head">
       <span class="section-head__index">01</span>
       <h2 class="section-head__title" data-reveal>Selected Work</h2>
-      <p class="section-head__sub" data-reveal>Short films, spots and experiments — all made with generative pipelines.</p>
+      <p class="section-head__sub" data-reveal>Short films, spots and experiments — directed end to end with generative pipelines.</p>
     </div>
 
     <div class="work__grid">
@@ -111,7 +116,7 @@
         <div class="project__media"><div class="project__ph project__ph--1"></div></div>
         <div class="project__meta">
           <span class="project__num">01</span>
-          <h3 class="project__title">Neon Requiem</h3>
+          <h3 class="project__title">Amber Requiem</h3>
           <span class="project__type">Short Film · 2025</span>
         </div>
       </article>
@@ -145,24 +150,24 @@
     </div>
   </section>
 
-  <!-- ============ CRAFT / CAPABILITIES ============ -->
+  <!-- ============ CRAFT ============ -->
   <section class="craft" id="craft">
     <div class="section-head">
       <span class="section-head__index">02</span>
       <h2 class="section-head__title" data-reveal>The Craft</h2>
-      <p class="section-head__sub" data-reveal>End-to-end, from prompt to final grade.</p>
+      <p class="section-head__sub" data-reveal>End to end, from prompt to final grade.</p>
     </div>
 
     <ul class="craft__list">
       <li class="craft__row" data-craft>
         <span class="craft__no">01</span>
         <h3 class="craft__name">Concept &amp; Direction</h3>
-        <p class="craft__desc">Story, look, and shot design before a single frame is generated.</p>
+        <p class="craft__desc">Story, look and shot design before a single frame is generated.</p>
       </li>
       <li class="craft__row" data-craft>
         <span class="craft__no">02</span>
         <h3 class="craft__name">Generative Cinematography</h3>
-        <p class="craft__desc">Image and video models directed like a camera — light, lens, motion.</p>
+        <p class="craft__desc">Image and video models directed like a camera: light, lens, motion.</p>
       </li>
       <li class="craft__row" data-craft>
         <span class="craft__no">03</span>
@@ -180,14 +185,15 @@
   <!-- ============ ABOUT ============ -->
   <section class="about" id="about">
     <div class="about__portrait">
-      <img src="assets/vlad-portrait.jpg" alt="Vlad Grigorov" id="aboutPortrait" />
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_33Ej8t2gAxUeQ3elHCepqWYPaUg/hf_20260708_132743_322631c3-d583-4aee-a3eb-9d892908c368.png"
+           alt="Vlad Grigorov in a color-grading suite" id="aboutPortrait" />
       <div class="about__portrait-wash"></div>
     </div>
     <div class="about__body">
       <span class="section-head__index">03</span>
       <h2 class="about__title" data-reveal>About</h2>
-      <p data-reveal>I'm Vlad Grigorov, a filmmaker working entirely inside generative tools. I treat AI models the way a director treats a crew — casting light, framing, and motion until the frame feels alive.</p>
-      <p data-reveal>My work sits between cinema and code: the discipline of storytelling, the speed of a new medium. No sets, no rentals — just a vision pushed through the machine until it holds.</p>
+      <p data-reveal>I'm Vlad Grigorov, a filmmaker working entirely inside generative tools. I treat AI models the way a director treats a crew — casting light, framing and motion until the frame feels alive.</p>
+      <p data-reveal>My work sits between cinema and code: the discipline of storytelling, the speed of a new medium. No sets to rent, no gear to truck — just a vision pushed through the machine until it holds.</p>
       <dl class="about__stats">
         <div data-reveal><dt>50+</dt><dd>Films &amp; spots</dd></div>
         <div data-reveal><dt>4</dt><dd>Years directing</dd></div>

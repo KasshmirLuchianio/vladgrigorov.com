@@ -1,14 +1,21 @@
 # Assets
 
-Drop your media here — the site wires it up automatically.
+The hero, interlude and about images are AI-generated (Higgsfield) and are
+loaded from their CDN by URL in `index.html`. This folder is for **self-hosting**
+them if you'd rather not depend on the CDN.
 
-| File | Used for | Notes |
-|------|----------|-------|
-| `vlad-portrait.jpg` | Hero background + About portrait + video poster | Your cinematic green portrait. ~2000px tall, `.jpg`. |
-| `vlad-hero.mp4` | Scroll-scrubbed hero animation (optional) | The AI video made from your photo. H.264 `.mp4`, ~6–12s, muted. If missing, the site gracefully keeps the portrait with a Ken Burns zoom. |
+## To self-host
+Download each image, save it here, and swap the URL in `index.html`:
 
-## How the hero works
-- If `vlad-hero.mp4` loads, its playback is **scrubbed by scroll** — the frame you see is tied to your scroll position through the hero (the "transform on scroll" effect).
-- If only `vlad-portrait.jpg` exists, the portrait stays with a subtle parallax zoom.
+| Element in `index.html` | Suggested filename |
+|---|---|
+| `#heroImg` (hero background) | `hero.jpg` |
+| `.interlude__img` (full-bleed still) | `interlude.jpg` |
+| `#aboutPortrait` (About portrait) | `portrait.jpg` |
 
-Nothing else to configure — just add the files with these exact names.
+Also update the `og:image` meta tag at the top of `index.html`.
+
+## Selected Work
+The four project cards use styled gradient placeholders. When you have real
+film-still frames, drop them in and set them as the background of each
+`.project__media`.
