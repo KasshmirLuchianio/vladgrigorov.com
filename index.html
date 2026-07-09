@@ -108,43 +108,80 @@
     <div class="section-head">
       <span class="section-head__index">01</span>
       <h2 class="section-head__title" data-reveal>Selected Work</h2>
-      <p class="section-head__sub" data-reveal>Short films, spots and experiments — directed end to end with generative pipelines.</p>
+      <p class="section-head__sub" data-reveal>Music videos and commercial spots — directed, shot and cut.</p>
     </div>
 
     <div class="work__grid">
-      <article class="project" data-project>
-        <div class="project__media"><div class="project__ph project__ph--1"></div></div>
+      <article class="project" data-project data-yt="9l3zFDCcYqc" tabindex="0" role="button" aria-label="Play BRR by Kashmir Luchiano">
+        <div class="project__media">
+          <img class="project__thumb" loading="lazy" alt="Kashmir Luchiano — BRR"
+               src="https://img.youtube.com/vi/9l3zFDCcYqc/maxresdefault.jpg"
+               onerror="this.onerror=null;this.src='https://img.youtube.com/vi/9l3zFDCcYqc/hqdefault.jpg'" />
+          <span class="project__play" aria-hidden="true"></span>
+        </div>
         <div class="project__meta">
           <span class="project__num">01</span>
-          <h3 class="project__title">Amber Requiem</h3>
-          <span class="project__type">Short Film · 2025</span>
+          <h3 class="project__title">BRR</h3>
+          <span class="project__type">Music Video · Kashmir Luchiano · 2026</span>
         </div>
       </article>
 
-      <article class="project" data-project>
-        <div class="project__media"><div class="project__ph project__ph--2"></div></div>
+      <article class="project" data-project data-yt="N71k6MbbMSY" tabindex="0" role="button" aria-label="Play Ma Jolie by Kashmir Luchiano">
+        <div class="project__media">
+          <img class="project__thumb" loading="lazy" alt="Kashmir Luchiano — Ma Jolie"
+               src="https://img.youtube.com/vi/N71k6MbbMSY/maxresdefault.jpg"
+               onerror="this.onerror=null;this.src='https://img.youtube.com/vi/N71k6MbbMSY/hqdefault.jpg'" />
+          <span class="project__play" aria-hidden="true"></span>
+        </div>
         <div class="project__meta">
           <span class="project__num">02</span>
-          <h3 class="project__title">Ghost Signal</h3>
-          <span class="project__type">Music Video · 2025</span>
+          <h3 class="project__title">Ma Jolie</h3>
+          <span class="project__type">Music Video · Kashmir Luchiano · 2025</span>
         </div>
       </article>
+    </div>
 
-      <article class="project" data-project>
-        <div class="project__media"><div class="project__ph project__ph--3"></div></div>
+    <h3 class="work__subhead" data-reveal>Meetings.ro — Spots</h3>
+    <div class="work__shorts">
+      <article class="project project--short" data-project data-yt="8ajCsesQskk" data-short tabindex="0" role="button" aria-label="Play Meetings.ro spot one">
+        <div class="project__media">
+          <img class="project__thumb" loading="lazy" alt="Meetings.ro spot"
+               src="https://img.youtube.com/vi/8ajCsesQskk/maxresdefault.jpg"
+               onerror="this.onerror=null;this.src='https://img.youtube.com/vi/8ajCsesQskk/hqdefault.jpg'" />
+          <span class="project__play" aria-hidden="true"></span>
+        </div>
         <div class="project__meta">
           <span class="project__num">03</span>
-          <h3 class="project__title">Concrete Dreams</h3>
-          <span class="project__type">Brand Film · 2024</span>
+          <h3 class="project__title">Spot I</h3>
+          <span class="project__type">Meetings.ro Ad · 2026</span>
         </div>
       </article>
 
-      <article class="project" data-project>
-        <div class="project__media"><div class="project__ph project__ph--4"></div></div>
+      <article class="project project--short" data-project data-yt="eHqC55RmyXU" data-short tabindex="0" role="button" aria-label="Play Meetings.ro spot two">
+        <div class="project__media">
+          <img class="project__thumb" loading="lazy" alt="Meetings.ro spot"
+               src="https://img.youtube.com/vi/eHqC55RmyXU/maxresdefault.jpg"
+               onerror="this.onerror=null;this.src='https://img.youtube.com/vi/eHqC55RmyXU/hqdefault.jpg'" />
+          <span class="project__play" aria-hidden="true"></span>
+        </div>
         <div class="project__meta">
           <span class="project__num">04</span>
-          <h3 class="project__title">After the Fall</h3>
-          <span class="project__type">Experimental · 2024</span>
+          <h3 class="project__title">Spot II</h3>
+          <span class="project__type">Meetings.ro Ad · 2026</span>
+        </div>
+      </article>
+
+      <article class="project project--short" data-project data-yt="XL8gaRZOdhk" data-short tabindex="0" role="button" aria-label="Play Meetings.ro spot three">
+        <div class="project__media">
+          <img class="project__thumb" loading="lazy" alt="Meetings.ro spot"
+               src="https://img.youtube.com/vi/XL8gaRZOdhk/maxresdefault.jpg"
+               onerror="this.onerror=null;this.src='https://img.youtube.com/vi/XL8gaRZOdhk/hqdefault.jpg'" />
+          <span class="project__play" aria-hidden="true"></span>
+        </div>
+        <div class="project__meta">
+          <span class="project__num">05</span>
+          <h3 class="project__title">Spot III</h3>
+          <span class="project__type">Meetings.ro Ad · 2026</span>
         </div>
       </article>
     </div>
@@ -225,6 +262,15 @@
   </footer>
 
 </main>
+
+<!-- ============ VIDEO LIGHTBOX ============ -->
+<div class="vm" id="videoModal" aria-hidden="true">
+  <div class="vm__backdrop"></div>
+  <button class="vm__close" id="videoClose" aria-label="Close video">✕</button>
+  <div class="vm__frame-wrap">
+    <iframe id="videoFrame" title="Video player" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>

@@ -69,6 +69,46 @@
     });
   }
 
+  /* ---------- Video lightbox (YouTube) ---------- */
+  function initVideoLightbox(lenis) {
+    var modal = document.getElementById("videoModal");
+    var frame = document.getElementById("videoFrame");
+    var closeBtn = document.getElementById("videoClose");
+    if (!modal || !frame) return;
+
+    function open(id, isShort) {
+      frame.src = "https://www.youtube-nocookie.com/embed/" + id +
+        "?autoplay=1&rel=0&modestbranding=1&playsinline=1";
+      modal.classList.toggle("is-short", !!isShort);
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      if (lenis && lenis.stop) lenis.stop();
+    }
+    function close() {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      frame.src = "";
+      document.body.style.overflow = "";
+      if (lenis && lenis.start) lenis.start();
+    }
+
+    document.querySelectorAll("[data-yt]").forEach(function (el) {
+      function go(e) { e.preventDefault(); open(el.getAttribute("data-yt"), el.hasAttribute("data-short")); }
+      el.addEventListener("click", go);
+      el.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(e); }
+      });
+    });
+    if (closeBtn) closeBtn.addEventListener("click", close);
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal || e.target.classList.contains("vm__backdrop")) close();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && modal.classList.contains("is-open")) close();
+    });
+  }
+
   /* ---------- Animations ---------- */
   function initAnimations() {
     if (reduce || !hasGSAP || !window.ScrollTrigger) return;
@@ -137,6 +177,7 @@
   function boot() {
     var lenis = initSmoothScroll();
     wireAnchors(lenis);
+    initVideoLightbox(lenis);
     initAnimations();
     if (hasGSAP && window.ScrollTrigger) window.ScrollTrigger.refresh();
   }
