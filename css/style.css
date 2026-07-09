@@ -94,7 +94,7 @@ body::after {
 .nav__cta::after { display: none; }
 
 /* ---------- Hero ---------- */
-.hero { position: relative; height: 100vh; min-height: 640px; }
+.hero { position: relative; }
 .hero__pin {
   position: relative; height: 100vh; min-height: 640px; width: 100%; overflow: hidden;
   background: #060607;

@@ -143,7 +143,7 @@
 
       var tl = gsap.timeline({
         scrollTrigger: {
-          trigger: "#hero", start: "top top", end: "+=230%",
+          trigger: "#heroPin", start: "top top", end: "+=200%",
           pin: "#heroPin", scrub: 1, anticipatePin: 1,
           onUpdate: function (self) {
             if (video && video.readyState >= 1) {
