@@ -127,23 +127,36 @@
       var video = document.getElementById("heroVideo");
       if (!pin) return;
 
-      /* Let the video play natively (smooth); scroll only drives cheap transforms */
+      /* Single mechanic: scroll position drives the video's playhead.
+         No autoplay, no loop, no competing CSS zoom. */
+      var dur = 7;
       if (video) {
-        var pp = video.play && video.play();
-        if (pp && pp.catch) pp.catch(function () {});
+        video.pause();
+        video.addEventListener("loadedmetadata", function () { dur = video.duration || dur; });
+        video.addEventListener("loadeddata", function () {
+          try { video.currentTime = 0; } catch (e) {}
+        });
+        try { video.load(); } catch (e) {}
       }
 
       var tl = gsap.timeline({
         scrollTrigger: {
-          trigger: "#heroPin", start: "top top", end: "+=200%",
-          pin: "#heroPin", scrub: 1, anticipatePin: 1
+          trigger: "#heroPin", start: "top top", end: "+=280%",
+          pin: "#heroPin", scrub: 0.6, anticipatePin: 1,
+          onUpdate: function (self) {
+            if (video && video.readyState >= 2) {
+              var t = (video.duration || dur) * Math.min(self.progress, 0.999);
+              if (Math.abs(video.currentTime - t) > 0.008) {
+                try { video.currentTime = t; } catch (e) {}
+              }
+            }
+          }
         }
       });
-      tl.to("#heroMedia", { scale: 4.4, ease: "power2.in", duration: 1 }, 0)
-        .to("#heroContent", { opacity: 0, yPercent: -8, ease: "power1.in", duration: 0.26 }, 0)
-        .to("#heroScroll", { opacity: 0, duration: 0.1 }, 0)
-        .to("#heroEndcard", { opacity: 1, ease: "power2.in", duration: 0.5 }, 0.4)
-        .from(".hero__endcard-inner", { opacity: 0, y: 30, ease: "power2.out", duration: 0.3 }, 0.8);
+      tl.to("#heroContent", { opacity: 0, yPercent: -8, ease: "power1.in", duration: 0.2 }, 0)
+        .to("#heroScroll", { opacity: 0, duration: 0.08 }, 0)
+        .to("#heroEndcard", { opacity: 1, ease: "power1.in", duration: 0.22 }, 0.76)
+        .from(".hero__endcard-inner", { opacity: 0, y: 28, ease: "power2.out", duration: 0.3 }, 0.84);
     })();
 
     /* Interlude still: slow parallax drift (transform only) */
