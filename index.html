@@ -42,27 +42,36 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="hero">
-    <div class="hero__media" id="heroMedia">
-      <img class="hero__img" id="heroImg"
-           src="https://d8j0ntlcm91z4.cloudfront.net/user_33Ej8t2gAxUeQ3elHCepqWYPaUg/hf_20260708_132505_33f287b7-6707-4261-a0ca-565a1d7b3abd.png"
-           alt="Vlad Grigorov on set beside a cinema camera" />
-      <div class="hero__wash"></div>
-    </div>
+    <div class="hero__pin" id="heroPin">
+      <div class="hero__media" id="heroMedia">
+        <video class="hero__video" id="heroVideo" muted playsinline preload="auto"
+               poster="https://d8j0ntlcm91z4.cloudfront.net/user_33Ej8t2gAxUeQ3elHCepqWYPaUg/hf_20260708_132505_33f287b7-6707-4261-a0ca-565a1d7b3abd.png"></video>
+        <!-- hero push-in video source is added here once the render completes -->
+        <div class="hero__wash"></div>
+      </div>
 
-    <div class="hero__content">
-      <p class="hero__eyebrow" data-reveal>AI Filmmaker &middot; Director</p>
-      <h1 class="hero__title">
-        <span class="hero__line" data-reveal>VLAD</span>
-        <span class="hero__line hero__line--outline" data-reveal>GRIGOROV</span>
-      </h1>
-      <p class="hero__tagline" data-reveal>
-        I direct cinema from inside the machine — story, light and motion shaped with generative tools until the frame feels alive.
-      </p>
-    </div>
+      <div class="hero__content" id="heroContent">
+        <p class="hero__eyebrow" data-reveal>AI Filmmaker &middot; Director</p>
+        <h1 class="hero__title">
+          <span class="hero__line" data-reveal>VLAD</span>
+          <span class="hero__line hero__line--outline" data-reveal>GRIGOROV</span>
+        </h1>
+        <p class="hero__tagline" data-reveal>
+          I direct cinema from inside the machine — story, light and motion shaped with generative tools until the frame feels alive.
+        </p>
+      </div>
 
-    <div class="hero__scroll">
-      <span>Scroll</span>
-      <span class="hero__scroll-line"></span>
+      <div class="hero__endcard" id="heroEndcard" aria-hidden="true">
+        <div class="hero__endcard-inner">
+          <h2 class="hero__endcard-title">LET'S WORK<br />TOGETHER</h2>
+          <p class="hero__endcard-sub">Scroll to see my work</p>
+        </div>
+      </div>
+
+      <div class="hero__scroll" id="heroScroll">
+        <span>Scroll</span>
+        <span class="hero__scroll-line"></span>
+      </div>
     </div>
   </section>
 

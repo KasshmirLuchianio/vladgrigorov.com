@@ -121,11 +121,42 @@
       stagger: 0.09, delay: 0.15
     });
 
-    /* Hero image parallax + scale as you scroll past it */
-    gsap.to("#heroImg", {
-      yPercent: 16, scale: 1.16, ease: "none",
-      scrollTrigger: { trigger: "#hero", start: "top top", end: "bottom top", scrub: true }
-    });
+    /* Hero cinema: pin, scrub the push-in video, reveal the end card */
+    (function heroCinema() {
+      var pin = document.getElementById("heroPin");
+      var video = document.getElementById("heroVideo");
+      if (!pin) return;
+
+      var vdur = 8;
+      if (video) {
+        video.addEventListener("loadedmetadata", function () { vdur = video.duration || 8; });
+        var primed = false;
+        function prime() {
+          if (primed) return; primed = true;
+          var p = video.play();
+          if (p && p.then) p.then(function () { video.pause(); video.currentTime = 0; }).catch(function () {});
+          else { try { video.pause(); } catch (e) {} }
+        }
+        video.addEventListener("canplay", prime);
+        video.load();
+      }
+
+      var tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#hero", start: "top top", end: "+=230%",
+          pin: "#heroPin", scrub: 1, anticipatePin: 1,
+          onUpdate: function (self) {
+            if (video && video.readyState >= 1) {
+              try { video.currentTime = (video.duration || vdur) * self.progress; } catch (e) {}
+            }
+          }
+        }
+      });
+      tl.to("#heroContent", { opacity: 0, yPercent: -6, scale: 0.95, ease: "power1.in", duration: 0.3 }, 0)
+        .to("#heroScroll", { opacity: 0, duration: 0.12 }, 0)
+        .fromTo("#heroEndcard", { opacity: 0, scale: 1.22 }, { opacity: 1, scale: 1, ease: "power2.out", duration: 0.42 }, 0.58)
+        .from(".hero__endcard-inner", { opacity: 0, y: 26, ease: "power2.out", duration: 0.26 }, 0.72);
+    })();
 
     /* Interlude still: slow parallax drift (transform only) */
     gsap.to(".interlude__img", {
