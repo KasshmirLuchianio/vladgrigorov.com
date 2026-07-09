@@ -99,7 +99,10 @@ body::after {
   position: relative; height: 100vh; min-height: 640px; width: 100%; overflow: hidden;
   background: #060607;
 }
-.hero__media { position: absolute; inset: 0; z-index: 1; background: #060607; }
+.hero__media {
+  position: absolute; inset: 0; z-index: 1; background: #060607;
+  transform-origin: 66% 34%; will-change: transform; backface-visibility: hidden;
+}
 .hero__video, .hero__img {
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; object-position: 46% 16%; transform: scale(1.06);

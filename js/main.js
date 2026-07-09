@@ -127,35 +127,23 @@
       var video = document.getElementById("heroVideo");
       if (!pin) return;
 
-      var vdur = 8;
+      /* Let the video play natively (smooth); scroll only drives cheap transforms */
       if (video) {
-        video.addEventListener("loadedmetadata", function () { vdur = video.duration || 8; });
-        var primed = false;
-        function prime() {
-          if (primed) return; primed = true;
-          var p = video.play();
-          if (p && p.then) p.then(function () { video.pause(); video.currentTime = 0; }).catch(function () {});
-          else { try { video.pause(); } catch (e) {} }
-        }
-        video.addEventListener("canplay", prime);
-        video.load();
+        var pp = video.play && video.play();
+        if (pp && pp.catch) pp.catch(function () {});
       }
 
       var tl = gsap.timeline({
         scrollTrigger: {
           trigger: "#heroPin", start: "top top", end: "+=200%",
-          pin: "#heroPin", scrub: 1, anticipatePin: 1,
-          onUpdate: function (self) {
-            if (video && video.readyState >= 1) {
-              try { video.currentTime = (video.duration || vdur) * self.progress; } catch (e) {}
-            }
-          }
+          pin: "#heroPin", scrub: 1, anticipatePin: 1
         }
       });
-      tl.to("#heroContent", { opacity: 0, yPercent: -6, scale: 0.95, ease: "power1.in", duration: 0.3 }, 0)
+      tl.to("#heroMedia", { scale: 2.5, ease: "power1.in", duration: 1 }, 0)
+        .to("#heroContent", { opacity: 0, yPercent: -6, ease: "power1.in", duration: 0.32 }, 0)
         .to("#heroScroll", { opacity: 0, duration: 0.12 }, 0)
-        .fromTo("#heroEndcard", { opacity: 0, scale: 1.22 }, { opacity: 1, scale: 1, ease: "power2.out", duration: 0.42 }, 0.58)
-        .from(".hero__endcard-inner", { opacity: 0, y: 26, ease: "power2.out", duration: 0.26 }, 0.72);
+        .fromTo("#heroEndcard", { opacity: 0 }, { opacity: 1, ease: "power1.inOut", duration: 0.42 }, 0.6)
+        .from(".hero__endcard-inner", { opacity: 0, y: 28, ease: "power2.out", duration: 0.28 }, 0.74);
     })();
 
     /* Interlude still: slow parallax drift (transform only) */
