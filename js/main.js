@@ -139,11 +139,11 @@
           pin: "#heroPin", scrub: 1, anticipatePin: 1
         }
       });
-      tl.to("#heroMedia", { scale: 2.5, ease: "power1.in", duration: 1 }, 0)
-        .to("#heroContent", { opacity: 0, yPercent: -6, ease: "power1.in", duration: 0.32 }, 0)
-        .to("#heroScroll", { opacity: 0, duration: 0.12 }, 0)
-        .fromTo("#heroEndcard", { opacity: 0 }, { opacity: 1, ease: "power1.inOut", duration: 0.42 }, 0.6)
-        .from(".hero__endcard-inner", { opacity: 0, y: 28, ease: "power2.out", duration: 0.28 }, 0.74);
+      tl.to("#heroMedia", { scale: 4.4, ease: "power2.in", duration: 1 }, 0)
+        .to("#heroContent", { opacity: 0, yPercent: -8, ease: "power1.in", duration: 0.26 }, 0)
+        .to("#heroScroll", { opacity: 0, duration: 0.1 }, 0)
+        .to("#heroEndcard", { opacity: 1, ease: "power2.in", duration: 0.5 }, 0.4)
+        .from(".hero__endcard-inner", { opacity: 0, y: 30, ease: "power2.out", duration: 0.3 }, 0.8);
     })();
 
     /* Interlude still: slow parallax drift (transform only) */

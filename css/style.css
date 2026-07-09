@@ -24,7 +24,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; background: var(--bg); }
 
 body {
   background: var(--bg);
@@ -97,15 +97,15 @@ body::after {
 .hero { position: relative; }
 .hero__pin {
   position: relative; height: 100vh; min-height: 640px; width: 100%; overflow: hidden;
-  background: #060607;
+  background: #000;
 }
 .hero__media {
-  position: absolute; inset: 0; z-index: 1; background: #060607;
-  transform-origin: 66% 34%; will-change: transform; backface-visibility: hidden;
+  position: absolute; inset: 0; z-index: 1; background: #000;
+  transform-origin: 58% 40%; will-change: transform; backface-visibility: hidden;
 }
 .hero__video, .hero__img {
   position: absolute; inset: 0; width: 100%; height: 100%;
-  object-fit: cover; object-position: 46% 16%; transform: scale(1.06);
+  object-fit: cover; object-position: 46% 16%; transform: scale(1.1); background: #000;
   will-change: transform;
 }
 .hero__wash {
