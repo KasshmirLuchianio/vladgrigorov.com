@@ -1,0 +1,44 @@
+name: Re-encode hero video for scroll scrubbing
+
+# Re-encodes the hero MP4 as all-intra (a keyframe on every frame) so that
+# scroll-driven currentTime seeks are instant and perfectly smooth.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'assets/.reencode-request'
+
+jobs:
+  reencode:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Download source video
+        run: |
+          SRC_URL="$(head -n1 assets/.reencode-request | tr -d '[:space:]')"
+          echo "Source: $SRC_URL"
+          curl -fL --retry 3 -o /tmp/hero-src.mp4 "$SRC_URL"
+          ls -la /tmp/hero-src.mp4
+
+      - name: Re-encode all-intra (keyframe every frame)
+        run: |
+          ffmpeg -y -i /tmp/hero-src.mp4 -an \
+            -c:v libx264 -g 1 -keyint_min 1 -sc_threshold 0 \
+            -crf 24 -preset medium -pix_fmt yuv420p \
+            -movflags +faststart \
+            assets/hero-scrub.mp4
+          ls -la assets/
+
+      - name: Commit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/hero-scrub.mp4
+          git commit -m "Add all-intra hero scrub video (CI re-encode)"
+          git push
