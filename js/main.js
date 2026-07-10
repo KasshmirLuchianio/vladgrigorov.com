@@ -139,13 +139,20 @@
         try { video.load(); } catch (e) {}
       }
 
+      /* Phase A (0 → 65% of the pin): scroll scrubs the video to its last frame
+         (the monitor filling most of the frame).
+         Phase B (65% → 100%): a CSS zoom dives INTO the monitor's screen from the
+         frozen last frame — guaranteed to end inside the screen — while the black
+         card (with the yellow text) fades in over it. */
+      var VIDEO_PHASE = 0.65;
       var tl = gsap.timeline({
         scrollTrigger: {
-          trigger: "#heroPin", start: "top top", end: "+=280%",
+          trigger: "#heroPin", start: "top top", end: "+=300%",
           pin: "#heroPin", scrub: 0.6, anticipatePin: 1,
           onUpdate: function (self) {
             if (video && video.readyState >= 2) {
-              var t = (video.duration || dur) * Math.min(self.progress, 0.999);
+              var vp = Math.min(self.progress / VIDEO_PHASE, 1);
+              var t = (video.duration || dur) * Math.min(vp, 0.999);
               if (Math.abs(video.currentTime - t) > 0.008) {
                 try { video.currentTime = t; } catch (e) {}
               }
@@ -153,10 +160,11 @@
           }
         }
       });
-      tl.to("#heroContent", { opacity: 0, yPercent: -8, ease: "power1.in", duration: 0.2 }, 0)
+      tl.to("#heroContent", { opacity: 0, yPercent: -8, ease: "power1.in", duration: 0.15 }, 0)
         .to("#heroScroll", { opacity: 0, duration: 0.08 }, 0)
-        .to("#heroEndcard", { opacity: 1, ease: "power1.in", duration: 0.22 }, 0.76)
-        .from(".hero__endcard-inner", { opacity: 0, y: 28, ease: "power2.out", duration: 0.3 }, 0.84);
+        .to("#heroMedia", { scale: 5.5, ease: "power2.in", duration: 0.32 }, VIDEO_PHASE)
+        .to("#heroEndcard", { opacity: 1, ease: "power1.in", duration: 0.13 }, 0.84)
+        .from(".hero__endcard-inner", { opacity: 0, y: 28, ease: "power2.out", duration: 0.1 }, 0.9);
     })();
 
     /* Interlude still: slow parallax drift (transform only) */
