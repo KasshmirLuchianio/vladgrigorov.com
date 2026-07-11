@@ -413,9 +413,10 @@ body::after {
   .project__type { margin-left: 0; }
   .project__meta { flex-wrap: wrap; }
 
-  /* Hero: centered composition on mobile */
+  /* Hero: dead-center composition on mobile */
   .hero__content {
-    left: 0; right: 0; bottom: 9vh; max-width: none;
+    left: 0; right: 0; top: 0; bottom: 0; max-width: none;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
     padding: 0 1.25rem; text-align: center;
   }
   .hero__eyebrow { letter-spacing: 0.24em; font-size: 0.72rem; margin-bottom: 1rem; }
