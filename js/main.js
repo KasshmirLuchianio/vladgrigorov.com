@@ -215,6 +215,35 @@
     gsap.from("#nav", { y: -30, opacity: 0, duration: 0.8, ease: "power3.out", delay: 0.4 });
   }
 
+  /* ---------- Force autoplay on iOS Safari (never leave a video paused —
+     a paused <video> is what triggers WebKit's big native play button) ---------- */
+  function initAutoplayVideos() {
+    var vids = document.querySelectorAll("video[autoplay]");
+    if (!vids.length) return;
+
+    function tryPlayAll() {
+      vids.forEach(function (v) {
+        if (v.paused) {
+          var p = v.play();
+          if (p && p.catch) p.catch(function () {});
+        }
+      });
+    }
+    tryPlayAll();
+    vids.forEach(function (v) {
+      v.addEventListener("loadeddata", tryPlayAll);
+      v.addEventListener("canplay", tryPlayAll);
+      v.addEventListener("pause", function () {
+        setTimeout(function () { if (v.paused) tryPlayAll(); }, 50);
+      });
+    });
+    /* iOS can block autoplay entirely (Settings > Safari > Auto-Play: Off) —
+       the first touch/scroll/click anywhere is a user gesture that unlocks it. */
+    ["touchstart", "scroll", "click"].forEach(function (evt) {
+      document.addEventListener(evt, tryPlayAll, { once: true, passive: true });
+    });
+  }
+
   /* ---------- Boot ---------- */
   if (document.getElementById("year")) {
     document.getElementById("year").textContent = new Date().getFullYear();
@@ -224,6 +253,7 @@
     var lenis = initSmoothScroll();
     wireAnchors(lenis);
     initVideoLightbox(lenis);
+    initAutoplayVideos();
     initAnimations();
     if (hasGSAP && window.ScrollTrigger) window.ScrollTrigger.refresh();
   }

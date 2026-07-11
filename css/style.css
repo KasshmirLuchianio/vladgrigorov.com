@@ -26,6 +26,16 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; background: var(--bg); }
 
+/* Suppress Safari/iOS's native big play-button overlay on autoplaying/
+   scroll-driven videos — we control playback ourselves via JS. */
+video::-webkit-media-controls,
+video::-webkit-media-controls-start-playback-button,
+video::-webkit-media-controls-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+  pointer-events: none;
+}
+
 body {
   background: var(--bg);
   color: var(--ink);
