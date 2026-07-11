@@ -412,6 +412,29 @@ body::after {
   .hero__scroll { display: none; }
   .project__type { margin-left: 0; }
   .project__meta { flex-wrap: wrap; }
+
+  /* Hero: centered composition on mobile */
+  .hero__content {
+    left: 0; right: 0; bottom: 9vh; max-width: none;
+    padding: 0 1.25rem; text-align: center;
+  }
+  .hero__eyebrow { letter-spacing: 0.24em; font-size: 0.72rem; margin-bottom: 1rem; }
+  .hero__title { font-size: clamp(3.6rem, 17.5vw, 7rem); line-height: 0.92; }
+  .hero__tagline {
+    margin: 1.2rem auto 0; max-width: 30ch; font-size: 0.98rem; opacity: 0.9;
+  }
+  .hero__endcard-title { font-size: clamp(3rem, 14vw, 6rem); }
+  .hero__endcard-sub { letter-spacing: 0.22em; }
+
+  /* Tighter rhythm on small screens */
+  .manifesto { padding-block: 5.5rem; }
+  .manifesto__text { font-size: clamp(1.7rem, 7.6vw, 3rem); }
+  .section-head__title { font-size: clamp(2.6rem, 11vw, 4rem); }
+  .work__subhead { font-size: clamp(1.5rem, 6.5vw, 2rem); }
+  .about__stats { flex-wrap: wrap; gap: 1.6rem 2.2rem; }
+  .contact__title { font-size: clamp(3.2rem, 15vw, 6rem); }
+  .contact__email { font-size: clamp(1.05rem, 5vw, 1.4rem); }
+  .footer { justify-content: center; text-align: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
