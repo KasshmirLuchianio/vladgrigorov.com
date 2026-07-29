@@ -258,5 +258,14 @@
     if (hasGSAP && window.ScrollTrigger) window.ScrollTrigger.refresh();
   }
 
-  window.addEventListener("load", function () { runPreloader(boot); });
+  /* Boot on DOM-ready, not window "load" — "load" waits for every byte of
+     every video/image to finish downloading, which can stall the whole site
+     behind one large or slow-to-serve file. Videos stream in progressively
+     (poster shows immediately) so there is nothing to gain by waiting. */
+  function start() { runPreloader(boot); }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", start);
+  } else {
+    start();
+  }
 })();
