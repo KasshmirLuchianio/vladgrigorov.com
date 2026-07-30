@@ -255,7 +255,19 @@
     initVideoLightbox(lenis);
     initAutoplayVideos();
     initAnimations();
-    if (hasGSAP && window.ScrollTrigger) window.ScrollTrigger.refresh();
+    if (hasGSAP && window.ScrollTrigger) {
+      window.ScrollTrigger.refresh();
+      /* Booting on DOMContentLoaded (see below) means web fonts may still be
+         swapping in when ScrollTrigger first measures the page. A late font
+         swap reflows text height and desyncs every pinned/scrubbed position
+         computed before it. Re-measure, without blocking anything, once
+         fonts actually settle (and once more after full load as a safety
+         net for images/video posters affecting layout). */
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(function () { window.ScrollTrigger.refresh(); });
+      }
+      window.addEventListener("load", function () { window.ScrollTrigger.refresh(); });
+    }
   }
 
   /* Boot on DOM-ready, not window "load" — "load" waits for every byte of

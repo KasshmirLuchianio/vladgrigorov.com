@@ -413,6 +413,10 @@ body::after {
   .channel__stats, .channel__tags { justify-content: flex-start; max-width: none; }
 }
 @media (max-width: 860px) {
+  /* Shift the hero crop right so the camera monitor is the focal point
+     instead of the arm/robe on the left of the frame. */
+  .hero__video, .hero__img { object-position: 74% 22%; }
+
   .nav__links { gap: 1.1rem; }
   .nav__links a:not(.nav__cta) { display: none; }
   .work__grid { grid-template-columns: 1fr; }
