@@ -415,7 +415,7 @@ body::after {
 @media (max-width: 860px) {
   /* Shift the hero crop right so the camera monitor is the focal point
      instead of the arm/robe on the left of the frame. */
-  .hero__video, .hero__img { object-position: 74% 22%; }
+  .hero__video, .hero__img { object-position: 60% 20%; }
 
   .nav__links { gap: 1.1rem; }
   .nav__links a:not(.nav__cta) { display: none; }
