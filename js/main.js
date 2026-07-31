@@ -134,7 +134,7 @@
 
       var tl = gsap.timeline({
         scrollTrigger: {
-          trigger: "#heroPin", start: "top top", end: "+=460%",
+          trigger: "#heroPin", start: "top top", end: "+=620%",
           pin: "#heroPin", scrub: 1, anticipatePin: 1
         }
       });
@@ -146,17 +146,35 @@
         .fromTo("#heroImg", { filter: "blur(0px)" },
                 { filter: "blur(7px)", ease: "power3.in", duration: 0.4 }, 0.58);
 
-      /* Narrative beats play like title cards across the dive, each one
-         holding long enough to be read before the next takes over. */
+      /* Narrative beats play like title cards across the dive. Each line rises
+         out of its own mask on a stagger, holds long enough to actually be
+         read, then lifts away — the exit blurs so it feels like a dissolve
+         rather than a switch. */
       gsap.utils.toArray("[data-beat]").forEach(function (beat, i) {
-        var start = [0.13, 0.36, 0.59][i];
-        tl.fromTo(beat, { opacity: 0, y: 26 },
-                  { opacity: 1, y: 0, ease: "power2.out", duration: 0.06 }, start)
-          .to(beat, { opacity: 0, y: -26, ease: "power2.in", duration: 0.05 }, start + 0.15);
+        var IN = [0.12, 0.38, 0.64][i];
+        var OUT = IN + 0.185;
+        var lines = beat.querySelectorAll("[data-mask]");
+
+        tl.set(beat, { opacity: 1 }, IN)
+          .fromTo(lines,
+                  { yPercent: 118 },
+                  { yPercent: 0, ease: "power3.out", duration: 0.075, stagger: 0.018 }, IN)
+          .fromTo(beat, { filter: "blur(8px)" },
+                  { filter: "blur(0px)", ease: "power2.out", duration: 0.05 }, IN)
+          .to(lines, { yPercent: -118, ease: "power2.in", duration: 0.05, stagger: 0.012 }, OUT)
+          .to(beat, { opacity: 0, filter: "blur(8px)", ease: "power2.in", duration: 0.045 }, OUT + 0.012);
       });
 
-      tl.to("#heroEndcard", { opacity: 1, ease: "power1.inOut", duration: 0.2 }, 0.8)
-        .from(".hero__endcard-inner", { opacity: 0, y: 28, ease: "power2.out", duration: 0.12 }, 0.88);
+      /* Chapter rail: fades in with the first beat, each segment filling as
+         its beat plays, so the sequence reads as three deliberate chapters. */
+      tl.to("#heroRail", { opacity: 1, ease: "power2.out", duration: 0.04 }, 0.12);
+      gsap.utils.toArray("#heroRail i").forEach(function (fill, i) {
+        tl.to(fill, { scaleY: 1, ease: "none", duration: 0.2 }, [0.12, 0.38, 0.64][i]);
+      });
+      tl.to("#heroRail", { opacity: 0, ease: "power2.in", duration: 0.04 }, 0.86);
+
+      tl.to("#heroEndcard", { opacity: 1, ease: "power1.inOut", duration: 0.09 }, 0.88)
+        .from(".hero__endcard-inner", { opacity: 0, y: 30, ease: "power3.out", duration: 0.06 }, 0.93);
 
       /* ---- Zoom-target calibrator ----------------------------------------
          Open the site with ?tune=1 and click directly on the camera's monitor.

@@ -151,12 +151,33 @@ body::after {
 .hero__beat-title {
   font-family: var(--font-display); text-transform: uppercase; color: var(--amber);
   font-size: clamp(2.4rem, 7vw, 5.5rem); line-height: 0.92; letter-spacing: 0.01em;
-  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.9), 0 0 70px rgba(232, 162, 76, 0.25);
+  text-shadow: 0 3px 16px rgba(0, 0, 0, 0.9);
 }
 .hero__beat-line {
-  margin: 1.3rem auto 0; max-width: 44ch; color: #efece7;
+  margin: 1.4rem auto 0; max-width: 44ch; color: #efece7;
   font-size: clamp(1rem, 1.6vw, 1.25rem); line-height: 1.55;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.85);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95);
+}
+/* line masks — each line rises out from behind its own clipped edge */
+.hero__beat .mask {
+  display: block; overflow: hidden;
+  padding: 0.14em 0.06em; margin: -0.14em -0.06em;
+}
+.hero__beat [data-mask] { display: block; will-change: transform; }
+
+/* chapter rail — three segments that fill as each beat plays */
+.hero__rail {
+  position: absolute; left: var(--pad); top: 50%; transform: translateY(-50%);
+  z-index: 5; display: flex; flex-direction: column; gap: 10px; opacity: 0;
+  pointer-events: none;
+}
+.hero__rail-seg {
+  display: block; width: 2px; height: 40px; overflow: hidden;
+  background: rgba(242, 237, 228, 0.2);
+}
+.hero__rail-seg i {
+  display: block; width: 100%; height: 100%; background: var(--amber);
+  transform: scaleY(0); transform-origin: top;
 }
 .hero__endcard {
   position: absolute; inset: 0; z-index: 6; display: grid; place-items: center;
@@ -473,6 +494,7 @@ body::after {
   .hero__endcard-sub { letter-spacing: 0.22em; }
   .hero__beat-title { font-size: clamp(2.2rem, 11vw, 3.6rem); }
   .hero__beat-line { font-size: 0.98rem; max-width: 32ch; }
+  .hero__rail { display: none; }
 
   /* Tighter rhythm on small screens */
   .manifesto { padding-block: 5.5rem; }
