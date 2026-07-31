@@ -129,7 +129,8 @@
        softness at the far end of the zoom. */
     (function heroCinema() {
       var pin = document.getElementById("heroPin");
-      if (!pin) return;
+      var media = document.getElementById("heroMedia");
+      if (!pin || !media) return;
 
       var tl = gsap.timeline({
         scrollTrigger: {
@@ -139,10 +140,45 @@
       });
       tl.to("#heroContent", { opacity: 0, yPercent: -8, ease: "power1.in", duration: 0.16 }, 0)
         .to("#heroScroll", { opacity: 0, duration: 0.08 }, 0)
-        /* accelerating dive — reads as flying into the screen, not a flat zoom */
-        .to("#heroMedia", { scale: 7, ease: "power2.in", duration: 1 }, 0)
+        /* hard-accelerating dive — reads as flying in, not a flat linear zoom */
+        .to("#heroMedia", { scale: 9, ease: "power3.in", duration: 1 }, 0)
+        /* a touch of blur at the deep end sells the speed and hides softness */
+        .fromTo("#heroImg", { filter: "blur(0px)" },
+                { filter: "blur(6px)", ease: "power3.in", duration: 0.45 }, 0.55)
         .to("#heroEndcard", { opacity: 1, ease: "power1.inOut", duration: 0.26 }, 0.62)
         .from(".hero__endcard-inner", { opacity: 0, y: 28, ease: "power2.out", duration: 0.16 }, 0.8);
+
+      /* ---- Zoom-target calibrator ----------------------------------------
+         Open the site with ?tune=1 and click directly on the camera's monitor.
+         The dive re-targets live and the exact percentages are shown, so the
+         focal point can be set by eye instead of guessed. Invisible to normal
+         visitors — nothing below runs without the flag. */
+      if (!/[?&]tune=1\b/.test(window.location.search)) return;
+
+      var hud = document.createElement("div");
+      hud.style.cssText = "position:fixed;left:50%;top:16px;transform:translateX(-50%);" +
+        "z-index:9999;background:#000;color:#E8A24C;font:600 14px/1.5 monospace;" +
+        "padding:10px 16px;border:1px solid #E8A24C;border-radius:6px;text-align:center;" +
+        "pointer-events:none;white-space:pre";
+      hud.textContent = "TUNE MODE\nclick the camera monitor";
+      document.body.appendChild(hud);
+
+      var dot = document.createElement("div");
+      dot.style.cssText = "position:absolute;width:18px;height:18px;margin:-9px 0 0 -9px;" +
+        "border:2px solid #E8A24C;border-radius:50%;z-index:9998;pointer-events:none;display:none";
+      media.appendChild(dot);
+
+      pin.addEventListener("click", function (e) {
+        var r = media.getBoundingClientRect();
+        var x = ((e.clientX - r.left) / r.width) * 100;
+        var y = ((e.clientY - r.top) / r.height) * 100;
+        media.style.setProperty("--hero-zoom-x", x.toFixed(1) + "%");
+        media.style.setProperty("--hero-zoom-y", y.toFixed(1) + "%");
+        dot.style.display = "block";
+        dot.style.left = x + "%";
+        dot.style.top = y + "%";
+        hud.textContent = "--hero-zoom-x: " + x.toFixed(1) + "%\n--hero-zoom-y: " + y.toFixed(1) + "%";
+      });
     })();
 
     /* Interlude still: slow parallax drift (transform only) */
