@@ -121,56 +121,28 @@
       stagger: 0.09, delay: 0.15
     });
 
-    /* Hero cinema: pin, scrub the push-in video, reveal the end card */
+    /* Hero cinema: pin the frame, dive into the camera's monitor, reveal the
+       end card. The still image is the source now — scroll drives a pure GPU
+       transform (scale about the monitor's position, set as transform-origin
+       in CSS), so the motion is frame-perfect at any scroll speed. The black
+       card rises as the dive goes deep, which is also what hides the pixel
+       softness at the far end of the zoom. */
     (function heroCinema() {
       var pin = document.getElementById("heroPin");
-      var video = document.getElementById("heroVideo");
       if (!pin) return;
 
-      /* Single mechanic: scroll drives the video's playhead through a DAMPED
-         follower (lerp) — the playhead glides toward the scroll target instead
-         of jumping, which removes the harsh stepping. */
-      var dur = 12;
-      var targetT = 0;
-      if (video) {
-        video.pause();
-        video.addEventListener("loadedmetadata", function () { dur = video.duration || dur; });
-        video.addEventListener("loadeddata", function () {
-          try { video.currentTime = 0; } catch (e) {}
-        });
-        try { video.load(); } catch (e) {}
-
-        /* Smooth follower: every tick, ease the playhead toward the target */
-        gsap.ticker.add(function () {
-          if (video.readyState < 2) return;
-          var cur = video.currentTime;
-          var next = cur + (targetT - cur) * 0.12;
-          if (Math.abs(next - cur) > 0.003) {
-            try { video.currentTime = next; } catch (e) {}
-          }
-        });
-      }
-
-      /* Phase A (0 → 82%): the 12s footage itself performs the entire move —
-         push-in that enters the camera's screen and ends on black.
-         Phase B (82% → 100%): a gentle CSS dive as an invisible safety net
-         (zooming into black) while the end-card text fades in. */
-      var VIDEO_PHASE = 0.82;
       var tl = gsap.timeline({
         scrollTrigger: {
-          trigger: "#heroPin", start: "top top", end: "+=340%",
-          pin: "#heroPin", scrub: 1, anticipatePin: 1,
-          onUpdate: function (self) {
-            var vp = Math.min(self.progress / VIDEO_PHASE, 1);
-            targetT = (video && (video.duration || dur) || dur) * Math.min(vp, 0.998);
-          }
+          trigger: "#heroPin", start: "top top", end: "+=320%",
+          pin: "#heroPin", scrub: 1, anticipatePin: 1
         }
       });
-      tl.to("#heroContent", { opacity: 0, yPercent: -8, ease: "power1.in", duration: 0.14 }, 0)
+      tl.to("#heroContent", { opacity: 0, yPercent: -8, ease: "power1.in", duration: 0.16 }, 0)
         .to("#heroScroll", { opacity: 0, duration: 0.08 }, 0)
-        .to("#heroMedia", { scale: 3, ease: "power2.in", duration: 0.2 }, 0.8)
-        .to("#heroEndcard", { opacity: 1, ease: "power1.inOut", duration: 0.12 }, 0.85)
-        .from(".hero__endcard-inner", { opacity: 0, y: 26, ease: "power2.out", duration: 0.09 }, 0.9);
+        /* accelerating dive — reads as flying into the screen, not a flat zoom */
+        .to("#heroMedia", { scale: 7, ease: "power2.in", duration: 1 }, 0)
+        .to("#heroEndcard", { opacity: 1, ease: "power1.inOut", duration: 0.26 }, 0.62)
+        .from(".hero__endcard-inner", { opacity: 0, y: 28, ease: "power2.out", duration: 0.16 }, 0.8);
     })();
 
     /* Interlude still: slow parallax drift (transform only) */
