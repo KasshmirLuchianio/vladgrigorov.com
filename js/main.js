@@ -121,35 +121,30 @@
       stagger: 0.09, delay: 0.15
     });
 
-    /* Hero cinema: pin the frame, dive into the camera's monitor, reveal the
-       end card. The still image is the source now — scroll drives a pure GPU
-       transform (scale about the monitor's position, set as transform-origin
-       in CSS), so the motion is frame-perfect at any scroll speed. The black
-       card rises as the dive goes deep, which is also what hides the pixel
-       softness at the far end of the zoom. */
+    /* Hero cinema: a held frame with a slow drift, three narrative beats, and
+       a fade to black. Deliberately NOT a fake camera move — scaling a still
+       has no parallax and no perspective, so pretending to fly into the
+       monitor always read as unfinished. A steady Ken Burns drift is honest
+       about being a photograph and lands as an intentional held shot. The
+       filmed push-in comes back when the hero is a real clip again. */
     (function heroCinema() {
       var pin = document.getElementById("heroPin");
-      var media = document.getElementById("heroMedia");
-      if (!pin || !media) return;
+      if (!pin) return;
 
       var tl = gsap.timeline({
         scrollTrigger: {
-          trigger: "#heroPin", start: "top top", end: "+=620%",
+          trigger: "#heroPin", start: "top top", end: "+=540%",
           pin: "#heroPin", scrub: 1, anticipatePin: 1
         }
       });
       tl.to("#heroContent", { opacity: 0, yPercent: -8, ease: "power1.in", duration: 0.10 }, 0)
         .to("#heroScroll", { opacity: 0, duration: 0.06 }, 0)
-        /* hard-accelerating dive — reads as flying in, not a flat linear zoom */
-        .to("#heroMedia", { scale: 9, ease: "power3.in", duration: 1 }, 0)
-        /* a touch of blur at the deep end sells the speed and hides softness */
-        .fromTo("#heroImg", { filter: "blur(0px)" },
-                { filter: "blur(7px)", ease: "power3.in", duration: 0.4 }, 0.58);
+        /* steady, unaccelerated drift — a held shot breathing, not a zoom */
+        .to("#heroMedia", { scale: 1.22, ease: "none", duration: 1 }, 0);
 
-      /* Narrative beats play like title cards across the dive. Each line rises
-         out of its own mask on a stagger, holds long enough to actually be
-         read, then lifts away — the exit blurs so it feels like a dissolve
-         rather than a switch. */
+      /* Narrative beats play like title cards over the held frame. Each line
+         rises out of its own mask on a stagger, holds long enough to actually
+         be read, then lifts away through a blur dissolve. */
       gsap.utils.toArray("[data-beat]").forEach(function (beat, i) {
         var IN = [0.12, 0.38, 0.64][i];
         var OUT = IN + 0.185;
@@ -171,42 +166,12 @@
       gsap.utils.toArray("#heroRail i").forEach(function (fill, i) {
         tl.to(fill, { scaleY: 1, ease: "none", duration: 0.2 }, [0.12, 0.38, 0.64][i]);
       });
-      tl.to("#heroRail", { opacity: 0, ease: "power2.in", duration: 0.04 }, 0.86);
+      tl.to("#heroRail", { opacity: 0, ease: "power2.in", duration: 0.04 }, 0.85);
 
-      tl.to("#heroEndcard", { opacity: 1, ease: "power1.inOut", duration: 0.09 }, 0.88)
-        .from(".hero__endcard-inner", { opacity: 0, y: 30, ease: "power3.out", duration: 0.06 }, 0.93);
-
-      /* ---- Zoom-target calibrator ----------------------------------------
-         Open the site with ?tune=1 and click directly on the camera's monitor.
-         The dive re-targets live and the exact percentages are shown, so the
-         focal point can be set by eye instead of guessed. Invisible to normal
-         visitors — nothing below runs without the flag. */
-      if (!/[?&]tune=1\b/.test(window.location.search)) return;
-
-      var hud = document.createElement("div");
-      hud.style.cssText = "position:fixed;left:50%;top:16px;transform:translateX(-50%);" +
-        "z-index:9999;background:#000;color:#E8A24C;font:600 14px/1.5 monospace;" +
-        "padding:10px 16px;border:1px solid #E8A24C;border-radius:6px;text-align:center;" +
-        "pointer-events:none;white-space:pre";
-      hud.textContent = "TUNE MODE\nclick the camera monitor";
-      document.body.appendChild(hud);
-
-      var dot = document.createElement("div");
-      dot.style.cssText = "position:absolute;width:18px;height:18px;margin:-9px 0 0 -9px;" +
-        "border:2px solid #E8A24C;border-radius:50%;z-index:9998;pointer-events:none;display:none";
-      media.appendChild(dot);
-
-      pin.addEventListener("click", function (e) {
-        var r = media.getBoundingClientRect();
-        var x = ((e.clientX - r.left) / r.width) * 100;
-        var y = ((e.clientY - r.top) / r.height) * 100;
-        media.style.setProperty("--hero-zoom-x", x.toFixed(1) + "%");
-        media.style.setProperty("--hero-zoom-y", y.toFixed(1) + "%");
-        dot.style.display = "block";
-        dot.style.left = x + "%";
-        dot.style.top = y + "%";
-        hud.textContent = "--hero-zoom-x: " + x.toFixed(1) + "%\n--hero-zoom-y: " + y.toFixed(1) + "%";
-      });
+      /* Slow dissolve to black, then the closing card — a sequence ending on
+         a title card, rather than a zoom that had to stop somewhere. */
+      tl.to("#heroEndcard", { opacity: 1, ease: "power1.inOut", duration: 0.14 }, 0.84)
+        .from(".hero__endcard-inner", { opacity: 0, y: 30, ease: "power3.out", duration: 0.07 }, 0.92);
     })();
 
     /* Interlude still: slow parallax drift (transform only) */
