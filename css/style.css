@@ -140,22 +140,33 @@ body::after {
   padding: var(--pad); pointer-events: none;
 }
 .hero__beat {
-  grid-area: 1 / 1; max-width: 44rem; text-align: center; opacity: 0;
-  will-change: transform, opacity;
+  grid-area: 1 / 1; position: relative; max-width: 44rem;
+  text-align: center; opacity: 0; will-change: transform, opacity;
+}
+/* soft scrim so the type never has to fight a bright frame on its own */
+.hero__beat::before {
+  content: ""; position: absolute; inset: -18% -22%; z-index: -1;
+  background: radial-gradient(58% 54% at 50% 50%, rgba(4, 5, 6, 0.72), rgba(4, 5, 6, 0) 72%);
 }
 .hero__beat-index {
   display: block; font-family: var(--font-head); text-transform: uppercase;
   letter-spacing: 0.4em; font-size: 0.72rem; color: var(--amber); margin-bottom: 1.1rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 0 3px rgba(0, 0, 0, 0.9);
 }
 .hero__beat-title {
   font-family: var(--font-display); text-transform: uppercase;
   font-size: clamp(2.4rem, 7vw, 5.5rem); line-height: 0.92; letter-spacing: 0.01em;
-  text-shadow: 0 4px 40px rgba(4, 5, 6, 0.75);
+  /* stroke painted behind the fill, so the letterforms keep their weight */
+  -webkit-text-stroke: 4px #05070a;
+  paint-order: stroke fill;
+  text-shadow: 0 6px 34px rgba(0, 0, 0, 0.85), 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 .hero__beat-line {
-  margin: 1.3rem auto 0; max-width: 44ch; color: #ddd8d0;
+  margin: 1.3rem auto 0; max-width: 44ch; color: #efece7;
   font-size: clamp(1rem, 1.6vw, 1.25rem); line-height: 1.55;
-  text-shadow: 0 2px 24px rgba(4, 5, 6, 0.8);
+  -webkit-text-stroke: 0.8px rgba(5, 7, 10, 0.95);
+  paint-order: stroke fill;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95), 0 1px 3px rgba(0, 0, 0, 0.9);
 }
 .hero__endcard {
   position: absolute; inset: 0; z-index: 6; display: grid; place-items: center;
@@ -177,11 +188,16 @@ body::after {
 .hero__title {
   font-family: var(--font-display); line-height: 0.9; letter-spacing: 0.01em;
   font-size: clamp(3.2rem, 13.5vw, 14rem); text-transform: uppercase;
-  text-shadow: 0 2px 40px rgba(4,5,6,0.5);
+  -webkit-text-stroke: 4px #05070a;
+  paint-order: stroke fill;
+  text-shadow: 0 6px 40px rgba(0, 0, 0, 0.8), 0 2px 8px rgba(0, 0, 0, 0.65);
 }
 .hero__line { display: block; }
 .hero__line--outline {
-  color: transparent; -webkit-text-stroke: 1.5px var(--ink); text-stroke: 1.5px var(--ink);
+  color: transparent;
+  -webkit-text-stroke: 2px var(--ink); text-stroke: 2px var(--ink);
+  paint-order: fill stroke;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 22px rgba(0, 0, 0, 0.75));
 }
 .hero__tagline {
   max-width: 40ch; margin-top: 1.6rem; font-size: clamp(1rem, 1.5vw, 1.3rem);
@@ -467,9 +483,10 @@ body::after {
   }
   .hero__endcard-title { font-size: clamp(3rem, 14vw, 6rem); }
   .hero__endcard-sub { letter-spacing: 0.22em; }
-  .hero__beat-title { font-size: clamp(2.2rem, 11vw, 3.6rem); }
-  .hero__beat-line { font-size: 0.98rem; max-width: 32ch; }
+  .hero__beat-title { font-size: clamp(2.2rem, 11vw, 3.6rem); -webkit-text-stroke-width: 2.5px; }
+  .hero__beat-line { font-size: 0.98rem; max-width: 32ch; -webkit-text-stroke-width: 0.6px; }
   .hero__beat-index { letter-spacing: 0.3em; margin-bottom: 0.9rem; }
+  .hero__title { -webkit-text-stroke-width: 2.5px; }
 
   /* Tighter rhythm on small screens */
   .manifesto { padding-block: 5.5rem; }
