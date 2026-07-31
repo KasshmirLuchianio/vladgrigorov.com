@@ -134,6 +134,29 @@ body::after {
   position: absolute; left: 0; bottom: 0; z-index: 3;
   padding: var(--pad); max-width: 1400px;
 }
+/* Scroll-staged narrative beats that play over the dive */
+.hero__beats {
+  position: absolute; inset: 0; z-index: 5; display: grid; place-items: center;
+  padding: var(--pad); pointer-events: none;
+}
+.hero__beat {
+  grid-area: 1 / 1; max-width: 44rem; text-align: center; opacity: 0;
+  will-change: transform, opacity;
+}
+.hero__beat-index {
+  display: block; font-family: var(--font-head); text-transform: uppercase;
+  letter-spacing: 0.4em; font-size: 0.72rem; color: var(--amber); margin-bottom: 1.1rem;
+}
+.hero__beat-title {
+  font-family: var(--font-display); text-transform: uppercase;
+  font-size: clamp(2.4rem, 7vw, 5.5rem); line-height: 0.92; letter-spacing: 0.01em;
+  text-shadow: 0 4px 40px rgba(4, 5, 6, 0.75);
+}
+.hero__beat-line {
+  margin: 1.3rem auto 0; max-width: 44ch; color: #ddd8d0;
+  font-size: clamp(1rem, 1.6vw, 1.25rem); line-height: 1.55;
+  text-shadow: 0 2px 24px rgba(4, 5, 6, 0.8);
+}
 .hero__endcard {
   position: absolute; inset: 0; z-index: 6; display: grid; place-items: center;
   background: #040404; opacity: 0; text-align: center; padding: var(--pad);
@@ -444,6 +467,9 @@ body::after {
   }
   .hero__endcard-title { font-size: clamp(3rem, 14vw, 6rem); }
   .hero__endcard-sub { letter-spacing: 0.22em; }
+  .hero__beat-title { font-size: clamp(2.2rem, 11vw, 3.6rem); }
+  .hero__beat-line { font-size: 0.98rem; max-width: 32ch; }
+  .hero__beat-index { letter-spacing: 0.3em; margin-bottom: 0.9rem; }
 
   /* Tighter rhythm on small screens */
   .manifesto { padding-block: 5.5rem; }

@@ -134,19 +134,29 @@
 
       var tl = gsap.timeline({
         scrollTrigger: {
-          trigger: "#heroPin", start: "top top", end: "+=320%",
+          trigger: "#heroPin", start: "top top", end: "+=460%",
           pin: "#heroPin", scrub: 1, anticipatePin: 1
         }
       });
-      tl.to("#heroContent", { opacity: 0, yPercent: -8, ease: "power1.in", duration: 0.16 }, 0)
-        .to("#heroScroll", { opacity: 0, duration: 0.08 }, 0)
+      tl.to("#heroContent", { opacity: 0, yPercent: -8, ease: "power1.in", duration: 0.10 }, 0)
+        .to("#heroScroll", { opacity: 0, duration: 0.06 }, 0)
         /* hard-accelerating dive — reads as flying in, not a flat linear zoom */
         .to("#heroMedia", { scale: 9, ease: "power3.in", duration: 1 }, 0)
         /* a touch of blur at the deep end sells the speed and hides softness */
         .fromTo("#heroImg", { filter: "blur(0px)" },
-                { filter: "blur(6px)", ease: "power3.in", duration: 0.45 }, 0.55)
-        .to("#heroEndcard", { opacity: 1, ease: "power1.inOut", duration: 0.26 }, 0.62)
-        .from(".hero__endcard-inner", { opacity: 0, y: 28, ease: "power2.out", duration: 0.16 }, 0.8);
+                { filter: "blur(7px)", ease: "power3.in", duration: 0.4 }, 0.58);
+
+      /* Narrative beats play like title cards across the dive, each one
+         holding long enough to be read before the next takes over. */
+      gsap.utils.toArray("[data-beat]").forEach(function (beat, i) {
+        var start = [0.13, 0.36, 0.59][i];
+        tl.fromTo(beat, { opacity: 0, y: 26 },
+                  { opacity: 1, y: 0, ease: "power2.out", duration: 0.06 }, start)
+          .to(beat, { opacity: 0, y: -26, ease: "power2.in", duration: 0.05 }, start + 0.15);
+      });
+
+      tl.to("#heroEndcard", { opacity: 1, ease: "power1.inOut", duration: 0.2 }, 0.8)
+        .from(".hero__endcard-inner", { opacity: 0, y: 28, ease: "power2.out", duration: 0.12 }, 0.88);
 
       /* ---- Zoom-target calibrator ----------------------------------------
          Open the site with ?tune=1 and click directly on the camera's monitor.
