@@ -143,35 +143,50 @@
         .to("#heroMedia", { scale: 1.22, ease: "none", duration: 1 }, 0);
 
       /* Narrative beats play like title cards over the held frame. Each line
-         rises out of its own mask on a stagger, holds long enough to actually
-         be read, then lifts away through a blur dissolve. */
+         rises out of its own mask on a stagger, holds long enough to be read,
+         then leaves the same way it arrived.
+
+         Transform and opacity only, in BOTH directions. The previous version
+         animated `filter: blur()` on the way in and on the way out — blur is
+         not GPU-composited, so every scroll frame forced a full repaint (the
+         stutter), and because it eased slowly the type spent most of its
+         entrance *and* its exit genuinely out of focus (the washed-out look).
+         The beat container now holds a flat opacity while it is on screen;
+         only the masked lines move. */
+      var BEAT_IN = [0.11, 0.37, 0.63];
       gsap.utils.toArray("[data-beat]").forEach(function (beat, i) {
-        var IN = [0.12, 0.38, 0.64][i];
-        var OUT = IN + 0.185;
+        var IN = BEAT_IN[i];
+        var OUT = IN + 0.155;
         var lines = beat.querySelectorAll("[data-mask]");
 
-        tl.set(beat, { opacity: 1 }, IN)
+        /* The container fade only carries the scrim behind the type — it is
+           finished before the first line starts moving and doesn't begin
+           again until the last line has left, so no glyph is ever animated
+           at partial opacity. */
+        tl.fromTo(beat, { opacity: 0 },
+                  { opacity: 1, ease: "none", duration: 0.03 }, IN - 0.03)
           .fromTo(lines,
-                  { yPercent: 118 },
-                  { yPercent: 0, ease: "power3.out", duration: 0.075, stagger: 0.018 }, IN)
-          .fromTo(beat, { filter: "blur(8px)" },
-                  { filter: "blur(0px)", ease: "power2.out", duration: 0.05 }, IN)
-          .to(lines, { yPercent: -118, ease: "power2.in", duration: 0.05, stagger: 0.012 }, OUT)
-          .to(beat, { opacity: 0, filter: "blur(8px)", ease: "power2.in", duration: 0.045 }, OUT + 0.012);
+                  { yPercent: 130 },
+                  { yPercent: 0, ease: "power3.out", duration: 0.06, stagger: 0.015 }, IN)
+          /* Exit mirrors the entrance: same distance, same stagger, eased in
+             rather than snapped, so the line leaves the frame instead of
+             blinking off it. */
+          .to(lines, { yPercent: -130, ease: "power2.in", duration: 0.055, stagger: 0.015 }, OUT)
+          .to(beat, { opacity: 0, ease: "none", duration: 0.03 }, OUT + 0.085);
       });
 
       /* Chapter rail: fades in with the first beat, each segment filling as
          its beat plays, so the sequence reads as three deliberate chapters. */
-      tl.to("#heroRail", { opacity: 1, ease: "power2.out", duration: 0.04 }, 0.12);
+      tl.to("#heroRail", { opacity: 1, ease: "power2.out", duration: 0.04 }, BEAT_IN[0]);
       gsap.utils.toArray("#heroRail i").forEach(function (fill, i) {
-        tl.to(fill, { scaleY: 1, ease: "none", duration: 0.2 }, [0.12, 0.38, 0.64][i]);
+        tl.to(fill, { scaleY: 1, ease: "none", duration: 0.2 }, BEAT_IN[i]);
       });
-      tl.to("#heroRail", { opacity: 0, ease: "power2.in", duration: 0.04 }, 0.85);
+      tl.to("#heroRail", { opacity: 0, ease: "power2.in", duration: 0.04 }, 0.84);
 
       /* Slow dissolve to black, then the closing card — a sequence ending on
          a title card, rather than a zoom that had to stop somewhere. */
-      tl.to("#heroEndcard", { opacity: 1, ease: "power1.inOut", duration: 0.14 }, 0.84)
-        .from(".hero__endcard-inner", { opacity: 0, y: 30, ease: "power3.out", duration: 0.07 }, 0.92);
+      tl.to("#heroEndcard", { opacity: 1, ease: "power1.inOut", duration: 0.14 }, 0.85)
+        .from(".hero__endcard-inner", { opacity: 0, y: 30, ease: "power3.out", duration: 0.07 }, 0.93);
     })();
 
     /* Interlude still: slow parallax drift (transform only) */
