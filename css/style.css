@@ -224,7 +224,14 @@ body::after {
 @keyframes scrollpulse { 0% { transform: translateY(-100%);} 100% { transform: translateY(250%);} }
 
 /* ---------- Marquee ---------- */
-.marquee { overflow: hidden; border-block: 1px solid var(--line); padding: 1.3rem 0; background: var(--surface); }
+/* No top border: the hero above ends on the endcard's near-black, and a warm
+   1px --line rule against it read as a coloured seam. The band now rises out
+   of that same black and only separates itself from the manifesto below. */
+.marquee {
+  overflow: hidden; padding: 1.3rem 0;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(to bottom, #040404 0%, var(--surface) 55%);
+}
 .marquee__track {
   display: flex; gap: 3rem; white-space: nowrap; width: max-content;
   animation: marquee 30s linear infinite;
