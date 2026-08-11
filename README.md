@@ -1,6 +1,6 @@
 # vladgrigorov.com
 
-Personal portfolio for **Vlad Grigorov — AI Filmmaker & Director**.
+Personal portfolio for **Vlad Grigorov — Filmmaker, Editor & AI Director**.
 
 A one-page, cinematic site. Concept: **"the screening room"** — deep black,
 projector-beam amber, teal shadow (a palette matched to Vlad's AI-generated
@@ -35,10 +35,10 @@ assets/         Optional self-hosted media
 ```
 
 ## Sections
-Hero · Manifesto · Selected Work · The Craft · About · Contact
+Hero · Manifesto · Selected Work (live action + AI) · The Craft · About · Contact
 
 ## Customise
 - **Social links** — replace the `#` hrefs in the Contact section.
-- **Selected Work** — the four cards use styled gradient placeholders; drop in
-  real film-still images when ready.
+- **Selected Work** — YouTube projects use their video thumbnails and open in
+  an on-page player. Live-action and AI work are labelled separately.
 - **Copy / stats** — all inline in `index.html`.

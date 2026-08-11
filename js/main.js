@@ -74,27 +74,37 @@
     var modal = document.getElementById("videoModal");
     var frame = document.getElementById("videoFrame");
     var closeBtn = document.getElementById("videoClose");
+    var lastTrigger = null;
     if (!modal || !frame) return;
 
-    function open(id, isShort) {
+    function open(id, isShort, label, trigger) {
+      lastTrigger = trigger || null;
       frame.src = "https://www.youtube-nocookie.com/embed/" + id +
         "?autoplay=1&rel=0&modestbranding=1&playsinline=1";
+      frame.title = label || "Video player";
       modal.classList.toggle("is-short", !!isShort);
       modal.classList.add("is-open");
       modal.setAttribute("aria-hidden", "false");
       document.body.style.overflow = "hidden";
       if (lenis && lenis.stop) lenis.stop();
+      if (closeBtn) closeBtn.focus();
     }
     function close() {
       modal.classList.remove("is-open");
       modal.setAttribute("aria-hidden", "true");
       frame.src = "";
+      frame.title = "Video player";
       document.body.style.overflow = "";
       if (lenis && lenis.start) lenis.start();
+      if (lastTrigger) lastTrigger.focus();
+      lastTrigger = null;
     }
 
     document.querySelectorAll("[data-yt]").forEach(function (el) {
-      function go(e) { e.preventDefault(); open(el.getAttribute("data-yt"), el.hasAttribute("data-short")); }
+      function go(e) {
+        e.preventDefault();
+        open(el.getAttribute("data-yt"), el.hasAttribute("data-short"), el.getAttribute("aria-label"), el);
+      }
       el.addEventListener("click", go);
       el.addEventListener("keydown", function (e) {
         if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(e); }
