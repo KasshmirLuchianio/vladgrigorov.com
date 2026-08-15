@@ -606,3 +606,197 @@ A clean vertical 9:16 frame from a day-in-my-life TikTok video, the phone proppe
 ```
 A clean vertical 9:16 frame from a day-in-my-life TikTok video, the phone propped against something on the table so the shot holds still, at a bright weekend brunch spot. She is reaching across the table for the coffee pot, mid-conversation and half laughing. The frame is steady and well composed, framed from the chest up, with the room reading clearly behind her. She wears glossy black rectangular glasses and gold hoops and stacked rings, and she is dressed in a fitted white ribbed tank in thick opaque fabric with a scooped neckline and a modest medium decolletage, worn with wide sand-coloured trousers. Broad daylight through tall windows gives soft, flattering illumination. Plates of eggs and pastries, a carafe, potted plants and other tables behind. The palette is white, sand, plant green and warm daylight. Sharp, stabilised phone video with natural colour, a still lifted from a clip rather than a posed photograph. The mood is warm and sociable.
 ```
+
+# ROMÂNIA / LOCAȚII LOCALE
+
+1.
+
+```
+A clean vertical 9:16 frame from a day-in-my-life TikTok video, filmed on a phone's front camera at arm's length, walking through the central hall of Piața Obor in Bucharest on a Saturday morning. She is moving slowly past the produce stalls, pointing the camera at a pyramid of tomatoes and then back to herself mid-sentence. The frame is steady and well composed, framed from the waist up, with the place reading clearly around her. She wears glossy black rectangular glasses and small gold hoops, and she is dressed in a fitted white ribbed tank in thick opaque fabric with a scooped neckline and modest medium decolletage, worn with high-waisted straight jeans and a canvas tote. High industrial windows drop broad, cool daylight over the aisles with warm fill from the stall lamps. Stalls heaped with tomatoes, peppers, jars of honey and walnuts, hand-written cardboard price tags in Romanian, a butcher's counter and escalators to the upper level behind. The people around her read as local Romanians, light to olive complexions with dark hair, dressed in ordinary modern European high-street clothes, vendors in aprons and older shoppers with woven raffia bags. The palette is tomato red, pepper green, warm timber and cool hall grey. Sharp, stabilised phone video with natural colour, a still lifted from a clip rather than a posed photograph. The mood is busy and grounded.
+```
+
+2.
+
+```
+A clean vertical 9:16 frame from a day-in-my-life TikTok video, filmed by a friend on a phone from a step ahead, at Terasa Obor, the open-air grill beside the market, at midday. She is carrying a paper plate of mici with mustard toward a standing table, weaving past the queue. The frame is steady and well composed, framed from mid-thigh up, with the place reading clearly around her. She wears glossy black rectangular glasses and gold hoops, and she is dressed in a fitted black ribbed tank in thick opaque fabric with a scooped neckline and modest decolletage, worn with baggy light-wash jeans. Hard midday sun with grill smoke drifting through it, catching the light in pale bands. A long charcoal grill with rows of mici, smoke, plastic beer crates and simple metal tables. The people around her read as local Romanians, light to olive complexions with dark hair, dressed in ordinary modern European high-street clothes, mostly men on lunch break standing at the tables. The palette is charcoal smoke, grilled brown, mustard yellow and denim blue. Sharp, stabilised phone video with natural colour, a still lifted from a clip rather than a posed photograph. The mood is unpretentious and hungry.
+```
+
+3.
+
+```
+A clean vertical 9:16 frame from a day-in-my-life TikTok video, filmed on a phone's front camera at arm's length, in the aisle of a Kaufland hypermarket on the edge of the city. She is pushing a trolley slowly down the aisle, holding up a product to the camera and reading the label out loud. The frame is steady and well composed, framed from the waist up, with the place reading clearly around her. She wears glossy black rectangular glasses and small gold studs, and she is dressed in a fitted grey ribbed tank in thick opaque fabric with a scooped neckline, worn with black joggers and white trainers. Flat, bright overhead fluorescents fill the aisle evenly with a faint cool cast. High shelving stacked to the ceiling, pallets of promotional stock in the aisle, red-and-white price signage and Romanian product labels. The people around her read as local Romanians, light to olive complexions with dark hair, dressed in ordinary modern European high-street clothes, families with trolleys and staff restocking shelves. The palette is fluorescent white, signage red, packaging colour and grey floor. Sharp, stabilised phone video with natural colour, a still lifted from a clip rather than a posed photograph. The mood is ordinary and easy.
+```
+
+4.
+
+```
+A clean vertical 9:16 frame from a day-in-my-life TikTok video, filmed on a phone's front camera at arm's length, in a small Mega Image on the ground floor of a residential block. She is standing at the chilled shelf choosing a yoghurt, glancing at the camera and shrugging. The frame is steady and well composed, framed from the chest up, with the place reading clearly around her. She wears glossy black rectangular glasses and a fine gold chain, and she is dressed in a fitted cream ribbed tank in thick opaque fabric with a scooped neckline, worn with wide blue jeans. Cool ceiling fluorescents with a spill of daylight from the shopfront glass behind her. Narrow aisles, a chilled dairy cabinet, Romanian labels on the shelf edges and a small checkout with one till. The people around her read as local Romanians, light to olive complexions with dark hair, dressed in ordinary modern European high-street clothes, a couple of neighbours with baskets. The palette is cool white, dairy pastels, cream and pale grey. Sharp, stabilised phone video with natural colour, a still lifted from a clip rather than a posed photograph. The mood is everyday and unglamorous.
+```
+
+5.
+
+```
+A clean vertical 9:16 frame from a day-in-my-life TikTok video, filmed by a friend on a phone from a step ahead, at a street covrigărie window in central Bucharest in the morning. She is taking a warm covrig with sesame through the little window, breaking a piece off as she turns away. The frame is steady and well composed, framed from the waist up, with the place reading clearly around her. She wears glossy black rectangular glasses and gold hoops, and she is dressed in a fitted black ribbed tank in thick opaque fabric, worn with high-waisted wide jeans and an open beige overshirt. Soft morning daylight in the street with warm light spilling from the shop window. A small hatch window with trays of covrigi stacked behind glass, a hand-written price list in Romanian and a queue on the pavement. The people around her read as local Romanians, light to olive complexions with dark hair, dressed in ordinary modern European high-street clothes, office workers grabbing breakfast on the way in. The palette is baked gold, sesame beige, black and pavement grey. Sharp, stabilised phone video with natural colour, a still lifted from a clip rather than a posed photograph. The mood is warm and local.
+```
+
+6.
+
+```
+A clean vertical 9:16 frame from a day-in-my-life TikTok video, filmed with the phone propped against a beer glass, at a table inside Caru' cu Bere in Bucharest in the evening. She is leaning back as a plate of sarmale with polenta lands in front of her, eyebrows lifting at the size of it. The frame is steady and well composed, framed from the chest up across the table, with the place reading clearly around her. She wears glossy black rectangular glasses and fine gold drop earrings, and she is dressed in a burgundy bodycon mini dress in thick, opaque, solid fabric with a scooped neckline and a tasteful medium decolletage. Warm low lamps and stained-glass colour give rich, golden interior light with deep shadow in the vaults. Neo-Gothic vaulted ceilings, painted panels, stained glass, carved dark wood booths and a spiral staircase behind. The people around her read as local Romanians, light to olive complexions with dark hair, dressed in ordinary modern European high-street clothes, full tables and waiters in waistcoats moving between them. The palette is burgundy, stained-glass jewel tones, dark walnut and candle gold. Sharp, stabilised phone video with natural colour, a still lifted from a clip rather than a posed photograph. The mood is festive and traditional.
+```
+
+7.
+
+```
+A clean vertical 9:16 frame from a day-in-my-life TikTok video, filmed on a phone's front camera at arm's length, on a summer terrace under vine and string lights in a Bucharest neighbourhood. She is sitting down at a rattan chair with a lemonade, pulling the chair in and starting to talk about the day. The frame is steady and well composed, framed from the waist up, with the place reading clearly around her. She wears glossy black rectangular glasses and stacked fine gold rings, and she is dressed in a cream bodycon mini dress in thick opaque fabric with a scooped neckline and a modest medium decolletage. Warm bulb string lights overhead against a fading blue sky, soft golden pools on the tables. Rattan chairs, potted greenery, a vine-covered pergola and low apartment blocks beyond the fence. The people around her read as local Romanians, light to olive complexions with dark hair, dressed in ordinary modern European high-street clothes, groups of friends at the surrounding tables. The palette is bulb gold, cream, vine green and dusk blue. Sharp, stabilised phone video with natural colour, a still lifted from a clip rather than a posed photograph. The mood is relaxed and summery.
+```
+
+8.
+
+```
+A clean vertical 9:16 frame from a day-in-my-life TikTok video, filmed by a friend on a phone from across the street, on the pavement in front of a ten-storey communist-era block in the Militari district. She is walking along the block with a shopping bag, looking up at the balconies and then back to the camera. The frame is steady and well composed, framed from the knees up, with the place reading clearly around her. She wears glossy black rectangular glasses and gold hoops, and she is dressed in a fitted black ribbed tank in thick opaque fabric, worn with low-rise cargo trousers and chunky trainers. Bright late-afternoon sun rakes across the concrete facade, throwing hard balcony shadows. A long uniform block with mismatched windows, some balconies glazed and some open, air-conditioning units, satellite dishes, flower pots on railings, parked cars and a strip of grass along the kerb. The people around her read as local Romanians, light to olive complexions with dark hair, dressed in ordinary modern European high-street clothes, pensioners on a bench by the entrance. The palette is concrete grey, faded facade paint, black and warm sun. Sharp, stabilised phone video with natural colour, a still lifted from a clip rather than a posed photograph. The mood is rooted and everyday.
+```
+
+9.
+
+```
+A clean vertical 9:16 frame from a day-in-my-life TikTok video, filmed on a phone's front camera at arm's length, walking the lakeside alley in Herăstrău Park in Bucharest on a summer evening. She is walking and talking to the camera with an ice cream in one hand, the lake moving behind her. The frame is steady and well composed, framed from the chest up, with the place reading clearly around her. She wears glossy black rectangular glasses and small gold hoops, and she is dressed in a fitted white ribbed tank in thick opaque fabric with a scooped neckline, worn with a denim mini skirt. Low golden sun through the trees, dappled warm light on the path. The lake with rowing boats, willow trees, benches, a wooden pontoon and terraces along the water. The people around her read as local Romanians, light to olive complexions with dark hair, dressed in ordinary modern European high-street clothes, couples strolling, families with prams and cyclists passing. The palette is golden hour amber, lake green, white and leafy green. Sharp, stabilised phone video with natural colour, a still lifted from a clip rather than a posed photograph. The mood is easy and content.
+```
+
+10.
+
+```
+A high-resolution full-length vertical photograph taken by someone else, no phone in frame, shot from a low angle, inside the glass dome of Therme București at Balotești, surrounded by palms. She is walking along the tiled edge of the pool with a rolled white towel over one arm, glancing back. The frame is composed so the landscape carries as much of the picture as she does, framed full length. She wears glossy black rectangular glasses and a fine gold anklet, and she is dressed in a teal one-piece in thick opaque fabric with full front coverage, a scooped open back and a high-cut leg. Warm interior spotlights mix with green-filtered daylight through the vast glass dome, humid haze in the air. Hundreds of palms under the dome, loungers, steaming pools and water slides curling overhead. The palette is teal, jungle green, warm gold and pale tile grey. Editorial travel capture, sharp focus with clean natural grading. The mood is tropical and surreal for a Romanian winter.
+```
+
+11.
+
+```
+A high-resolution full-length vertical photograph taken by someone else, no phone in frame, shot from a low angle at thigh height, on the wide sand of Mamaia beach in the late afternoon. She is standing on the sand looking out toward the water, turning her head back over her shoulder. The frame is composed so the landscape carries as much of the picture as she does, framed full length. She wears glossy black rectangular glasses and a fine gold anklet, and she is dressed in a black bikini set in thick opaque fabric, a fully lined top and high-leg bottoms, under an open white linen shirt. Low warm sun from the side, long shadows running across the sand. Rows of aligned loungers and straw umbrellas, the darker green-blue water of the Black Sea, a line of tall hotels running down the narrow strip with Lake Siutghiol visible beyond. The palette is grey-gold sand, Black Sea green-blue, straw beige and warm sun. Editorial travel capture, sharp focus with clean natural grading. The mood is unmistakably Romanian summer.
+```
+
+12.
+
+```
+A clean vertical 9:16 frame from a day-in-my-life TikTok video, filmed on a phone's front camera at arm's length, at a beach club lounger in Mamaia at golden hour. She is settling onto the lounger with a cold drink, pushing her sunglasses up and talking to the camera. The frame is steady and well composed, framed from the waist up, with the place reading clearly around her. She wears glossy black rectangular glasses and gold hoops, and she is dressed in a white ribbed bikini set in thick opaque fabric with a fully lined halter top, under an open sheer cover-up. Low golden sun with warm rim light along her shoulders and sparkle off the sea. White beach-club loungers with low tables, a DJ booth under a canopy, cocktail glasses and the sea beyond. The people around her read as local Romanians, light to olive complexions with dark hair, dressed in ordinary modern European high-street clothes, young groups on the neighbouring loungers. The palette is white, gold sun, sea blue-green and warm sand. Sharp, stabilised phone video with natural colour, a still lifted from a clip rather than a posed photograph. The mood is holiday and upbeat.
+```
+
+13.
+
+```
+A high-resolution full-length vertical photograph taken by someone else, no phone in frame, shot from a low three-quarter angle, on the beach at Vama Veche at sunset. She is walking barefoot along the waterline with a linen shirt open over her swimwear, looking back. The frame is composed so the landscape carries as much of the picture as she does, framed full length. She wears glossy black rectangular glasses and thin shell bracelets, and she is dressed in a burnt-orange bikini set in thick opaque fabric with a fully lined top and high-leg bottoms. Warm low sun behind her, haze in the air and a long reflection on the wet sand. Low wooden beach bars, tents pitched at the far end of the beach, a bonfire being built, hand-painted signs and a scruffy, unmanicured shoreline. The palette is sunset orange, weathered timber, sea grey-blue and sand. Editorial travel capture, sharp focus with clean natural grading. The mood is bohemian and free.
+```
+
+14.
+
+```
+A clean vertical 9:16 frame from a day-in-my-life TikTok video, filmed by a friend on a phone from a step ahead, on the promenade at Eforie Nord above the cliff at midday. She is walking along the railing with an ice cream, the sea below on one side. The frame is steady and well composed, framed from the knees up, with the place reading clearly around her. She wears glossy black rectangular glasses and small gold hoops, and she is dressed in a sage bodycon mini dress in thick opaque fabric with a scooped neckline and modest decolletage. Hard midday sun with strong short shadows and bright bounce off the pale concrete. A concrete promenade with a metal railing, steps down to the beach, socialist-era hotel blocks along the front and the sea below. The people around her read as local Romanians, light to olive complexions with dark hair, dressed in ordinary modern European high-street clothes, families in beachwear walking with towels and inflatable rings. The palette is pale concrete, sage, sea blue and bright sun. Sharp, stabilised phone video with natural colour, a still lifted from a clip rather than a posed photograph. The mood is nostalgic seaside.
+```
+
+15.
+
+```
+A high-resolution full-length vertical photograph taken by someone else, no phone in frame, shot from a low angle, on the beach at Costinești with the rusted Evangelia shipwreck offshore. She is standing in shallow water facing the wreck, turning her head back toward the camera. The frame is composed so the landscape carries as much of the picture as she does, framed full length. She wears glossy black rectangular glasses and a fine gold anklet, and she is dressed in a coral bikini set in thick opaque fabric with a fully lined halter top and high-cut bottoms. Bright afternoon sun with hard sparkle on the water. The rusted hull of the Evangelia sitting in the sea a short way out, a young crowded beach behind and low buildings along the shore. The palette is rust orange, coral, sea blue-green and gold sand. Editorial travel capture, sharp focus with clean natural grading. The mood is youthful and iconic.
+```
+
+16.
+
+```
+A clean vertical 9:16 frame from a day-in-my-life TikTok video, filmed on a phone's front camera at arm's length, at the new Nibiru resort on the Black Sea coast near Costinești. She is walking through the open-air complex talking to the camera, turning to show the arena structure behind her. The frame is steady and well composed, framed from the waist up, with the place reading clearly around her. She wears glossy black rectangular glasses and layered fine gold chains, and she is dressed in a black bodycon mini dress in thick opaque fabric with a scooped neckline and a tasteful medium decolletage. Late golden sun with the first coloured stage lights coming on as the sky deepens. A vast modern open-air complex with a huge arena stage, palm-lined walkways, food and fashion pavilions and festival signage. The people around her read as local Romanians, light to olive complexions with dark hair, dressed in ordinary modern European high-street clothes, a young festival crowd flowing between the pavilions. The palette is stage magenta and cyan, dusk blue, black and warm gold. Sharp, stabilised phone video with natural colour, a still lifted from a clip rather than a posed photograph. The mood is electric and new.
+```
+
+17.
+
+```
+A high-resolution full-length vertical photograph taken by someone else, no phone in frame, shot from the low deck of a boat, on a narrow channel in the Danube Delta near Mila 23. She is sitting on the bow of a small boat as it moves through the reeds, one hand trailing in the water, looking back at the camera. The frame is composed so the landscape carries as much of the picture as she does, framed from the knees up. She wears glossy black rectangular glasses and small gold hoops, and she is dressed in a white linen shirt worn open over a fitted sand ribbed tank in thick opaque fabric and denim shorts. Soft early light with mist still sitting low over the water. Walls of tall reed on both sides, water lilies, willows leaning over the channel and white pelicans lifting off ahead. The palette is reed gold-green, still water, white and pale sky. Editorial travel capture, sharp focus with clean natural grading. The mood is quiet and wild.
+```
+
+18.
+
+```
+A clean vertical 9:16 frame from a day-in-my-life TikTok video, filmed on a phone's front camera at arm's length, on the wooden jetty of a fishing village in the Danube Delta. She is standing on the jetty talking to the camera about the trip, gesturing back at the boats. The frame is steady and well composed, framed from the waist up, with the place reading clearly around her. She wears glossy black rectangular glasses and a fine gold chain, and she is dressed in a fitted cream ribbed tank in thick opaque fabric with a scooped neckline, worn with light wide trousers. Broad flat daylight under a high overcast, soft and shadowless. Wooden lotca rowing boats tied along the jetty, nets drying on poles, and low Lipovan houses of brick and wood painted white with pale blue window frames behind. The people around her read as local Romanians, light to olive complexions with dark hair, dressed in ordinary modern European high-street clothes, a couple of fishermen working on a net. The palette is white and pale blue, weathered wood, reed green and flat sky. Sharp, stabilised phone video with natural colour, a still lifted from a clip rather than a posed photograph. The mood is calm and far from the city.
+```
+
+19.
+
+```
+A high-resolution full-length vertical photograph taken by someone else, no phone in frame, shot from a low angle, on the wild beach at Sfântu Gheorghe where the Danube meets the Black Sea. She is walking along the empty shoreline with a gauze cover-up drifting open, turning back over her shoulder. The frame is composed so the landscape carries as much of the picture as she does, framed full length. She wears glossy black rectangular glasses and a fine gold anklet, and she is dressed in a butter-yellow bikini set in thick opaque fabric with a fully lined top and high-leg bottoms. Late afternoon sun low and warm, the beach almost empty. An enormous undeveloped beach with driftwood, dune grass and no buildings in sight, the river current meeting the sea. The palette is butter yellow, pale sand, dune green and hazy blue. Editorial travel capture, sharp focus with clean natural grading. The mood is remote and free.
+```
+
+20.
+
+```
+A high-resolution full-length vertical photograph taken by someone else, no phone in frame, shot from the deck of a boat on the water, on the Danube at Dubova, below the Decebal rock relief. She is standing at the boat rail looking up at the carved face, then turning her head to the camera. The frame is composed so the landscape carries as much of the picture as she does, framed from the knees up with the relief filling the cliff behind. She wears glossy black rectangular glasses and small gold hoops, and she is dressed in a fitted olive ribbed tank in thick opaque fabric with a scooped neckline, worn with light linen trousers and a windbreaker tied at the waist. Bright daylight with the cliff face in warm sun and the water in deep shadow. The fifty-five-metre Decebal face carved into the rock above the water, dense forest on the slopes and the Mraconia monastery small and white on the opposite bank. The palette is stone grey-ochre, forest green, deep river green and olive. Editorial travel capture, sharp focus with clean natural grading. The mood is monumental and proud.
+```
+
+21.
+
+```
+A high-resolution full-length vertical photograph taken by someone else, no phone in frame, shot from the boat deck at a low angle, in the Cazanele Mari gorge between Dubova and Ogradena. She is standing at the rail with the wind in her clothes, one hand on the rail, looking back at the camera. The frame is composed so the landscape carries as much of the picture as she does, framed from the waist up with the gorge walls towering behind. She wears glossy black rectangular glasses and a fine gold chain, and she is dressed in a fitted black ribbed tank in thick opaque fabric, worn with wide beige trousers. High sun leaves the gorge in strong contrast, one wall lit and the other in deep shade. Limestone walls rising three hundred metres straight out of the water, forested slopes, the river narrowing into a dark green channel. The palette is limestone grey, forest green, deep river green and black. Editorial travel capture, sharp focus with clean natural grading. The mood is awed and small.
+```
+
+22.
+
+```
+A high-resolution full-length vertical photograph taken by someone else, no phone in frame, shot from a low angle beside the road, on a hairpin bend of the Transfăgărășan in the Făgăraș mountains. She is standing beside the crash barrier looking down the switchbacks, turning her head to the camera. The frame is composed so the landscape carries as much of the picture as she does, framed full length with the road looping away below. She wears glossy black rectangular glasses and small gold hoops, and she is dressed in a fitted white ribbed tank in thick opaque fabric with a scooped neckline, worn with straight jeans and a fleece tied around her waist. Bright high-altitude sun with fast clouds throwing moving shadows across the slopes. Hairpin after hairpin stacked down the mountainside, steep green slopes, rock outcrops and a viaduct in the distance. The palette is alpine green, asphalt grey, white and sky blue. Editorial travel capture, sharp focus with clean natural grading. The mood is expansive and free.
+```
+
+23.
+
+```
+A clean vertical 9:16 frame from a day-in-my-life TikTok video, filmed on a phone's front camera at arm's length, at Bâlea Lac at the top of the Transfăgărășan. She is standing at the lake edge with a fleece pulled around her, telling the camera how cold it is at two thousand metres. The frame is steady and well composed, framed from the chest up, with the place reading clearly around her. She wears glossy black rectangular glasses and small gold studs, and she is dressed in a fitted grey ribbed tank in thick opaque fabric under an open fleece, with straight jeans. Cool high-altitude daylight under moving cloud, flat and bright. The glacial lake still and dark in its bowl, bare rock slopes rising around it, patches of snow in the gullies and a chalet at the far shore. The people around her read as local Romanians, light to olive complexions with dark hair, dressed in ordinary modern European high-street clothes, day trippers photographing the lake and a few sheep on the slope above. The palette is slate grey, glacial dark blue, alpine green and cloud white. Sharp, stabilised phone video with natural colour, a still lifted from a clip rather than a posed photograph. The mood is crisp and elated.
+```
+
+24.
+
+```
+A high-resolution full-length vertical photograph taken by someone else, no phone in frame, shot from a low angle, on the Bucegi plateau beside the Sphinx rock formation. She is standing on the grass near the formation with her jacket open in the wind, looking back at the camera. The frame is composed so the landscape carries as much of the picture as she does, framed full length with the rock beside her. She wears glossy black rectangular glasses and small gold hoops, and she is dressed in a fitted black ribbed tank in thick opaque fabric under an open windbreaker, with hiking leggings and boots. Hard mountain sun with a big open sky and fast cloud shadow crossing the plateau. The eight-metre Sphinx profile on the plateau edge, the mushroom-shaped Babele rocks nearby, wide alpine grass and a drop to the Prahova valley beyond. The palette is rock grey, alpine grass green, sky blue and black. Editorial travel capture, sharp focus with clean natural grading. The mood is high and windswept.
+```
+
+25.
+
+```
+A clean vertical 9:16 frame from a day-in-my-life TikTok video, filmed on a phone's front camera at arm's length, in the cable car climbing from Bușteni toward Babele. She is filming herself in the cabin as the valley drops away, tilting the phone to show the view through the glass. The frame is steady and well composed, framed from the chest up, with the place reading clearly around her. She wears glossy black rectangular glasses and a fine gold chain, and she is dressed in a fitted cream ribbed tank in thick opaque fabric under an open puffer jacket. Bright daylight through the cabin glass with cool shadow inside. The cable car window with forested slopes falling away, the town of Bușteni small below and the rock face of the Bucegi rising ahead. The people around her read as local Romanians, light to olive complexions with dark hair, dressed in ordinary modern European high-street clothes, a few hikers with backpacks sharing the cabin. The palette is forest green, rock grey, cream and sky blue. Sharp, stabilised phone video with natural colour, a still lifted from a clip rather than a posed photograph. The mood is excited and a little nervous.
+```
+
+26.
+
+```
+A high-resolution full-length vertical photograph taken by someone else, no phone in frame, shot from a low angle in the underground hall, inside the Salina Turda salt mine. She is standing on the walkway of the great hall with the Ferris wheel behind her, turning her head to the camera. The frame is composed so the landscape carries as much of the picture as she does, framed full length in the enormous space. She wears glossy black rectangular glasses and small gold hoops, and she is dressed in a fitted black ribbed tank in thick opaque fabric under an open grey overshirt, with straight jeans. Vertical strip lights run down the salt walls, throwing cool white light into a very dark space. A cavern ninety metres high with grey striated salt walls, a lit Ferris wheel, walkways and an underground lake with rowing boats far below. The palette is salt grey, cool white light, black and deep shadow. Editorial travel capture, sharp focus with clean natural grading. The mood is strange and cinematic.
+```
+
+27.
+
+```
+A clean vertical 9:16 frame from a day-in-my-life TikTok video, filmed by a friend on a phone from a step ahead, crossing Piața Sfatului in Brașov in the late afternoon. She is walking across the square with a coffee, looking up at the roofline and back to the camera. The frame is steady and well composed, framed from the knees up, with the place reading clearly around her. She wears glossy black rectangular glasses and gold hoops, and she is dressed in a fitted white ribbed tank in thick opaque fabric with a scooped neckline, worn with wide blue jeans and an open linen overshirt. Warm low sun washing across the square, long shadows on the cobbles. Painted merchant houses with steep red-tiled roofs, the old council house in the middle of the square, cafe terraces along the edges and Mount Tâmpa rising behind the rooftops. The people around her read as local Romanians, light to olive complexions with dark hair, dressed in ordinary modern European high-street clothes, tourists and locals crossing the square. The palette is red roof tile, ochre and pastel facades, cobble grey and warm sun. Sharp, stabilised phone video with natural colour, a still lifted from a clip rather than a posed photograph. The mood is postcard and relaxed.
+```
+
+28.
+
+```
+A clean vertical 9:16 frame from a day-in-my-life TikTok video, filmed on a phone's front camera at arm's length, in Piața Mică in Sibiu in the early evening. She is walking toward the Bridge of Lies, turning the camera to show the rooftops behind her. The frame is steady and well composed, framed from the chest up, with the place reading clearly around her. She wears glossy black rectangular glasses and small gold studs, and she is dressed in a fitted sage ribbed tank in thick opaque fabric with a scooped neckline, worn with straight jeans. Soft evening light with the first warm street lamps coming on. Pastel facades, arcaded ground floors, the small iron bridge and the distinctive oval roof dormers of Sibiu looking like half-closed eyes. The people around her read as local Romanians, light to olive complexions with dark hair, dressed in ordinary modern European high-street clothes, people at the terrace tables in the square. The palette is pastel facade colour, roof tile grey, sage and lamp gold. Sharp, stabilised phone video with natural colour, a still lifted from a clip rather than a posed photograph. The mood is charming and calm.
+```
+
+29.
+
+```
+A high-resolution full-length vertical photograph taken by someone else, no phone in frame, shot from a low angle on the stairs, in the citadel of Sighișoara below the Clock Tower. She is standing on the cobbled slope with one hand on the wall, looking back down at the camera. The frame is composed so the landscape carries as much of the picture as she does, framed full length with the tower above her. She wears glossy black rectangular glasses and fine gold drop earrings, and she is dressed in a deep red bodycon mini dress in thick opaque fabric with a scooped neckline and a tasteful medium decolletage. Late afternoon sun catching the upper facades while the lane below sits in shade. The painted Clock Tower with its coloured tile roof, narrow cobbled lanes, ochre and green burgher houses and a covered wooden stairway climbing away. The palette is ochre, tile red-green, cobble grey and deep red. Editorial travel capture, sharp focus with clean natural grading. The mood is medieval and cinematic.
+```
+
+30.
+
+```
+A high-resolution full-length vertical photograph taken by someone else, no phone in frame, shot from a low angle, on an unpaved lane in a Maramureș village in summer. She is walking past a carved wooden gate, running her hand along the timber and looking back. The frame is composed so the landscape carries as much of the picture as she does, framed full length. She wears glossy black rectangular glasses and small gold hoops, and she is dressed in a white linen shirt worn open over a fitted cream ribbed tank in thick opaque fabric, with a long flowing skirt. Warm late sun across the fields, long shadows and dust in the air. A massive carved oak gate with sun and twisted-rope motifs, a wooden house with a steep roof behind it, tall conical haystacks in the field and a horse cart further down the lane. The palette is weathered oak brown, hay gold, field green and cream. Editorial travel capture, sharp focus with clean natural grading. The mood is timeless and gentle.
+```
+
+31.
+
+```
+A high-resolution full-length vertical photograph taken by someone else, no phone in frame, shot at eye level from a few steps back, in the courtyard of a painted monastery in Bucovina. She is standing quietly in front of the frescoed exterior wall, hands loose, turning her head to the camera. The frame is composed so the landscape carries as much of the picture as she does, framed full length against the painted wall. She wears glossy black rectangular glasses and a fine gold cross on a chain, and she is dressed in a long-sleeved cream linen dress in thick opaque fabric with a high neckline, modest and covered for the setting. Soft overcast daylight, even and gentle on the frescoes. A church wall covered in fifteenth-century frescoes in blue and ochre, a shingled roof, a low stone wall and green Bucovina hills beyond. The palette is fresco blue, ochre, shingle grey and cream. Editorial travel capture, sharp focus with clean natural grading. The mood is quiet and respectful.
+```
+
+32.
+
+```
+A clean vertical 9:16 frame from a day-in-my-life TikTok video, filmed with the phone propped on the table, at a guesthouse table in a Bucovina village at breakfast. She is pouring tea and reaching for a slice of bread, mid-sentence about the drive up. The frame is steady and well composed, framed from the chest up across the table, with the place reading clearly around her. She wears glossy black rectangular glasses and small gold studs, and she is dressed in a fitted oat ribbed tank in thick opaque fabric with a scooped neckline, worn under an open knit cardigan. Broad morning daylight through a small window with lace curtains. A woven tablecloth, homemade jam in jars, bread, a ceramic jug, embroidered cushions on a bench and geraniums at the window. The host, an older woman in an apron, sets down a plate at the edge of the frame. The palette is oat, jam red, embroidery blue and warm timber. Sharp, stabilised phone video with natural colour, a still lifted from a clip rather than a posed photograph. The mood is homely and warm.
+```
