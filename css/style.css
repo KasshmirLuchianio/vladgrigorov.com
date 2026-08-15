@@ -281,6 +281,9 @@ body::after {
    and each one dwarfed everything around it. */
 .work__grid { display: grid; grid-template-columns: repeat(3, 1fr);
   gap: clamp(1.2rem, 2.4vw, 2rem); padding: 0 var(--pad); }
+/* A section holding a single film: one card at a third of the row leaves two
+   empty columns and reads as a gap rather than a feature. */
+.work__grid--feature { grid-template-columns: repeat(2, 1fr); }
 .project { cursor: pointer; }
 .project__media { position: relative; overflow: hidden; border-radius: 4px; aspect-ratio: 16 / 9; }
 .project__ph { position: absolute; inset: 0; transform: scale(1.02);
