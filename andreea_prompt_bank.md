@@ -425,3 +425,184 @@ A three-quarter rear-angle full-length vertical photograph, her body rotated abo
 A three-quarter rear-angle full-length vertical photograph, her body rotated about forty-five degrees away from the camera with the hip nearest the lens pushed out toward it, her shoulders opening back and her face turned to the camera, no phone in frame, shot close from thigh height with the lens angled up and the hip line centred in the frame, at the edge of an overwater villa deck at sunrise with glassy water below. She stands at the deck edge with one foot forward on the timber and the weight loaded onto the back leg, the standing leg locked straight and the pelvis tipped back so the glute shelf lifts high and round with the glute-hamstring tie-in clearly defined. She has an athletic hourglass build: a narrow waist above full, rounded glutes and strong thighs, realistic in proportion, never inflated. Her swimwear is a coral Brazilian-cut bikini set with a fully lined halter top and high-cut bottoms with a Brazilian back, with a fine gold anklet, and her head is turned back over her shoulder with a soft, magnetic look. Low sunrise light rakes across the water from the side, laying a warm band along her back, and the key light rakes across that hip from the side so the round catches a bright highlight and drops into soft shadow underneath. Still lagoon water, a thatched roofline and a pale horizon fill the background. The palette is coral, sunrise gold, lagoon turquoise and warm skin tone. Editorial swimwear capture, clean natural grading. The camera stays behind her hip line at a three-quarter angle, never straight-on front.
 ```
 
+# EVERYDAY / FOOD SPOTS
+
+1.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, seated on a moulded plastic chair inside a McDonald's in a shopping mall at night. She wears glossy black rectangular glasses and bold gold hoop earrings. Her outfit is a red bodycon mini dress with fine spaghetti straps and a scooped neckline, cut from thick, opaque, solid fabric that covers the chest and gives a visible yet tasteful medium decolletage, fitted close through the waist and hip. Her pose is direct and self-assured, one arm resting along the back of the chair, shoulders angled, chin dipped, eyes into the lens, visibly mindful of her angle to the camera, the camera-side arm out of frame. Cool overhead fluorescents mix with warm glow from the illuminated menu screens, giving soft shadows under the chin and small flares on her glasses. Backlit menu boards, the golden arches glowing on the wall, red drink cups and trays of fries on occupied tables blur behind. The palette is bold red, deep burgundy, glossy black and branded yellow. Sharp high-resolution capture with gentle smartphone perspective distortion. The mood is lively, contemporary and urban.
+```
+
+2.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, in a window booth at a McDonald's on a bright weekday afternoon. She wears glossy black rectangular glasses and small gold hoops. Her outfit is a fitted white ribbed tank in thick opaque fabric with a scooped neckline and modest medium decolletage, worn with low-rise straight jeans. Her pose is relaxed and playful, one hand lifting a paper cup of soda toward the frame, head tipped with a small laugh, visibly mindful of her angle to the camera, the camera-side arm out of frame. Flat daylight through the plate glass mixes with cool ceiling fluorescents for even, honest lighting. A red tray of fries and a wrapped burger sit on the table, the golden arches visible on the glass behind. The palette is branded red and yellow, white, denim blue and warm skin tone. High-resolution capture, true-to-life colour. The mood is casual, warm and everyday.
+```
+
+3.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, in the passenger seat at a McDonald's drive-thru window at night. She wears glossy black rectangular glasses and layered fine gold chains. Her outfit is a fitted black ribbed tank in thick opaque fabric with a scooped neckline and modest medium decolletage, worn with baggy grey sweatpants. Her pose is playful and easy, a paper bag held up beside her shoulder, eyebrows raised at the lens, visibly mindful of her angle to the camera, the camera-side arm out of frame. The lit service window throws hard warm key light from the side while the car interior stays dark. The service window, a staff member's arm handing out a bag and the illuminated drive-thru sign blur behind. The palette is warm window gold, deep night blue, black and branded red. Night-mode smartphone capture with visible grain. The mood is fun, spontaneous and late-night.
+```
+
+4.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, at an outdoor table on a McDonald's terrace on a summer evening. She wears glossy black rectangular glasses and gold hoop earrings and stacked rings. Her outfit is a cream bodycon mini dress with fine spaghetti straps and a scooped neckline, cut from thick, opaque, solid fabric that covers the chest and gives a visible yet tasteful medium decolletage, fitted close through the waist and hip. Her pose is relaxed and social, both forearms on the table, leaning slightly toward the lens with a soft smile, visibly mindful of her angle to the camera, the camera-side arm out of frame. Low golden sun rakes across the terrace with warm rim light along her shoulders. A tray with fries, a paper cup and a parasol, with the golden arches sign glowing beyond the railing. The palette is golden hour amber, cream, branded red and warm pavement grey. Warm-balanced capture with mild lens flare. The mood is breezy and content.
+```
+
+5.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, standing at a self-order kiosk inside a McDonald's. She wears glossy black rectangular glasses and small gold studs. Her outfit is a fitted sage ribbed tank in thick opaque fabric with a scooped neckline and modest medium decolletage, worn with high-waisted wide jeans. Her pose is casual and mid-decision, one hand raised toward the touchscreen, head turned back to the lens, visibly mindful of her angle to the camera, the camera-side arm out of frame. The bright kiosk screen throws cool light up onto her while warm ceiling lamps fill from above. The glowing touchscreen menu, queue barriers and the arches logo on the wall behind. The palette is screen blue, branded red and yellow, sage and warm grey. Crisp capture with slight highlight clipping on the screen. The mood is everyday and unbothered.
+```
+
+6.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, in a red booth at a KFC in the early evening. She wears glossy black rectangular glasses and bold gold hoops. Her outfit is a black bodycon mini dress with fine spaghetti straps and a scooped neckline, cut from thick, opaque, solid fabric that covers the chest and gives a visible yet tasteful medium decolletage, fitted close through the waist and hip. Her pose is confident and amused, one hand resting on the table beside a red-and-white striped bucket, chin dipped toward the lens, visibly mindful of her angle to the camera, the camera-side arm out of frame. Warm interior downlights give soft golden key light with gentle shadow under the chin. A red-and-white striped chicken bucket, paper boxes and the red signage of the counter blur behind. The palette is signature red, warm white, black and fried-gold. High-resolution capture with warm white balance. The mood is playful and relaxed.
+```
+
+7.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, waiting at the counter of a KFC at night. She wears glossy black rectangular glasses and gold hoops and a fine chain. Her outfit is a fitted chocolate ribbed tank in thick opaque fabric with a scooped neckline and modest medium decolletage, worn with black cargo trousers. Her pose is patient and easy, one hip leaning on the counter edge, head tilted toward the lens, visibly mindful of her angle to the camera, the camera-side arm out of frame. Cool overhead fluorescents mix with the warm red glow of the illuminated menu. The red counter signage, stacked trays and staff in uniform blur behind. The palette is signal red, cool white, chocolate and warm gold. Smartphone capture with honest digital noise. The mood is casual and self-assured.
+```
+
+8.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, at a window seat in a Starbucks on a bright afternoon. She wears glossy black rectangular glasses and small gold hoops. Her outfit is a fitted oat ribbed tank in thick opaque fabric with a scooped neckline and modest medium decolletage, worn with tailored beige trousers. Her pose is calm and warm, both hands wrapped around a white paper cup with a green siren logo at the lower edge of frame, visibly mindful of her angle to the camera, the camera-side arm out of frame. Broad daylight through the window gives soft directional key light with warm bounce off pale wood. A marble-topped table, a green-aproned barista at the espresso bar and hanging pendant lamps blur behind. The palette is oat, espresso brown, siren green and warm timber. High-resolution capture with natural depth of field. The mood is calm and everyday.
+```
+
+9.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, in the queue at a Starbucks counter in the morning. She wears glossy black rectangular glasses and fine gold studs. Her outfit is a fitted grey marl ribbed tank in thick opaque fabric with a scooped neckline and modest medium decolletage, worn with straight blue jeans. Her pose is upbeat and social, one shoulder angled to the lens as if mid-sentence to camera, visibly mindful of her angle to the camera, the camera-side arm out of frame. Warm pendant lamps over the counter mix with cool daylight from the shopfront. The pastry case, chalkboard menu, green siren logo on cups and a steaming espresso machine behind. The palette is siren green, warm timber, grey marl and cream. Crisp capture with mild sharpening. The mood is bright and ordinary in the best way.
+```
+
+10.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, on the outdoor patio of a Starbucks on a summer morning. She wears glossy black rectangular glasses and gold hoops. Her outfit is a sage bodycon mini dress with fine spaghetti straps and a scooped neckline, cut from thick, opaque, solid fabric that covers the chest and gives a visible yet tasteful medium decolletage, fitted close through the waist and hip. Her pose is relaxed and sunny, an iced coffee in a clear cup with a green straw held at frame edge, head tipped back slightly, visibly mindful of her angle to the camera, the camera-side arm out of frame. Bright morning sun with dappled shade from a patio umbrella across the table. Metal patio chairs, a green logo on the cup, planters and passing pedestrians blur behind. The palette is sage, iced coffee caramel, siren green and sunlit white. High dynamic range capture with crisp detail. The mood is fresh and easy.
+```
+
+11.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, working at a corner table in a Starbucks in the late afternoon. She wears glossy black rectangular glasses and small gold hoops. Her outfit is a fitted black ribbed tank in thick opaque fabric with a scooped neckline and modest medium decolletage, worn with a soft grey blazer over the shoulders. Her pose is focused then amused, one hand on an open laptop, glancing up at the lens, visibly mindful of her angle to the camera, the camera-side arm out of frame. Warm café lamps and low side daylight give soft mixed lighting with gentle contrast. A laptop, notebook, a white cup with a green siren logo and exposed-brick wall behind. The palette is black, warm brick, siren green and paper cream. Capture with soft contrast and fine detail. The mood is productive and relaxed.
+```
+
+12.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, at a table inside a Five Guys at lunchtime. She wears glossy black rectangular glasses and gold hoops. Her outfit is a fitted white ribbed tank in thick opaque fabric with a scooped neckline and modest medium decolletage, worn with low-rise baggy jeans. Her pose is playful and hungry, a foil-wrapped burger held near the shoulder, head tipped with a grin, visibly mindful of her angle to the camera, the camera-side arm out of frame. Bright overhead fluorescents bounce off white tile for flat, high-key lighting. Red-and-white checkerboard tile walls, open sacks of peanuts, a brown paper bag darkened with grease and a soda fountain behind. The palette is checkerboard red and white, brown paper, denim and warm skin tone. Crisp high-key capture with true colour. The mood is fun and unpretentious.
+```
+
+13.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, on a bench seat at a Five Guys in the early evening. She wears glossy black rectangular glasses and a fine gold chain. Her outfit is a deep red bodycon mini dress with fine spaghetti straps and a scooped neckline, cut from thick, opaque, solid fabric that covers the chest and gives a visible yet tasteful medium decolletage, fitted close through the waist and hip. Her pose is composed and self-aware, one arm along the bench back, a paper cup of fries on the table, visibly mindful of her angle to the camera, the camera-side arm out of frame. Warm interior lamps and cool window light mix for gentle two-tone lighting. Checkerboard tiling, stacked peanut sacks, hand-written wall signs and the open kitchen behind. The palette is deep red, checkerboard white, brown paper and warm gold. High-resolution capture with mild sharpening. The mood is confident and casual.
+```
+
+14.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, at the sandwich counter of a Subway at midday. She wears glossy black rectangular glasses and small gold studs. Her outfit is a fitted olive ribbed tank in thick opaque fabric with a scooped neckline and modest medium decolletage, worn with wide cargo trousers. Her pose is mid-order and animated, one hand gesturing at the glass counter, head turned to the lens, visibly mindful of her angle to the camera, the camera-side arm out of frame. Cool counter fluorescents mix with warm daylight from the shopfront glass. The glass topping counter with trays of vegetables, green-and-yellow signage and a bread oven behind. The palette is olive, counter steel, green-yellow signage and warm bread gold. Crisp capture with true-to-life colour. The mood is ordinary and cheerful.
+```
+
+15.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, at a table inside a Burger King in the evening. She wears glossy black rectangular glasses and bold gold hoops. Her outfit is a charcoal bodycon mini dress with fine spaghetti straps and a scooped neckline, cut from thick, opaque, solid fabric that covers the chest and gives a visible yet tasteful medium decolletage, fitted close through the waist and hip. Her pose is relaxed and direct, both forearms on the table, chin dipped toward the lens, visibly mindful of her angle to the camera, the camera-side arm out of frame. Warm orange interior lighting with cool spill from the window behind. Flame-grill signage, a paper crown on the table, wrapped burgers and blurred diners behind. The palette is flame orange, charcoal, warm brown and branded red. Capture with warm white balance and soft contrast. The mood is easy and everyday.
+```
+
+16.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, at a Taco Bell late at night. She wears glossy black rectangular glasses and layered gold chains. Her outfit is a fitted black ribbed tank in thick opaque fabric with a scooped neckline and modest medium decolletage, worn with baggy grey joggers. Her pose is playful and sleepy, a wrapped taco held up beside her cheek, eyebrows raised, visibly mindful of her angle to the camera, the camera-side arm out of frame. Purple-tinted interior lighting and cool fluorescents give a saturated night-time cast. Purple and magenta wall panels, bell signage and a nearly empty dining room behind. The palette is electric purple, magenta, black and warm tortilla gold. Night capture with visible grain and colour bloom. The mood is fun and nocturnal.
+```
+
+17.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, at a shared table in a busy shopping mall food court. She wears glossy black rectangular glasses and gold hoops and stacked rings. Her outfit is a fitted cream ribbed tank in thick opaque fabric with a scooped neckline and modest medium decolletage, worn with a denim mini skirt. Her pose is social and animated, one hand holding a plastic fork over a tray, talking to the lens, visibly mindful of her angle to the camera, the camera-side arm out of frame. Bright skylight daylight from above mixes with warm signage glow from surrounding counters. A crowded food court with backlit counter signs, plastic trays and shoppers passing behind. The palette is cream, denim, mixed signage colour and warm daylight. High dynamic range capture with crisp detail. The mood is busy and cheerful.
+```
+
+18.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, at a late-night shaorma counter on a Bucharest street. She wears glossy black rectangular glasses and small gold hoops. Her outfit is a fitted black ribbed tank in thick opaque fabric with a scooped neckline and modest medium decolletage, worn with low-rise cargo trousers. Her pose is hungry and amused, a foil-wrapped wrap held in both hands at frame edge, head tipped, visibly mindful of her angle to the camera, the camera-side arm out of frame. Harsh fluorescent tubes over the counter throw hard high-key light against the dark street. The vertical rotisserie, plastic sauce bottles, hand-written price board and dark street behind. The palette is fluorescent white, foil silver, black and warm meat gold. Night capture with hard contrast and grain. The mood is unpretentious and fun.
+```
+
+19.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, at a counter stool in a busy pizza place, evening. She wears glossy black rectangular glasses and gold hoops. Her outfit is a olive bodycon mini dress with fine spaghetti straps and a scooped neckline, cut from thick, opaque, solid fabric that covers the chest and gives a visible yet tasteful medium decolletage, fitted close through the waist and hip. Her pose is relaxed and playful, a folded pizza slice held at frame edge, head tilted toward the lens, visibly mindful of her angle to the camera, the camera-side arm out of frame. Warm pizza oven glow from behind the counter with soft ambient fill. The stone oven, hanging copper lamps, flour-dusted counter and stacked pizza boxes behind. The palette is oven amber, olive, tomato red and flour white. Warm-balanced capture with soft contrast. The mood is cosy and social.
+```
+
+20.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, at a small table in a neighbourhood bakery in the morning. She wears glossy black rectangular glasses and fine gold studs. Her outfit is a fitted soft pink ribbed tank in thick opaque fabric with a scooped neckline and modest medium decolletage, worn with high-waisted straight jeans. Her pose is soft and content, a croissant on a small plate and a coffee cup at frame edge, gentle smile, visibly mindful of her angle to the camera, the camera-side arm out of frame. Broad morning daylight through the shopfront glass gives soft, flattering illumination. A glass pastry case, wooden shelves of loaves and a chalk menu board behind. The palette is soft pink, pastry gold, warm timber and cream. High-resolution capture with natural depth of field. The mood is gentle and warm.
+```
+
+21.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, at a conveyor-belt sushi counter in the evening. She wears glossy black rectangular glasses and small gold hoops. Her outfit is a fitted black ribbed tank in thick opaque fabric with a scooped neckline and modest medium decolletage, worn with tailored black trousers. Her pose is curious and amused, chopsticks in one hand over a small plate, head turned to the lens, visibly mindful of her angle to the camera, the camera-side arm out of frame. Cool overhead strip lights with warm accents from the kitchen pass. Colour-coded plates gliding past on the belt, chefs at the pass and printed menus behind. The palette is cool white, plate red and blue, black and salmon pink. Crisp capture with true-to-life colour. The mood is playful and modern.
+```
+
+22.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, in a red vinyl booth at an American-style diner. She wears glossy black rectangular glasses and bold gold hoops. Her outfit is a powder blue bodycon mini dress with fine spaghetti straps and a scooped neckline, cut from thick, opaque, solid fabric that covers the chest and gives a visible yet tasteful medium decolletage, fitted close through the waist and hip. Her pose is bright and social, one arm along the booth back, a milkshake glass at frame edge, visibly mindful of her angle to the camera, the camera-side arm out of frame. Warm pendant lamps overhead with cool daylight through venetian blinds. Red vinyl seating, chrome trim, a checkered floor and a neon wall clock behind. The palette is powder blue, diner red, chrome and cream. Capture with warm white balance and mild grain. The mood is retro and cheerful.
+```
+
+23.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, at the window of a gelato shop on a hot afternoon. She wears glossy black rectangular glasses and gold hoops. Her outfit is a fitted white ribbed tank in thick opaque fabric with a scooped neckline and modest medium decolletage, worn with a linen mini skirt. Her pose is delighted and playful, a gelato cone held up beside her cheek, sunglasses pushed up, visibly mindful of her angle to the camera, the camera-side arm out of frame. Bright direct sun outside with cool bounce from the chilled display case. Trays of coloured gelato under glass, metal scoops and a striped awning behind. The palette is gelato pastels, white, mint green and sunlit gold. High dynamic range capture with crisp detail. The mood is sunny and joyful.
+```
+
+24.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, at a bubble tea shop in the late afternoon. She wears glossy black rectangular glasses and small gold studs. Her outfit is a fitted lilac ribbed tank in thick opaque fabric with a scooped neckline and modest medium decolletage, worn with baggy blue jeans. Her pose is playful and easy, a clear cup with wide straw held at frame edge, head tilted, visibly mindful of her angle to the camera, the camera-side arm out of frame. Soft daylight through the shopfront with cool LED accents from the menu wall. A pastel menu board, sealed cups on the counter and neon lettering behind. The palette is lilac, milk tea beige, pastel signage and cool white. Crisp capture with clean colour. The mood is light and fun.
+```
+
+25.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, walking down a busy street with a takeaway coffee in hand. She wears glossy black rectangular glasses and gold hoops and a fine chain. Her outfit is a fitted black ribbed tank in thick opaque fabric with a scooped neckline and modest medium decolletage, worn with high-waisted wide jeans and a beige overshirt. Her pose is on the move and chatty, the coffee cup held near the shoulder, talking to the lens mid-step, visibly mindful of her angle to the camera, the camera-side arm out of frame. Bright overcast daylight gives soft even light with gentle shadow. Shopfronts, traffic and pedestrians blur into shallow depth behind. The palette is black, beige, denim blue and city grey. Capture with mild motion blur and crisp face detail. The mood is on-the-go and confident.
+```
+
+26.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, at a cinema snack counter before a screening. She wears glossy black rectangular glasses and small gold hoops. Her outfit is a burgundy bodycon mini dress with fine spaghetti straps and a scooped neckline, cut from thick, opaque, solid fabric that covers the chest and gives a visible yet tasteful medium decolletage, fitted close through the waist and hip. Her pose is excited and warm, a striped popcorn tub held at frame edge, eyebrows lifted, visibly mindful of her angle to the camera, the camera-side arm out of frame. Warm counter lights and cool blue spill from the screens above. The popcorn machine, backlit film posters and the ticket queue behind. The palette is burgundy, popcorn gold, poster blue and warm red. Capture with soft contrast and gentle bloom. The mood is excited and easy.
+```
+
+27.
+
+```
+A waist-up selfie, photographed with a front-facing camera at arm's length, no phone or mirror in the image, at the coffee machine of a motorway service station at dawn. She wears glossy black rectangular glasses and a fine gold chain. Her outfit is a fitted grey ribbed tank in thick opaque fabric with a scooped neckline and modest medium decolletage, worn with black joggers and a cropped puffer vest. Her pose is sleepy and amused, a paper cup held under the dispenser, glancing at the lens, visibly mindful of her angle to the camera, the camera-side arm out of frame. Cold fluorescent strip lighting with pale dawn light through the glass doors. The coffee machine, shelves of snacks and the empty forecourt beyond the glass. The palette is fluorescent white, dawn blue, grey and coffee brown. Capture with honest digital noise. The mood is early and unglamorous in a charming way.
+```
+
+28.
+
+```
+A full-length mirror selfie, the phone clearly visible in the reflection and held at chest height, in the restroom mirror of a shopping mall between stops. She wears glossy black rectangular glasses and gold hoops. Her outfit is a red bodycon mini dress with fine spaghetti straps and a scooped neckline, cut from thick, opaque, solid fabric that covers the chest and gives a visible yet tasteful medium decolletage, fitted close through the waist and hip. Her pose is casual and checking the fit, one hand smoothing the hem, weight settled on one leg with the hip pushed out and the chin level with the reflection. Cool overhead vanity lights give even, slightly clinical illumination. Tiled walls, a long vanity counter and a row of basins behind the reflection. The palette is red, tile grey, chrome and cool white. Crisp capture with mild highlight clipping. The mood is quick and unbothered.
+```
+
+29.
+
+```
+A high-resolution vertical photograph taken by someone else, no phone in frame, shot at table height from across a fine-dining restaurant table at dinner. She wears glossy black rectangular glasses and fine gold drop earrings. Her outfit is a black bodycon mini dress with fine spaghetti straps and a scooped neckline, cut from thick, opaque, solid fabric that covers the chest and gives a visible yet tasteful medium decolletage, fitted close through the waist and hip. Her pose is composed and mid-conversation, one hand resting beside a plated dish, head turned toward her companion rather than the lens. Low candlelight and dim pendant lamps give warm, intimate key light with deep falloff. White linen, crystal glassware, a plated tasting course and blurred diners behind. The palette is candle gold, black, white linen and deep espresso. Low-light capture on a fast lens with fine grain. The mood is elegant and grown-up.
+```
+
+30.
+
+```
+A high-resolution vertical photograph taken by someone else, no phone in frame, shot from across the table at a bright weekend brunch spot. She wears glossy black rectangular glasses and gold hoops and stacked rings. Her outfit is a fitted white ribbed tank in thick opaque fabric with a scooped neckline and modest medium decolletage, worn with wide sand-coloured trousers. Her pose is natural and laughing, mid-conversation with a coffee cup halfway to her lips, not looking at the camera. Broad daylight through tall windows gives soft, flattering illumination. Plates of eggs and pastries, a carafe, potted plants and other tables behind. The palette is white, sand, plant green and warm daylight. Editorial capture on a fast lens with shallow depth of field. The mood is warm and sociable.
+```
