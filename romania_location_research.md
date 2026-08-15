@@ -20,13 +20,38 @@ fâșie, plajă lată cu șezlonguri și umbrele aliniate în rânduri. Beach
 cluburi cunoscute: Nuba, Loft, Fratelli, Bamboo — șezlonguri premium,
 servire la masă, muzică.
 
-**Nibiru** — resort nou lângă Costinești, investiție de 50 mil. EUR în
-prima fază, deschidere anunțată pentru **iulie 2026**. Include mall în aer
-liber, parc de distracții, platformă de festival de până la 150.000 de
-oameni și NIBIRU Arena, cel mai mare club în aer liber din lume (30.000
-locuri). LOFT și NUBA operează înăuntru. Estetică: futurist, „carnaval
-continuu". *Atenție: la data scrierii încă nu e deschis — imaginile trebuie
-tratate ca „resort nou, modern", nu ca loc documentat.*
+**Nibiru** — stațiune de entertainment între **Costinești și Tuzla**, jud.
+Constanța. **Deschisă 16 iulie 2026**, sezon inaugural de 46 de zile
+(16 iulie – 30 august 2026). Investiție ~50 mil. EUR, inițiată de Andrei
+Șelaru (Selly) cu un grup de investitori. Suprafață amenajată ~210.000 mp.
+
+**Detaliul care schimbă totul pentru imagini: funcționează zilnic de la
+18:00 până spre dimineață (03:00).** Deci orice cadru din Nibiru e cadru
+de noapte sau de amurg — niciodată la soare de amiază.
+
+Zone:
+- **Promenada centrală** — traversează tot complexul, peste 2.000 de
+  copaci și plante plantate de-a lungul ei; ~jumătate din suprafață e
+  iarbă, peste 5.000 de plante în total. Intrarea e liberă, cu o
+  consumație minimă de 25 lei.
+- **NIBIRU Arena** — cel mai mare club în aer liber din lume, 30.000 de
+  locuri. Ecrane LED uriașe, sunet și lumini de festival, lasere.
+- **Thrill District** — carusele și atracții de adrenalină
+- **Kids District** — zonă de familie, locuri de joacă
+- **Chill District** — oaze de relaxare pe iarbă
+- **Flavor District** — food court, peste 30 de restaurante, cafenele și
+  baruri
+- **Creator's District** — spații gândite pentru filmat conținut
+- **Night Market** — tarabe, bazar de modă cu designeri români
+- **Nibiru Beer Garden** și **The Fool** (stand-up)
+- Atracții: **roată panoramică**, **tiroliană cu o navă spațială**,
+  circuit de karting de 30.000 mp, tobogane cu apă, gonflabile, arcade,
+  VR, teren de mini-fotbal, baschet, skatepark
+- Platformă de festival pentru până la 150.000 de oameni
+
+Sezonul 1: peste 150 de evenimente, peste 200 de artiști. Line-up
+internațional: Timbaland, Busta Rhymes, Fat Joe, Hugel, Ozuna, Nicky Jam.
+LOFT și NUBA operează înăuntru. Marea e la câțiva pași.
 
 **Vama Veche / 2 Mai** — boem, festivalier. Corturi pe plajă la ambele
 capete, focuri de tabără seara, baruri joase din lemn, muzică live,
@@ -248,8 +273,13 @@ Semnalele vizuale care contează, în ordinea puterii:
 - [Munții Bucegi — Romanian Friend](https://www.romanianfriend.com/attractions/bucegi-natural-park)
 - [Babele — Wikipedia](https://en.wikipedia.org/wiki/Babele)
 - [Mamaia — Wikipedia](https://en.wikipedia.org/wiki/Mamaia)
-- [Nibiru, stațiune nouă — Funky Travel](https://funkytravel.ro/en/2025/07/29/Nibiru-a-new-seaside-resort-over-50-million-euros-for-phase-1-only/)
-- [Nibiru — Romania Experience](https://www.romaniaexperience.com/nibiru-private-resort/)
+- [NIBIRU — sit oficial](https://nibiru.net/)
+- [NIBIRU s-a deschis — Nine O'Clock](https://nineoclock.ro/nibiru-opens-today-romania-launches-its-first-entertainment-resort-on-the-black-sea-coast-and-europes-largest-entertainment-destination/)
+- [NIBIRU inaugurare — Romania Insider](https://www.romania-insider.com/nibiru-opening-romania-july-2026)
+- [NIBIRU lansare 16 iulie — Business Review](https://business-review.eu/bucharest-going-out/concerts/nibiru-launches-in-costinesti-on-july-16-with-ambitions-to-generate-over-e300-million-for-the-local-economy-294757)
+- [NIBIRU ghid complet — Radel House](https://radelhouse.ro/en/blog/nibiru-costinesti-2026)
+- [NIBIRU — money.ro](https://www.money.ro/stiri/s-a-deschis-nibiru-statiunea-de-50-de-milioane-de-euro-care-promite-sa-schimbe-l-mrnguyfv)
+- [Nibiru (stațiune) — Wikipedia](https://ro.wikipedia.org/wiki/Nibiru_(sta%C8%9Biune))
 - [Selly / resort Marea Neagră — Romania Insider](https://www.romania-insider.com/selly-resort-black-sea-jul-2025)
 - [Stațiunile de la Marea Neagră — Romania Tourism](https://romaniatourism.com/black-sea-resorts.html)
 - [Vama Veche — Romania Insider](https://www.romania-insider.com/discover-seaside-hot-spot-vama-veche)
