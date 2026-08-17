@@ -242,6 +242,15 @@ body::after {
   overflow: hidden; padding: 0.9rem 0;
   border-bottom: 1px solid var(--line);
   background: var(--surface);
+  /* .hero__media is scaled to 1.22 by the Ken Burns and carries
+     will-change: transform, so it renders on its own compositing layer. That
+     layer overshoots the pin's overflow:hidden by one device pixel on
+     subpixel rounding, and once the pin released, that row of the photograph
+     showed as a bright hairline along this band's top edge. Verified: a
+     clip-path on the pin does not stop it - the overshoot happens below the
+     level any CSS clip applies. Pulling the band up by a pixel covers the
+     seam, which is the reliable fix for this class of compositing artefact. */
+  position: relative; z-index: 2; margin-top: -2px;
 }
 .marquee__track {
   display: flex; gap: 3rem; white-space: nowrap; width: max-content;
