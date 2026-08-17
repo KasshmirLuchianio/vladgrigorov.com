@@ -141,27 +141,32 @@ body::after {
   position: absolute; left: 0; bottom: 0; z-index: 3;
   padding: var(--pad); max-width: 1400px;
 }
-/* Scroll-staged narrative beats that play over the dive */
+/* Scroll-staged narrative beats. Left-aligned rather than centred: the hero
+   frame puts the subject centre-right, so centred type landed across his
+   face. This keeps the beats in the same clear left zone the title block
+   uses (the title has already faded out by the time they play). */
 .hero__beats {
-  position: absolute; inset: 0; z-index: 5; display: grid; place-items: center;
-  padding: var(--pad); pointer-events: none;
+  position: absolute; inset: 0; z-index: 5; display: grid;
+  place-items: center start;
+  padding: var(--pad); padding-left: calc(var(--pad) + 2.75rem);
+  pointer-events: none;
 }
 .hero__beat {
-  grid-area: 1 / 1; position: relative; max-width: 44rem;
-  text-align: center; opacity: 0; will-change: transform, opacity;
+  grid-area: 1 / 1; position: relative; max-width: 30rem;
+  text-align: left; opacity: 0; will-change: transform, opacity;
 }
 /* scrim carries the legibility so the type can stay clean, no heavy outline */
 .hero__beat::before {
   content: ""; position: absolute; inset: -22% -26%; z-index: -1;
-  background: radial-gradient(60% 56% at 50% 50%, rgba(4, 5, 6, 0.86), rgba(4, 5, 6, 0) 74%);
+  background: radial-gradient(62% 58% at 38% 50%, rgba(4, 5, 6, 0.90), rgba(4, 5, 6, 0) 76%);
 }
 .hero__beat-title {
-  font-family: var(--font-display); text-transform: uppercase; color: var(--amber);
-  font-size: clamp(2.4rem, 7vw, 5.5rem); line-height: 0.92; letter-spacing: 0.01em;
+  font-family: var(--font-display); text-transform: uppercase; color: var(--ink);
+  font-size: clamp(2.1rem, 5.4vw, 4.2rem); line-height: 0.94; letter-spacing: 0.01em;
   text-shadow: 0 3px 16px rgba(0, 0, 0, 0.9);
 }
 .hero__beat-line {
-  margin: 1.4rem auto 0; max-width: 44ch; color: #efece7;
+  margin: 1.4rem 0 0; max-width: 40ch; color: #efece7;
   font-size: clamp(1rem, 1.6vw, 1.25rem); line-height: 1.55;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95);
 }
