@@ -233,13 +233,15 @@ body::after {
 @keyframes scrollpulse { 0% { transform: translateY(-100%);} 100% { transform: translateY(250%);} }
 
 /* ---------- Marquee ---------- */
-/* No top border: the hero above ends on the endcard's near-black, and a warm
-   1px --line rule against it read as a coloured seam. The band now rises out
-   of that same black and only separates itself from the manifesto below. */
+/* Sits directly under the hero's black endcard. An earlier fix removed the
+   coloured hairline and faded the band up out of that same #040404, which
+   removed the seam but left the two blacks reading as one dead void. The
+   band now starts at --surface so it registers as its own surface, and the
+   padding is tightened so it reads as a strip rather than a gap. */
 .marquee {
-  overflow: hidden; padding: 1.3rem 0;
+  overflow: hidden; padding: 0.9rem 0;
   border-bottom: 1px solid var(--line);
-  background: linear-gradient(to bottom, #040404 0%, var(--surface) 55%);
+  background: var(--surface);
 }
 .marquee__track {
   display: flex; gap: 3rem; white-space: nowrap; width: max-content;
