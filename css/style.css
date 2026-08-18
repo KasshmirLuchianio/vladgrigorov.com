@@ -170,7 +170,7 @@ body::after {
   pointer-events: none;
 }
 .hero__beat {
-  grid-area: 1 / 1; position: relative; max-width: 30rem;
+  grid-area: 1 / 1; position: relative; max-width: 34rem;
   text-align: left; opacity: 0; will-change: transform, opacity;
 }
 /* scrim carries the legibility so the type can stay clean, no heavy outline */
@@ -180,7 +180,7 @@ body::after {
 }
 .hero__beat-title {
   font-family: var(--font-display); text-transform: uppercase; color: var(--ink);
-  font-size: clamp(2.1rem, 5.4vw, 4.2rem); line-height: 0.94; letter-spacing: 0.01em;
+  font-size: clamp(2rem, 4.6vw, 3.9rem); line-height: 0.94; letter-spacing: 0.01em;
   text-shadow: 0 3px 16px rgba(0, 0, 0, 0.9);
 }
 .hero__beat-line {
@@ -568,7 +568,7 @@ body::after {
   }
   .hero__endcard-title { font-size: clamp(3rem, 14vw, 6rem); }
   .hero__endcard-sub { letter-spacing: 0.22em; }
-  .hero__beat-title { font-size: clamp(2.2rem, 11vw, 3.6rem); }
+  .hero__beat-title { font-size: clamp(1.9rem, 8.6vw, 3.1rem); }
   .hero__beat-line { font-size: 0.98rem; max-width: 32ch; }
   .hero__rail { display: none; }
 
