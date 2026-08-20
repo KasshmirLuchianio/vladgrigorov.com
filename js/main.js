@@ -243,6 +243,47 @@
 
   /* ---------- Force autoplay on iOS Safari (never leave a video paused —
      a paused <video> is what triggers WebKit's big native play button) ---------- */
+  /* ---------- Defer off-screen video downloads ---------- */
+  /* The interlude clip sits a full viewport below the fold but is served from
+     the same origin as the hero image, so preloading it competes with the LCP
+     image for the same connection. Its <source> ships as data-src and only
+     becomes a real src as the section approaches the viewport, and the poster
+     frame - another full-size file on that same origin - waits with it. The
+     section is decorative and sits on a near-black background, so the worst
+     case while it arrives is the background colour it already has. */
+  function initDeferredVideoSources() {
+    var sources = document.querySelectorAll("video source[data-src]");
+    if (!sources.length) return;
+
+    function attach(video) {
+      var poster = video.getAttribute("data-poster");
+      if (poster) { video.poster = poster; video.removeAttribute("data-poster"); }
+      video.querySelectorAll("source[data-src]").forEach(function (s) {
+        s.src = s.getAttribute("data-src");
+        s.removeAttribute("data-src");
+      });
+      video.load();
+      var p = video.play();
+      if (p && p.catch) p.catch(function () {});
+    }
+
+    var videos = [];
+    sources.forEach(function (s) {
+      if (videos.indexOf(s.parentNode) === -1) videos.push(s.parentNode);
+    });
+
+    if (!("IntersectionObserver" in window)) { videos.forEach(attach); return; }
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        io.unobserve(entry.target);
+        attach(entry.target);
+      });
+    }, { rootMargin: "200px 0px" });
+    videos.forEach(function (v) { io.observe(v); });
+  }
+
   function initAutoplayVideos() {
     var vids = document.querySelectorAll("video[autoplay]");
     if (!vids.length) return;
@@ -279,6 +320,7 @@
     var lenis = initSmoothScroll();
     wireAnchors(lenis);
     initVideoLightbox(lenis);
+    initDeferredVideoSources();
     initAutoplayVideos();
     initAnimations();
     if (hasGSAP && window.ScrollTrigger) {
