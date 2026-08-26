@@ -31,7 +31,7 @@ HERO = ("https://d8j0ntlcm91z4.cloudfront.net/user_33Ej8t2gAxUeQ3elHCepqWYPaUg/"
 # where the page credits him with cinematography and editing only. Getting this
 # wrong would put a director credit on somebody else's film.
 DIRECTED = {
-    "e-ywKlbDZRI", "9l3zFDCcYqc", "N71k6MbbMSY",
+    "e-ywKlbDZRI", "kg4jw54vQUQ", "9l3zFDCcYqc", "N71k6MbbMSY",
     "8ajCsesQskk", "eHqC55RmyXU", "XL8gaRZOdhk",
     "kv9llYpDRjU", "gq95zkO9dfQ", "MnMlt_aLOOM", "O6s77wokJEU",
 }
