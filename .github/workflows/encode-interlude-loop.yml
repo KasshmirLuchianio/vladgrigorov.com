@@ -1,0 +1,68 @@
+name: Encode the interlude clip as an animated image
+
+# The interlude clip is decorative scenery. Served as a <video> it can be taken
+# over by the system player full screen inside in-app webviews (TikTok on iOS),
+# and no page-side attribute prevents that - allowsInlineMediaPlayback belongs
+# to the host app, not to us. An <img> cannot go full screen on any browser, so
+# the clip ships as an animated WebP instead.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/encode-interlude-loop.yml'
+
+jobs:
+  encode:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Download source clip
+        env:
+          SRC: https://d8j0ntlcm91z4.cloudfront.net/user_33Ej8t2gAxUeQ3elHCepqWYPaUg/hf_20260710_171358_1ba11fcd-81fd-499d-853b-853ad6891c30.mp4
+        run: |
+          curl -fL --retry 3 -o /tmp/interlude.mp4 "$SRC"
+          ffprobe -v error -show_entries stream=width,height,r_frame_rate \
+                  -show_entries format=duration,size -of default=nw=1 /tmp/interlude.mp4
+
+      - name: Encode animated WebP and poster
+        run: |
+          # 1280 wide at 15fps keeps the loop under a few MB. The section is
+          # full-bleed but soft and heavily graded, so it carries the downscale.
+          ffmpeg -y -i /tmp/interlude.mp4 -an \
+            -vf "fps=15,scale=1280:-2:flags=lanczos" \
+            -c:v libwebp -lossless 0 -q:v 50 -compression_level 6 \
+            -loop 0 -preset picture \
+            assets/interlude-loop.webp
+
+          ffmpeg -y -i /tmp/interlude.mp4 -frames:v 1 \
+            -vf "scale=1280:-2:flags=lanczos" -q:v 4 \
+            assets/interlude-poster.jpg
+
+          ls -la assets/interlude-loop.webp assets/interlude-poster.jpg
+          echo "webp bytes: $(stat -c%s assets/interlude-loop.webp)"
+
+      - name: Fail if the loop is too heavy to ship
+        run: |
+          BYTES=$(stat -c%s assets/interlude-loop.webp)
+          if [ "$BYTES" -gt 6000000 ]; then
+            echo "interlude-loop.webp is ${BYTES} bytes - too heavy for a decorative loop."
+            echo "Lower -q:v or fps in this workflow and re-run."
+            exit 1
+          fi
+
+      - name: Commit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/interlude-loop.webp assets/interlude-poster.jpg
+          git diff --cached --quiet && { echo "nothing changed"; exit 0; }
+          git commit -m "Encode the interlude clip as an animated WebP (CI)"
+          git push

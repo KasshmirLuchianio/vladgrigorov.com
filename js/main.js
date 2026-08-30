@@ -121,6 +121,16 @@
 
   /* ---------- Animations ---------- */
   function initAnimations() {
+    /* Android in-app webviews - which is what a TikTok link opens into -
+       hide and re-show the URL bar while you scroll, and each change fires a
+       resize. A resize in the middle of a pin makes ScrollTrigger recompute
+       the hero's pin-spacer underneath the scroll position, which reads as
+       the endcard tearing and snapping back. This is the case the flag
+       exists for: ignore resizes that are only the mobile chrome moving. */
+    if (hasGSAP && window.ScrollTrigger) {
+      window.ScrollTrigger.config({ ignoreMobileResize: true });
+    }
+
     if (reduce || !hasGSAP || !window.ScrollTrigger) return;
     var gsap = window.gsap;
     gsap.registerPlugin(window.ScrollTrigger);
@@ -241,122 +251,6 @@
     gsap.from("#nav", { y: -30, opacity: 0, duration: 0.8, ease: "power3.out", delay: 0.4 });
   }
 
-  /* ---------- Force autoplay on iOS Safari (never leave a video paused —
-     a paused <video> is what triggers WebKit's big native play button) ---------- */
-  /* ---------- Keep ambient clips inline and untouchable ---------- */
-  /* The interlude clip is scenery, not a player. Opening the site from a
-     TikTok or Instagram link puts the visitor in an in-app webview, and there
-     - as on iOS Safari - a <video> that starts playing can be handed straight
-     to the system player full screen. That drops the visitor out of the page
-     into a fullscreen video with no obvious way back, which is exactly what
-     was happening.
-
-     Attributes alone do not settle it. After a dynamic load() some engines
-     only honour the IDL properties, so both get set, before any play() call.
-     And when a player opens anyway, webkitbeginfullscreen fires - that is the
-     one moment we can push back, so we do. */
-  function lockVideoInline(video) {
-    video.muted = true;
-    video.defaultMuted = true;
-    video.playsInline = true;
-    video.controls = false;
-    video.setAttribute("playsinline", "");
-    video.setAttribute("webkit-playsinline", "true");
-    if ("disableRemotePlayback" in video) video.disableRemotePlayback = true;
-
-    function bounce() {
-      if (video.webkitExitFullscreen) {
-        video.webkitExitFullscreen();
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      } else if (document.exitFullscreen) {
-        document.exitFullscreen().catch(function () {});
-      }
-    }
-
-    /* iOS fires this the instant the native player takes over. */
-    video.addEventListener("webkitbeginfullscreen", bounce);
-    ["fullscreenchange", "webkitfullscreenchange"].forEach(function (evt) {
-      document.addEventListener(evt, function () {
-        var active = document.fullscreenElement || document.webkitFullscreenElement;
-        if (active === video) bounce();
-      });
-    });
-  }
-
-  function initInlineVideoLock() {
-    document.querySelectorAll("video[data-ambient]").forEach(lockVideoInline);
-  }
-
-  /* ---------- Defer off-screen video downloads ---------- */
-  /* The interlude clip sits a full viewport below the fold but is served from
-     the same origin as the hero image, so preloading it competes with the LCP
-     image for the same connection. Its <source> ships as data-src and only
-     becomes a real src as the section approaches the viewport, and the poster
-     frame - another full-size file on that same origin - waits with it. The
-     section is decorative and sits on a near-black background, so the worst
-     case while it arrives is the background colour it already has. */
-  function initDeferredVideoSources() {
-    var sources = document.querySelectorAll("video source[data-src]");
-    if (!sources.length) return;
-
-    function attach(video) {
-      lockVideoInline(video);
-      var poster = video.getAttribute("data-poster");
-      if (poster) { video.poster = poster; video.removeAttribute("data-poster"); }
-      video.querySelectorAll("source[data-src]").forEach(function (s) {
-        s.src = s.getAttribute("data-src");
-        s.removeAttribute("data-src");
-      });
-      video.load();
-      var p = video.play();
-      if (p && p.catch) p.catch(function () {});
-    }
-
-    var videos = [];
-    sources.forEach(function (s) {
-      if (videos.indexOf(s.parentNode) === -1) videos.push(s.parentNode);
-    });
-
-    if (!("IntersectionObserver" in window)) { videos.forEach(attach); return; }
-
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        io.unobserve(entry.target);
-        attach(entry.target);
-      });
-    }, { rootMargin: "200px 0px" });
-    videos.forEach(function (v) { io.observe(v); });
-  }
-
-  function initAutoplayVideos() {
-    var vids = document.querySelectorAll("video[autoplay]");
-    if (!vids.length) return;
-
-    function tryPlayAll() {
-      vids.forEach(function (v) {
-        if (v.paused) {
-          var p = v.play();
-          if (p && p.catch) p.catch(function () {});
-        }
-      });
-    }
-    tryPlayAll();
-    vids.forEach(function (v) {
-      v.addEventListener("loadeddata", tryPlayAll);
-      v.addEventListener("canplay", tryPlayAll);
-      v.addEventListener("pause", function () {
-        setTimeout(function () { if (v.paused) tryPlayAll(); }, 50);
-      });
-    });
-    /* iOS can block autoplay entirely (Settings > Safari > Auto-Play: Off) —
-       the first touch/scroll/click anywhere is a user gesture that unlocks it. */
-    ["touchstart", "scroll", "click"].forEach(function (evt) {
-      document.addEventListener(evt, tryPlayAll, { once: true, passive: true });
-    });
-  }
-
   /* ---------- Boot ---------- */
   if (document.getElementById("year")) {
     document.getElementById("year").textContent = new Date().getFullYear();
@@ -366,9 +260,6 @@
     var lenis = initSmoothScroll();
     wireAnchors(lenis);
     initVideoLightbox(lenis);
-    initInlineVideoLock();
-    initDeferredVideoSources();
-    initAutoplayVideos();
     initAnimations();
     if (hasGSAP && window.ScrollTrigger) {
       window.ScrollTrigger.refresh();
