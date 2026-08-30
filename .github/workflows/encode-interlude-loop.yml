@@ -58,11 +58,32 @@ jobs:
             fi
           done
 
+          # The rung that fits a phone is far too soft stretched across a
+          # desktop viewport - 740px over 1440px is a 2x upscale, straight
+          # over his face. Desktops decode this without trouble, so they get
+          # their own file and the markup picks between them.
+          WIDE_BUDGET=2200000
+          for CFG in "1280 12 46" "1152 12 42" "1024 12 40"; do
+            set -- $CFG
+            W=$1; FPS=$2; Q=$3
+            ffmpeg -y -loglevel error -i /tmp/interlude.mp4 -an -t 6 \
+              -vf "fps=${FPS},scale=${W}:-2:flags=lanczos" \
+              -c:v libwebp -lossless 0 -q:v "$Q" -compression_level 6 \
+              -loop 0 -preset picture \
+              assets/interlude-loop-wide.webp
+            BYTES=$(stat -c%s assets/interlude-loop-wide.webp)
+            echo "wide ${W}px ${FPS}fps q${Q} -> ${BYTES} bytes"
+            if [ "$BYTES" -le "$WIDE_BUDGET" ]; then
+              echo "PICKED wide ${W}px ${FPS}fps q${Q} at ${BYTES} bytes"
+              break
+            fi
+          done
+
           ffmpeg -y -loglevel error -i /tmp/interlude.mp4 -frames:v 1 -update 1 \
             -vf "scale=1280:-2:flags=lanczos" -q:v 4 \
             assets/interlude-poster.jpg
 
-          ls -la assets/interlude-loop.webp assets/interlude-poster.jpg
+          ls -la assets/interlude-loop.webp assets/interlude-loop-wide.webp assets/interlude-poster.jpg
 
       - name: Fail if even the smallest rung is too heavy
         run: |
@@ -77,7 +98,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/interlude-loop.webp assets/interlude-poster.jpg
+          git add assets/interlude-loop.webp assets/interlude-loop-wide.webp assets/interlude-poster.jpg
           git diff --cached --quiet && { echo "nothing changed"; exit 0; }
           git commit -m "Encode the interlude clip as an animated WebP (CI)"
           git push

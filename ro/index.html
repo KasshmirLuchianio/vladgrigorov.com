@@ -704,10 +704,17 @@
 
   <!-- ============ INTERLUDE (flight film loop) ============ -->
   <section class="interlude" aria-hidden="true">
-    <img class="interlude__img" id="interludeLoop" alt="" aria-hidden="true"
-         loading="lazy" decoding="async" draggable="false"
-         src="../assets/interlude-loop.webp"
-         onerror="this.onerror=null;this.src='https://d8j0ntlcm91z4.cloudfront.net/user_33Ej8t2gAxUeQ3elHCepqWYPaUg/hf_20260710_163904_221ae3f6-a183-43ca-ae18-fe8e19e72958.png'" />
+    <picture>
+      <!-- The phone file is downscaled hard enough to decode smoothly there;
+           across a desktop viewport that same file is a 2x upscale. Same
+           breakpoint as the one that drops the parallax in main.js. -->
+      <source media="(min-width: 861px)" type="image/webp"
+              srcset="../assets/interlude-loop-wide.webp" />
+      <img class="interlude__img" id="interludeLoop" alt="" aria-hidden="true"
+           loading="lazy" decoding="async" draggable="false"
+           src="../assets/interlude-loop.webp"
+           onerror="this.onerror=null;this.src='https://d8j0ntlcm91z4.cloudfront.net/user_33Ej8t2gAxUeQ3elHCepqWYPaUg/hf_20260710_163904_221ae3f6-a183-43ca-ae18-fe8e19e72958.png'" />
+    </picture>
     <div class="interlude__bars"></div>
   </section>
 
