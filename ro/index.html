@@ -704,7 +704,12 @@
 
   <!-- ============ INTERLUDE (flight film loop) ============ -->
   <section class="interlude" aria-hidden="true">
-    <video class="interlude__img" id="interludeVideo" autoplay muted loop playsinline webkit-playsinline="true" disablepictureinpicture preload="none"
+    <video class="interlude__img" id="interludeVideo" data-ambient tabindex="-1"
+           autoplay muted loop playsinline webkit-playsinline="true"
+           disablepictureinpicture disableremoteplayback
+           controlslist="nodownload nofullscreen noremoteplayback"
+           x5-playsinline="true" x5-video-player-type="h5-page" x5-video-player-fullscreen="false"
+           preload="none"
            data-poster="https://d8j0ntlcm91z4.cloudfront.net/user_33Ej8t2gAxUeQ3elHCepqWYPaUg/hf_20260710_163904_221ae3f6-a183-43ca-ae18-fe8e19e72958.png">
       <source data-src="https://d8j0ntlcm91z4.cloudfront.net/user_33Ej8t2gAxUeQ3elHCepqWYPaUg/hf_20260710_171358_1ba11fcd-81fd-499d-853b-853ad6891c30.mp4" type="video/mp4" />
     </video>

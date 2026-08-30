@@ -243,6 +243,51 @@
 
   /* ---------- Force autoplay on iOS Safari (never leave a video paused —
      a paused <video> is what triggers WebKit's big native play button) ---------- */
+  /* ---------- Keep ambient clips inline and untouchable ---------- */
+  /* The interlude clip is scenery, not a player. Opening the site from a
+     TikTok or Instagram link puts the visitor in an in-app webview, and there
+     - as on iOS Safari - a <video> that starts playing can be handed straight
+     to the system player full screen. That drops the visitor out of the page
+     into a fullscreen video with no obvious way back, which is exactly what
+     was happening.
+
+     Attributes alone do not settle it. After a dynamic load() some engines
+     only honour the IDL properties, so both get set, before any play() call.
+     And when a player opens anyway, webkitbeginfullscreen fires - that is the
+     one moment we can push back, so we do. */
+  function lockVideoInline(video) {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.controls = false;
+    video.setAttribute("playsinline", "");
+    video.setAttribute("webkit-playsinline", "true");
+    if ("disableRemotePlayback" in video) video.disableRemotePlayback = true;
+
+    function bounce() {
+      if (video.webkitExitFullscreen) {
+        video.webkitExitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.exitFullscreen) {
+        document.exitFullscreen().catch(function () {});
+      }
+    }
+
+    /* iOS fires this the instant the native player takes over. */
+    video.addEventListener("webkitbeginfullscreen", bounce);
+    ["fullscreenchange", "webkitfullscreenchange"].forEach(function (evt) {
+      document.addEventListener(evt, function () {
+        var active = document.fullscreenElement || document.webkitFullscreenElement;
+        if (active === video) bounce();
+      });
+    });
+  }
+
+  function initInlineVideoLock() {
+    document.querySelectorAll("video[data-ambient]").forEach(lockVideoInline);
+  }
+
   /* ---------- Defer off-screen video downloads ---------- */
   /* The interlude clip sits a full viewport below the fold but is served from
      the same origin as the hero image, so preloading it competes with the LCP
@@ -256,6 +301,7 @@
     if (!sources.length) return;
 
     function attach(video) {
+      lockVideoInline(video);
       var poster = video.getAttribute("data-poster");
       if (poster) { video.poster = poster; video.removeAttribute("data-poster"); }
       video.querySelectorAll("source[data-src]").forEach(function (s) {
@@ -320,6 +366,7 @@
     var lenis = initSmoothScroll();
     wireAnchors(lenis);
     initVideoLightbox(lenis);
+    initInlineVideoLock();
     initDeferredVideoSources();
     initAutoplayVideos();
     initAnimations();
