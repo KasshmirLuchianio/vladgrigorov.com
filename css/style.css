@@ -594,4 +594,8 @@ body::after {
   * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
   .manifesto__text [data-word] { opacity: 1; }
   .hero__img, .interlude__img { transform: none; }
+  /* No parallax on phones (see main.js), so the clip needs no overscan to
+     drift into - and promoting a full-screen animated image to its own
+     compositing layer costs memory a phone would rather spend decoding it. */
+  .interlude__img { height: 100%; will-change: auto; }
 }

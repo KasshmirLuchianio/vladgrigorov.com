@@ -34,30 +34,42 @@ jobs:
 
       - name: Encode animated WebP and poster
         run: |
-          # First pass shipped 4.7MB for twelve seconds of scenery, which is
-          # real money on mobile data for something nobody looks at directly.
-          # 1024 wide at 12fps holds up: the section is full-bleed but soft,
-          # heavily graded and drifting, so it carries the downscale.
-          ffmpeg -y -i /tmp/interlude.mp4 -an \
-            -vf "fps=12,scale=1024:-2:flags=lanczos" \
-            -c:v libwebp -lossless 0 -q:v 42 -compression_level 6 \
-            -loop 0 -preset picture \
-            assets/interlude-loop.webp
+          # Animated WebP has no interframe motion compensation, so cost scales
+          # with pixels x frames and nothing else. Twelve seconds at 1280/15fps
+          # came to 4.7MB and stuttered on an iPhone, which decodes every frame
+          # on the main thread. Six seconds is the length that matters here.
+          #
+          # Rather than guess a quality that lands under budget - twice now it
+          # has not - walk down a ladder until one does.
+          BUDGET=1100000
+          for CFG in "900 12 42" "820 12 38" "740 12 34" "660 10 32" "560 10 30"; do
+            set -- $CFG
+            W=$1; FPS=$2; Q=$3
+            ffmpeg -y -loglevel error -i /tmp/interlude.mp4 -an -t 6 \
+              -vf "fps=${FPS},scale=${W}:-2:flags=lanczos" \
+              -c:v libwebp -lossless 0 -q:v "$Q" -compression_level 6 \
+              -loop 0 -preset picture \
+              assets/interlude-loop.webp
+            BYTES=$(stat -c%s assets/interlude-loop.webp)
+            echo "${W}px ${FPS}fps q${Q} -> ${BYTES} bytes"
+            if [ "$BYTES" -le "$BUDGET" ]; then
+              echo "PICKED ${W}px ${FPS}fps q${Q} at ${BYTES} bytes"
+              break
+            fi
+          done
 
-          ffmpeg -y -i /tmp/interlude.mp4 -frames:v 1 \
+          ffmpeg -y -loglevel error -i /tmp/interlude.mp4 -frames:v 1 -update 1 \
             -vf "scale=1280:-2:flags=lanczos" -q:v 4 \
             assets/interlude-poster.jpg
 
           ls -la assets/interlude-loop.webp assets/interlude-poster.jpg
-          echo "webp bytes: $(stat -c%s assets/interlude-loop.webp)"
 
-      - name: Fail if the loop is too heavy to ship
+      - name: Fail if even the smallest rung is too heavy
         run: |
           BYTES=$(stat -c%s assets/interlude-loop.webp)
-          if [ "$BYTES" -gt 2500000 ]; then
-            echo "interlude-loop.webp is ${BYTES} bytes - too heavy for a decorative loop."
-            echo "Budget is 2.5MB; the first attempt at 1280/15fps/q50 came out at 4.9MB."
-            echo "Lower -q:v or fps in this workflow and re-run."
+          if [ "$BYTES" -gt 1100000 ]; then
+            echo "Every rung of the ladder came out over 1.1MB (last: ${BYTES})."
+            echo "Shorten -t below 6s, or accept a still frame instead."
             exit 1
           fi
 

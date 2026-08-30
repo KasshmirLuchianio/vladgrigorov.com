@@ -209,11 +209,17 @@
         .from(".hero__endcard-inner", { opacity: 0, y: 30, ease: "power3.out", duration: 0.07 }, 0.93);
     })();
 
-    /* Interlude still: slow parallax drift (transform only) */
-    gsap.to(".interlude__img", {
-      yPercent: -12, ease: "none",
-      scrollTrigger: { trigger: ".interlude", start: "top bottom", end: "bottom top", scrub: true }
-    });
+    /* Interlude: slow parallax drift (transform only).
+       Skipped on small screens - the clip is an animated image, so every
+       frame is decoded on the main thread, and compositing a scroll-driven
+       transform on top of that is what tips a phone into stuttering. The
+       drift is the first thing to give up; the loop itself is the point. */
+    if (!window.matchMedia("(max-width: 860px)").matches) {
+      gsap.to(".interlude__img", {
+        yPercent: -12, ease: "none",
+        scrollTrigger: { trigger: ".interlude", start: "top bottom", end: "bottom top", scrub: true }
+      });
+    }
 
     /* Manifesto: words light up across the scroll */
     var words = gsap.utils.toArray(".manifesto__text [data-word]");
