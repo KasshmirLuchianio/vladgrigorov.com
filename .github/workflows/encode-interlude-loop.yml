@@ -34,11 +34,13 @@ jobs:
 
       - name: Encode animated WebP and poster
         run: |
-          # 1280 wide at 15fps keeps the loop under a few MB. The section is
-          # full-bleed but soft and heavily graded, so it carries the downscale.
+          # First pass shipped 4.7MB for twelve seconds of scenery, which is
+          # real money on mobile data for something nobody looks at directly.
+          # 1024 wide at 12fps holds up: the section is full-bleed but soft,
+          # heavily graded and drifting, so it carries the downscale.
           ffmpeg -y -i /tmp/interlude.mp4 -an \
-            -vf "fps=15,scale=1280:-2:flags=lanczos" \
-            -c:v libwebp -lossless 0 -q:v 50 -compression_level 6 \
+            -vf "fps=12,scale=1024:-2:flags=lanczos" \
+            -c:v libwebp -lossless 0 -q:v 42 -compression_level 6 \
             -loop 0 -preset picture \
             assets/interlude-loop.webp
 
@@ -52,8 +54,9 @@ jobs:
       - name: Fail if the loop is too heavy to ship
         run: |
           BYTES=$(stat -c%s assets/interlude-loop.webp)
-          if [ "$BYTES" -gt 6000000 ]; then
+          if [ "$BYTES" -gt 2500000 ]; then
             echo "interlude-loop.webp is ${BYTES} bytes - too heavy for a decorative loop."
+            echo "Budget is 2.5MB; the first attempt at 1280/15fps/q50 came out at 4.9MB."
             echo "Lower -q:v or fps in this workflow and re-run."
             exit 1
           fi
