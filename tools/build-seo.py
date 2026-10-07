@@ -42,12 +42,12 @@ PAGES = {
         "url": f"{SITE}/",
         "page_id": f"{SITE}/#page",
         "name": "Vlad Grigorov — AI Film Director & Cinematographer",
-        "description": ("Portfolio of Vlad Grigorov, a film director and cinematographer based in "
-                        "Bucharest, Romania: live-action music videos, AI-directed commercials and "
+        "description": ("Portfolio of Vlad Grigorov, a Romanian film director and cinematographer based "
+                        "in Barcelona: live-action music videos, AI-directed commercials and "
                         "generative short films."),
         "video_prefix": f"{SITE}/#video-",
         "job_titles": ["Film Director", "Cinematographer", "Video Editor", "AI Director"],
-        "person_description": ("Film director, cinematographer and editor based in Bucharest. Shoots and "
+        "person_description": ("Film director, cinematographer and editor based in Barcelona. Shoots and "
                                "cuts live-action music videos, and directs commercials and short films "
                                "made with generative AI video models."),
         "knows_about": [
@@ -72,11 +72,11 @@ PAGES = {
         "url": f"{SITE}/ro/",
         "page_id": f"{SITE}/ro/#page",
         "name": "Vlad Grigorov — Regizor videoclipuri și reclame AI",
-        "description": ("Portofoliul lui Vlad Grigorov, regizor și videograf din București: videoclipuri "
-                        "muzicale filmate, reclame și spoturi realizate cu AI, filme scurte generative."),
+        "description": ("Portofoliul lui Vlad Grigorov, regizor și videograf român stabilit în Barcelona: "
+                        "videoclipuri muzicale filmate, reclame și spoturi realizate cu AI, filme scurte generative."),
         "video_prefix": f"{SITE}/ro/#video-",
         "job_titles": ["Regizor", "Director de imagine", "Monteur video", "AI Director"],
-        "person_description": ("Regizor, director de imagine și monteur din București. Filmează și montează "
+        "person_description": ("Regizor, director de imagine și monteur român stabilit în Barcelona. Filmează și montează "
                                "videoclipuri muzicale, și regizează reclame și filme scurte realizate cu "
                                "modele video generative."),
         "knows_about": [
@@ -94,6 +94,35 @@ PAGES = {
              "Montaj, sunet, color grading și livrare, atât pentru filmare reală cât și pentru material generat."),
             ("Filme scurte generative și content de brand",
              "Producții scurte cinematice realizate cu modele AI de imagine și video, scrise și regizate de la cap la coadă."),
+        ],
+    },
+    "es/index.html": {
+        "lang": "es",
+        "url": f"{SITE}/es/",
+        "page_id": f"{SITE}/es/#page",
+        "name": "Vlad Grigorov — Realizador de videoclips y anuncios con IA",
+        "description": ("Portfolio de Vlad Grigorov, realizador y director de fotografía rumano afincado en "
+                        "Barcelona: videoclips rodados, anuncios dirigidos con IA y cortometrajes generativos."),
+        "video_prefix": f"{SITE}/es/#video-",
+        "job_titles": ["Realizador", "Director de fotografía", "Montador", "Director de IA"],
+        "person_description": ("Realizador, director de fotografía y montador afincado en Barcelona. Rueda y "
+                               "monta videoclips, y dirige anuncios y cortometrajes creados con modelos de "
+                               "vídeo generativo."),
+        "knows_about": [
+            "Dirección cinematográfica", "Dirección de fotografía", "Realización de videoclips",
+            "Montaje de vídeo", "Etalonaje", "Producción publicitaria",
+            "Generación de vídeo con IA", "Cine generativo", "Dirección mediante prompts",
+        ],
+        "image_caption": "Vlad Grigorov, realizador y director de fotografía, en un set de rodaje",
+        "services": [
+            ("Realización y dirección de fotografía de videoclips",
+             "Dirección, rodaje y montaje de videoclips, del tratamiento al etalonaje final."),
+            ("Anuncios y spots publicitarios dirigidos con IA",
+             "Anuncios y spots de marca creados con modelos de vídeo generativo y dirigidos plano a plano."),
+            ("Montaje, etalonaje y acabado",
+             "Montaje, sonido, etalonaje y entrega, tanto para material rodado como generado."),
+            ("Cortometrajes generativos y contenido de marca",
+             "Piezas cinematográficas breves hechas con modelos de imagen y vídeo con IA, escritas y dirigidas de principio a fin."),
         ],
     },
 }
@@ -135,7 +164,7 @@ def person(cfg):
         "image": {"@id": f"{SITE}/#vlad-photo"},
         "jobTitle": cfg["job_titles"],
         "description": cfg["person_description"],
-        "address": {"@type": "PostalAddress", "addressLocality": "Bucharest", "addressCountry": "RO"},
+        "address": {"@type": "PostalAddress", "addressLocality": "Barcelona", "addressCountry": "ES"},
         "email": "mailto:vladgrigorov1@gmail.com",
         "knowsAbout": cfg["knows_about"],
         "knowsLanguage": [
@@ -151,7 +180,8 @@ def person(cfg):
                     "description": desc,
                     "provider": {"@id": f"{SITE}/#vlad"},
                     "areaServed": [
-                        {"@type": "City", "name": "Bucharest"},
+                        {"@type": "City", "name": "Barcelona"},
+                        {"@type": "Country", "name": "Spain"},
                         {"@type": "Country", "name": "Romania"},
                     ],
                 },
@@ -241,6 +271,7 @@ SITEMAP_ENTRY = """  <url>
     <lastmod>{lastmod}</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="{site}/"/>
     <xhtml:link rel="alternate" hreflang="ro" href="{site}/ro/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="{site}/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="{site}/"/>
     <changefreq>monthly</changefreq>
     <priority>{priority}</priority>
@@ -251,7 +282,7 @@ SITEMAP_ENTRY = """  <url>
 def write_sitemap(dates):
     entries = "".join(
         SITEMAP_ENTRY.format(loc=PAGES[f]["url"], lastmod=dates[f], site=SITE, priority=priority)
-        for f, priority in (("index.html", "1.0"), ("ro/index.html", "0.9"))
+        for f, priority in (("index.html", "1.0"), ("ro/index.html", "0.9"), ("es/index.html", "0.9"))
     )
     (ROOT / "sitemap.xml").write_text(SITEMAP.format(entries=entries))
     print("sitemap.xml:", ", ".join(f"{f} {dates[f]}" for f in dates))

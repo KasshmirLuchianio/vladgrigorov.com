@@ -106,8 +106,8 @@ body::after {
 .nav__cta { border: 1px solid var(--line); border-radius: 100px; padding: 0.5rem 1.1rem; }
 .nav__cta::after { display: none; }
 
-/* Language switch. Two real links between two real pages rather than a JS
-   toggle, so each language has its own indexable URL. mix-blend-mode on .nav
+/* Language switch. Real links between real pages rather than a JS toggle,
+   so each language has its own indexable URL. mix-blend-mode on .nav
    means colours here invert against whatever is behind them. */
 .lang {
   display: inline-flex; align-items: center; gap: 0.15rem;
@@ -119,8 +119,7 @@ body::after {
 .lang__off { color: var(--ink); opacity: 0.45; transition: opacity 0.3s; }
 .lang__off:hover, .lang__off:focus-visible { opacity: 1; }
 .lang__off::after { display: none; }
-.lang__on + .lang__off::before,
-.lang__off + .lang__on::before {
+.lang > * + *::before {
   content: "/"; margin-right: 0.35rem; opacity: 0.3;
 }
 
