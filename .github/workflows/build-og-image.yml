@@ -1,11 +1,12 @@
 name: Build the link-preview image
 
 # LinkedIn, WhatsApp and the rest show og:image when the portfolio is shared.
-# Pointing that at the raw 2K hero PNG on the CDN does not work on LinkedIn:
-# it rejects og:image files over 5MB and quietly falls back to some other image
-# it finds on the page - which is how a random video thumbnail ended up as the
-# preview. This builds a purpose-made 1200x627 JPEG (LinkedIn's 1.91:1) and
-# serves it from the site's own domain.
+# With og:image pointing at the 2K hero PNG on Higgsfield's CDN, LinkedIn
+# ignored it and fell back to a video thumbnail it found on the page. Not
+# because of size - the PNG is 3.1MB, under LinkedIn's 5MB limit - so the
+# likeliest cause is the third-party host. This builds a purpose-made 1200x627
+# JPEG (LinkedIn's 1.91:1) that the site serves from its own domain, with its
+# dimensions declared, which removes every cause we cannot test from here.
 on:
   workflow_dispatch:
   push:
