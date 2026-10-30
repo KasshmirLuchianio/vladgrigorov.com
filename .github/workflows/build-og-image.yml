@@ -1,0 +1,55 @@
+name: Build the link-preview image
+
+# LinkedIn, WhatsApp and the rest show og:image when the portfolio is shared.
+# Pointing that at the raw 2K hero PNG on the CDN does not work on LinkedIn:
+# it rejects og:image files over 5MB and quietly falls back to some other image
+# it finds on the page - which is how a random video thumbnail ended up as the
+# preview. This builds a purpose-made 1200x627 JPEG (LinkedIn's 1.91:1) and
+# serves it from the site's own domain.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/build-og-image.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Download the hero still
+        env:
+          SRC: https://d8j0ntlcm91z4.cloudfront.net/user_33Ej8t2gAxUeQ3elHCepqWYPaUg/hf_20260817_085751_3d36c25d-57e4-4869-bfc2-2057a5cad5e8.png
+        run: |
+          curl -fL --retry 3 -o /tmp/hero.png "$SRC"
+          echo "source bytes: $(stat -c%s /tmp/hero.png)"
+          ffprobe -v error -show_entries stream=width,height -of csv=p=0 /tmp/hero.png
+
+      - name: Build 1200x627 JPEG
+        run: |
+          # Fill 1200x627, then crop - a touch above centre, the same framing
+          # the hero uses on the site (object-position 50% 42%).
+          ffmpeg -y -loglevel error -i /tmp/hero.png \
+            -vf "scale=w=1200:h=627:force_original_aspect_ratio=increase:flags=lanczos,crop=1200:627:(iw-1200)/2:(ih-627)*0.42" \
+            -q:v 3 assets/og-image.jpg
+          ffprobe -v error -show_entries stream=width,height -of csv=p=0 assets/og-image.jpg
+          BYTES=$(stat -c%s assets/og-image.jpg)
+          echo "og-image bytes: $BYTES"
+          if [ "$BYTES" -gt 1000000 ]; then echo "over 1MB - raise -q:v"; exit 1; fi
+
+      - name: Commit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/og-image.jpg
+          git diff --cached --quiet && { echo "nothing changed"; exit 0; }
+          git commit -m "Build the 1200x627 link-preview image (CI)"
+          git push
