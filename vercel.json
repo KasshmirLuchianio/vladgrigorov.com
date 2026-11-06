@@ -3,9 +3,9 @@
   "trailingSlash": true,
   "redirects": [
     {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "vladgrigorov-com.vercel.app" }],
-      "destination": "https://www.vladgrigorov.com/:path*",
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "vladgrigorov-com\\.vercel\\.app" }],
+      "destination": "https://www.vladgrigorov.com/$1",
       "permanent": true
     }
   ]
