@@ -22,6 +22,8 @@ import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
+import service_pages
+
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://www.vladgrigorov.com"
 HERO = ("https://d8j0ntlcm91z4.cloudfront.net/user_33Ej8t2gAxUeQ3elHCepqWYPaUg/"
@@ -41,12 +43,12 @@ PAGES = {
         "lang": "en",
         "url": f"{SITE}/",
         "page_id": f"{SITE}/#page",
-        "name": "Vlad Grigorov — AI Film Director & Cinematographer",
+        "name": "Vlad Grigorov — AI Filmmaker & Video Editor",
         "description": ("Portfolio of Vlad Grigorov, a Romanian film director and cinematographer based "
                         "in Barcelona: live-action music videos, AI-directed commercials and "
                         "generative short films."),
         "video_prefix": f"{SITE}/#video-",
-        "job_titles": ["Film Director", "Cinematographer", "Video Editor", "AI Director"],
+        "job_titles": ["AI Filmmaker", "AI Video Editor", "Film Director", "Cinematographer"],
         "person_description": ("Film director, cinematographer and editor based in Barcelona. Shoots and "
                                "cuts live-action music videos, and directs commercials and short films "
                                "made with generative AI video models."),
@@ -104,7 +106,7 @@ PAGES = {
         "description": ("Portfolio de Vlad Grigorov, realizador y director de fotografía rumano afincado en "
                         "Barcelona: videoclips rodados, anuncios dirigidos con IA y cortometrajes generativos."),
         "video_prefix": f"{SITE}/es/#video-",
-        "job_titles": ["Realizador", "Director de fotografía", "Montador", "Director de IA"],
+        "job_titles": ["Cineasta IA", "Editor de vídeo IA", "Realizador", "Director de fotografía"],
         "person_description": ("Realizador, director de fotografía y montador afincado en Barcelona. Rueda y "
                                "monta videoclips, y dirige anuncios y cortometrajes creados con modelos de "
                                "vídeo generativo."),
@@ -269,23 +271,40 @@ SITEMAP = """<?xml version="1.0" encoding="UTF-8"?>
 SITEMAP_ENTRY = """  <url>
     <loc>{loc}</loc>
     <lastmod>{lastmod}</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="{site}/"/>
-    <xhtml:link rel="alternate" hreflang="ro" href="{site}/ro/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="{site}/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="{site}/"/>
+{alternates}
     <changefreq>monthly</changefreq>
     <priority>{priority}</priority>
   </url>
 """
 
 
-def write_sitemap(dates):
-    entries = "".join(
-        SITEMAP_ENTRY.format(loc=PAGES[f]["url"], lastmod=dates[f], site=SITE, priority=priority)
-        for f, priority in (("index.html", "1.0"), ("ro/index.html", "0.9"), ("es/index.html", "0.9"))
-    )
-    (ROOT / "sitemap.xml").write_text(SITEMAP.format(entries=entries))
-    print("sitemap.xml:", ", ".join(f"{f} {dates[f]}" for f in dates))
+def write_sitemap(groups):
+    """groups: list of (priority, [(url, hreflang, lastmod), ...]) - each group is
+    one page in several languages, and every member lists all of them."""
+    entries = []
+    for priority, members in groups:
+        x_default = members[0][0]
+        alts = "\n".join(
+            f'    <xhtml:link rel="alternate" hreflang="{lang}" href="{url}"/>' for url, lang, _ in members)
+        alts += f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{x_default}"/>'
+        for url, _, lastmod in members:
+            entries.append(SITEMAP_ENTRY.format(loc=url, lastmod=lastmod, alternates=alts, priority=priority))
+    (ROOT / "sitemap.xml").write_text(SITEMAP.format(entries="".join(entries)))
+    print(f"sitemap.xml: {len(entries)} urls")
+
+
+def write_service_pages():
+    """Render the service landing pages; returns their sitemap groups."""
+    lastmod = {}
+    for rel, page, lang in service_pages.all_pages():
+        path = ROOT / rel
+        path.parent.mkdir(parents=True, exist_ok=True)
+        modified = last_commit_date(rel)
+        path.write_text(service_pages.render(page, lang, modified))
+        lastmod[service_pages.url_of(page, lang)] = modified
+        print(f"{rel}: rendered, dateModified {modified}")
+    return [("0.8", [(url, lang, lastmod[url]) for url, lang in group])
+            for group in service_pages.sitemap_groups()]
 
 
 def main():
@@ -306,8 +325,10 @@ def main():
             raise SystemExit(f"{filename}: expected exactly one JSON-LD block, replaced {count}")
         path.write_text(updated)
         print(f"{filename}: {len(projects)} videos, dateModified {modified}")
-    write_sitemap(dates)
 
+    home = [(PAGES[f]["url"], PAGES[f]["lang"], dates[f])
+            for f in ("index.html", "ro/index.html", "es/index.html")]
+    write_sitemap([("1.0", home)] + write_service_pages())
 
 if __name__ == "__main__":
     main()

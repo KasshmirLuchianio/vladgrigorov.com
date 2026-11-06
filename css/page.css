@@ -1,0 +1,99 @@
+/* ============================================================
+   Service pages (/ai-filmmaker/, /ai-video-editor/ and their
+   Spanish twins). Layered on style.css for tokens, nav, cards and
+   footer; this file only adds the long-form reading layout. These
+   pages carry no GSAP/Lenis - they are for reading and for search.
+   ============================================================ */
+
+.page main { padding-top: clamp(6.5rem, 12vw, 9rem); }
+
+.page__head,
+.page__body,
+.page__cta {
+  padding-inline: var(--pad);
+  max-width: calc(46rem + 2 * var(--pad));
+}
+
+.page__crumbs {
+  font-family: var(--font-head); font-size: 0.74rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--muted);
+  display: flex; gap: 0.55rem; flex-wrap: wrap;
+}
+.page__crumbs a:hover { color: var(--amber); }
+
+.page__eyebrow {
+  margin-top: 2.2rem; font-family: var(--font-head); font-size: 0.78rem;
+  letter-spacing: 0.3em; text-transform: uppercase; color: var(--amber);
+}
+.page__title {
+  font-family: var(--font-display); text-transform: uppercase; font-weight: 400;
+  font-size: clamp(3.2rem, 11vw, 7.5rem); line-height: 0.92; margin-top: 0.8rem;
+  text-wrap: balance;
+}
+.page__lede {
+  margin-top: 1.6rem; font-size: clamp(1.08rem, 1.9vw, 1.32rem);
+  line-height: 1.55; color: #e7e2d9; max-width: 40em;
+}
+
+.page__body { margin-top: clamp(3rem, 7vw, 5rem); }
+.page__body > * + * { margin-top: 1.15rem; }
+.page__body p, .page__body li { line-height: 1.7; color: #d9d4ca; max-width: 65ch; }
+.page__body a { color: var(--ink); border-bottom: 1px solid var(--amber-dim); }
+.page__body a:hover { color: var(--amber); }
+.page__body strong { color: var(--ink); font-weight: 500; }
+
+.page__body h2,
+.page__cta h2 {
+  font-family: var(--font-display); text-transform: uppercase; font-weight: 400;
+  font-size: clamp(1.9rem, 4.6vw, 3rem); line-height: 1; text-wrap: balance;
+}
+.page__body h2 { margin-top: clamp(3rem, 7vw, 4.5rem); }
+.page__body > h2:first-child { margin-top: 0; }
+
+.page__list { padding-left: 1.1rem; display: grid; gap: 0.7rem; }
+.page__list li::marker { color: var(--amber); }
+
+/* A real sequence, so it is numbered. */
+.page__steps { list-style: none; counter-reset: step; display: grid; gap: 1.4rem; }
+.page__steps li {
+  counter-increment: step; display: grid; grid-template-columns: 2.6rem 1fr;
+  column-gap: 0.4rem; padding-top: 1.2rem; border-top: 1px solid var(--line);
+}
+.page__steps li::before {
+  content: counter(step, decimal-leading-zero); grid-row: 1 / span 2;
+  font-family: var(--font-head); font-size: 0.8rem; color: var(--amber); padding-top: 0.25rem;
+}
+.page__steps h3, .page__qa h3 {
+  font-family: var(--font-head); font-weight: 600; font-size: 1.05rem; color: var(--ink);
+}
+.page__steps p { margin-top: 0.3rem; }
+
+.page__faq { display: grid; gap: 1.6rem; }
+.page__qa p { margin-top: 0.45rem; }
+
+/* Work cards reuse the portfolio's card styles; these have no index number. */
+.page__work { margin-top: 1.6rem; }
+.page__work .project__meta { grid-template-columns: minmax(0, 1fr); }
+.page__work .project__type { grid-column: 1; }
+.page__work .project__title { font-size: clamp(1.05rem, 1.4vw, 1.35rem); }
+
+.page__cta {
+  margin-top: clamp(4rem, 9vw, 7rem); margin-bottom: clamp(4rem, 9vw, 7rem);
+  padding-top: clamp(2.5rem, 5vw, 3.5rem); border-top: 1px solid var(--line);
+}
+.page__cta > p { margin-top: 1rem; color: #d9d4ca; max-width: 52ch; line-height: 1.65; }
+.page__cta .contact__email { margin-top: 1.8rem; }
+.page__more {
+  display: inline-block; margin-top: 1.2rem; font-family: var(--font-head);
+  font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+}
+.page__more:hover { color: var(--amber); }
+
+.nav__links a[aria-current="page"] { color: var(--amber); }
+
+@media (max-width: 1180px) {
+  .page__work { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 860px) {
+  .page__work { grid-template-columns: 1fr; }
+}
